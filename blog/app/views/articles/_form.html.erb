@@ -1,12 +1,12 @@
-<%= from_with model: @article, local: true do |form| %>
-    <%= if @article.errors.any? %>
-    <div id ~ "error_explanation">
+<%= form_with model: @article, local: true do |form| %>
+    <% if @article.errors.any? %>
+    <div id = "error_explanation">
         <h2><%= pluralize(@article.errors.count, "error") %>
         prohibited this article from being saved:</h2>
         <ul>
-            <%= @article.errors.full_messages.each dp |msg| %>
+        <% @article.errors.full_messages.each do |msg| %>
             <li><%= msg %></li>
-            <%= end %>
+        <% end %>
         </ul>
     </div>
     <% end %>
@@ -16,7 +16,17 @@
     </p>
 
     <p>
-        <%= form.label :title %><br>
+        <%= form.label :theater %><br>
+        <%= form.text_field :theater %>
+    </p>
+
+    <p>
+        <%= form.label :watched_date %><br>
+        <%= form.datetime_field :watched_date %>
+    </p>
+
+    <p>
+        <%= form.label :text %><br>
         <%= form.text_area :text %>
     </p>
 
