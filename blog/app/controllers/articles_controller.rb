@@ -44,6 +44,6 @@ class ArticlesController < ApplicationController
 
     private
     def article_params
-        params.require(:article).permit(:title, :theater, :watched_date, :text)
+        params.require(:article).permit(:title, :theater, :watched_date, :text, :rate)
     end
 end

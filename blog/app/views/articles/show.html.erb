@@ -14,6 +14,21 @@
 </p>    
 
 <p>
+    <strong>Rate</strong>
+    <div id="star-rate-<%= @article.rate %>"></div>
+    <script>
+          $('#star-rate-<%= @article.rate %>').raty({
+            size: 36,
+            starOff:  '<%= asset_path('star-off.png') %>',
+            starOn : '<%= asset_path('star-on.png') %>',
+            starHalf: '<%= asset_path('star-half.png') %>',
+            readOnly: true,
+            score: <%= @article.rate %>,
+        });
+    </script> 
+</p>
+
+<p>
     <strong>Text:</strong>
     <%= @article.text %>
 </p> 
