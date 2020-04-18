@@ -15,3 +15,14 @@ require("jquery")
 //
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
+
+/*!
+ * jQuery Raty - A Star Rating Plugin
+ *
+ * The MIT License
+ *
+ * author:  Washington Botelho
+ * github:  wbotelhos/raty
+ * version: 2.9.0
+ *
+ */

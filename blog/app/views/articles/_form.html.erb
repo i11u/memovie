@@ -25,6 +25,21 @@
         <%= form.datetime_field :watched_date %>
     </p>
 
+    <div class="field" id="star">
+        <%= form.label :rate,  "星評価 (※必須)" ,id: "e"%>
+        <%= form.hidden_field :rate, id: :review_star %>
+    </div>
+
+    <script>
+        $('#star').raty({
+            size     : 36,
+            starOff:  '<%= asset_path('star-off.png') %>',
+            starOn : '<%= asset_path('star-on.png') %>',
+            starHalf: '<%= asset_path('star-half.png') %>',
+            scoreName: 'comment[rate]',
+        });
+    </script>
+
     <p>
         <%= form.label :text %><br>
         <%= form.text_area :text %>
@@ -33,4 +48,5 @@
     <p>
         <%= form.submit %>
     </p>
+
 <% end %>
