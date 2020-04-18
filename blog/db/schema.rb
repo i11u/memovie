@@ -19,7 +19,7 @@ ActiveRecord::Schema.define(version: 2020_04_17_081656) do
     t.datetime "updated_at", precision: 6, null: false
     t.string "theater"
     t.datetime "watched_date"
-    t.float "rate"
+    t.integer "rate"
   end
 
 end
