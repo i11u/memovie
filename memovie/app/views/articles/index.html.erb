@@ -1,0 +1,38 @@
+<h1>Listing articles</h1>
+
+<%= link_to 'New article', new_article_path%>
+
+<table class = "table table-hover">
+    <tr>
+        <th>Title</th>
+        <th>Theater</th>
+        <th>Watched_date</th>
+        <th>Rate</th>
+        <th>Text</th>
+        <th></th>
+    </tr>
+
+    <% @articles.each do |article| %>
+        <tr>
+            <td><%= article.title %></td>
+            <td><%= article.theater %></td>
+            <td><%= article.watched_date %></td>
+            <td><div id="star-rate-<%= article.rate %>"></div></td>
+            <script>
+                $('#star-rate-<%= article.rate %>').raty({
+                    size: 36,
+                    starOff:  '<%= asset_path('star-off.png') %>',
+                    starOn : '<%= asset_path('star-on.png') %>',
+                    starHalf: '<%= asset_path('star-half.png') %>',
+                    readOnly: true,
+                    score: <%= article.rate %>,
+                });
+            </script> 
+            <td><%= article.text %></td>
+            <td><%= link_to 'Show', article_path(article) %></td>
+            <td><%= link_to 'Edit', edit_article_path(article) %></td>
+            <td><%= link_to 'Destroy', article_path(article),
+            method: :delete, data: { confirm: 'You are removing the selcted data. Are you sure?'} %></td>
+        </tr>
+    <% end %>
+</table>
