@@ -1,4 +1,5 @@
 class ArticlesController < ApplicationController
+
     def edit
         @article = Article.find(params[:id])    
     end
@@ -40,6 +41,10 @@ class ArticlesController < ApplicationController
         @article.destroy
 
         redirect_to articles_path
+    end
+        
+    def search
+        @articles = Article.search(params[:search])    
     end
 
     private

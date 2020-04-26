@@ -1923,3 +1923,647 @@ Processing by WelcomeController#index as HTML
 Completed 200 OK in 1091ms (Views: 1080.0ms | ActiveRecord: 0.0ms | Allocations: 21532)
 
 
+Started GET "/" for ::1 at 2020-04-26 10:57:48 +0900
+  [1m[35m (24.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 1522.9ms | Allocations: 28700)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 2594ms (Views: 2480.5ms | ActiveRecord: 0.0ms | Allocations: 50499)
+
+
+Started GET "/" for ::1 at 2020-04-26 11:06:30 +0900
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 29.7ms | Allocations: 1283)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 2193ms (Views: 2176.8ms | ActiveRecord: 0.0ms | Allocations: 21528)
+
+
+Started GET "/articles?class=nav-link" for ::1 at 2020-04-26 11:10:11 +0900
+Processing by ArticlesController#index as HTML
+  Parameters: {"class"=>"nav-link"}
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (3.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:15
+  Rendered articles/index.html.erb within layouts/application (Duration: 356.9ms | Allocations: 8676)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 1277ms (Views: 1235.7ms | ActiveRecord: 13.5ms | Allocations: 28943)
+
+
+Started GET "/articles" for ::1 at 2020-04-26 11:11:22 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (1.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:15
+Started GET "/" for ::1 at 2020-04-26 11:11:23 +0900
+  Rendered articles/index.html.erb within layouts/application (Duration: 714.2ms | Allocations: 3866)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 26.9ms | Allocations: 1514)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 2520ms (Views: 2508.0ms | ActiveRecord: 1.3ms | Allocations: 43445)
+
+
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 1701ms (Views: 1692.3ms | ActiveRecord: 0.0ms | Allocations: 32218)
+
+
+Started GET "/articles/new" for ::1 at 2020-04-26 11:11:31 +0900
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (Duration: 216.8ms | Allocations: 7719)
+  Rendered articles/new.html.erb within layouts/application (Duration: 239.8ms | Allocations: 8066)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 772ms (Views: 764.0ms | ActiveRecord: 0.0ms | Allocations: 27533)
+
+
+Started GET "/articles/new" for ::1 at 2020-04-26 11:11:40 +0900
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (Duration: 36.4ms | Allocations: 3043)
+  Rendered articles/new.html.erb within layouts/application (Duration: 214.9ms | Allocations: 3138)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 950ms (Views: 948.1ms | ActiveRecord: 0.0ms | Allocations: 22478)
+
+
+Started GET "/articles/new" for ::1 at 2020-04-26 11:11:43 +0900
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (Duration: 82.0ms | Allocations: 3042)
+  Rendered articles/new.html.erb within layouts/application (Duration: 165.4ms | Allocations: 3133)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 852ms (Views: 848.5ms | ActiveRecord: 0.0ms | Allocations: 22454)
+
+
+Started GET "/" for ::1 at 2020-04-26 11:11:48 +0900
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 61.7ms | Allocations: 1018)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 750ms (Views: 747.4ms | ActiveRecord: 0.0ms | Allocations: 20317)
+
+
+Started GET "/articles?class=nav-link" for ::1 at 2020-04-26 11:12:03 +0900
+Processing by ArticlesController#index as HTML
+  Parameters: {"class"=>"nav-link"}
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (1.5ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:15
+  Rendered articles/index.html.erb within layouts/application (Duration: 327.1ms | Allocations: 2650)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 1044ms (Views: 1039.4ms | ActiveRecord: 1.5ms | Allocations: 21956)
+
+
+Started GET "/articles?class=nav-link" for ::1 at 2020-04-26 11:12:07 +0900
+Processing by ArticlesController#index as HTML
+  Parameters: {"class"=>"nav-link"}
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (2.6ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:15
+  Rendered articles/index.html.erb within layouts/application (Duration: 197.5ms | Allocations: 2614)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 944ms (Views: 938.4ms | ActiveRecord: 2.6ms | Allocations: 21930)
+
+
+Started GET "/articles?class=nav-link" for ::1 at 2020-04-26 11:25:01 +0900
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ArticlesController#index as HTML
+  Parameters: {"class"=>"nav-link"}
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (2.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Article Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Article Load (0.0ms)[0m  [1m[34mSELECT "articles".* FROM "articles" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Article Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Article Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Article Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Article Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Article Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" LIMIT ?[0m  [["LIMIT", 11]]
+  Rendered articles/index.html.erb within layouts/application (Duration: 4253.7ms | Allocations: 190604)
+Completed 500 Internal Server Error in 4614ms (ActiveRecord: 2.6ms | Allocations: 192193)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `search_path' for #<#<Class:0x00000000090864f8>:0x00000000090af178>
+Did you mean?  search_field_tag):
+    3: <%= link_to 'New article', new_article_path%>
+    4: 
+    5: <p>Search</p>
+    6: <%= form_tag(search_path, :method => 'get') do %>
+    7:     <%= text_field_tag :search %>
+    8:     <%= submit_tag 'Search', :name => nil %>
+    9: <% end %>
+  
+app/views/articles/index.html.erb:6
+Started GET "/articles?class=nav-link" for ::1 at 2020-04-26 11:26:33 +0900
+Processing by ArticlesController#index as HTML
+  Parameters: {"class"=>"nav-link"}
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.9ms)[0m  [1m[34mSELECT "articles".* FROM "articles" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Article Load (0.0ms)[0m  [1m[34mSELECT "articles".* FROM "articles" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Article Load (0.0ms)[0m  [1m[34mSELECT "articles".* FROM "articles" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Article Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Article Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Article Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Article Load (0.0ms)[0m  [1m[34mSELECT "articles".* FROM "articles" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Article Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" LIMIT ?[0m  [["LIMIT", 11]]
+  Rendered articles/index.html.erb within layouts/application (Duration: 3297.0ms | Allocations: 185288)
+Completed 500 Internal Server Error in 3695ms (ActiveRecord: 1.5ms | Allocations: 186523)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `search_path' for #<#<Class:0x000000000c2ba988>:0x000000000c2b8a20>
+Did you mean?  search_field_tag):
+    3: <%= link_to 'New article', new_article_path%>
+    4: 
+    5: <p>Search</p>
+    6: <%= form_tag(search_path, :method => 'get') do %>
+    7:     <%= text_field_tag :search %>
+    8:     <%= submit_tag 'Search', :name => nil %>
+    9: <% end %>
+  
+app/views/articles/index.html.erb:6
+Started GET "/articles?class=nav-link" for ::1 at 2020-04-26 11:39:55 +0900
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ArticlesController#index as HTML
+  Parameters: {"class"=>"nav-link"}
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (1.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Article Load (0.0ms)[0m  [1m[34mSELECT "articles".* FROM "articles" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Article Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Article Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Article Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Article Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Article Load (0.6ms)[0m  [1m[34mSELECT "articles".* FROM "articles" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Article Load (0.0ms)[0m  [1m[34mSELECT "articles".* FROM "articles" LIMIT ?[0m  [["LIMIT", 11]]
+  Rendered articles/index.html.erb within layouts/application (Duration: 2578.9ms | Allocations: 189457)
+Completed 500 Internal Server Error in 2614ms (ActiveRecord: 2.3ms | Allocations: 190470)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `search_path' for #<#<Class:0x000000000c2cc278>:0x000000000c2dd050>
+Did you mean?  search_field_tag):
+    3: <%= link_to 'New article', new_article_path%>
+    4: 
+    5: <p>Search</p>
+    6: <%= form_tag(search_path, :method => 'get') do %>
+    7:     <%= text_field_tag :search %>
+    8:     <%= submit_tag 'Search', :name => nil %>
+    9: <% end %>
+  
+app/views/articles/index.html.erb:6
+Started GET "/articles?class=nav-link" for ::1 at 2020-04-26 11:40:54 +0900
+Processing by ArticlesController#index as HTML
+  Parameters: {"class"=>"nav-link"}
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (2.0ms)[0m  [1m[34mSELECT "articles".* FROM "articles" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Article Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Article Load (0.0ms)[0m  [1m[34mSELECT "articles".* FROM "articles" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Article Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Article Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Article Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Article Load (0.0ms)[0m  [1m[34mSELECT "articles".* FROM "articles" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Article Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" LIMIT ?[0m  [["LIMIT", 11]]
+  Rendered articles/index.html.erb within layouts/application (Duration: 2468.9ms | Allocations: 184604)
+Completed 500 Internal Server Error in 2487ms (ActiveRecord: 2.6ms | Allocations: 185065)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `search_path' for #<#<Class:0x000000000c2cc278>:0x000000000c0e1ff8>
+Did you mean?  search_field_tag):
+    3: <%= link_to 'New article', new_article_path%>
+    4: 
+    5: <p>Search</p>
+    6: <%= form_tag(search_path, :method => 'get') do %>
+    7:     <%= text_field_tag :search %>
+    8:     <%= submit_tag 'Search', :name => nil %>
+    9: <% end %>
+  
+app/views/articles/index.html.erb:6
+Started GET "/articles?class=nav-link" for ::1 at 2020-04-26 11:42:53 +0900
+Processing by ArticlesController#index as HTML
+  Parameters: {"class"=>"nav-link"}
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (1.0ms)[0m  [1m[34mSELECT "articles".* FROM "articles" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Article Load (0.0ms)[0m  [1m[34mSELECT "articles".* FROM "articles" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Article Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Article Load (0.0ms)[0m  [1m[34mSELECT "articles".* FROM "articles" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Article Load (0.0ms)[0m  [1m[34mSELECT "articles".* FROM "articles" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Article Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Article Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Article Load (0.0ms)[0m  [1m[34mSELECT "articles".* FROM "articles" LIMIT ?[0m  [["LIMIT", 11]]
+  Rendered articles/index.html.erb within layouts/application (Duration: 2048.2ms | Allocations: 184602)
+Completed 500 Internal Server Error in 2061ms (ActiveRecord: 1.5ms | Allocations: 185063)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `search_path' for #<#<Class:0x000000000c2cc278>:0x000000000c2c07e8>
+Did you mean?  search_field_tag):
+    3: <%= link_to 'New article', new_article_path%>
+    4: 
+    5: <p>Search</p>
+    6: <%= form_tag(search_path, :method => 'get') do %>
+    7:     <%= text_field_tag :search %>
+    8:     <%= submit_tag 'Search', :name => nil %>
+    9: <% end %>
+  
+app/views/articles/index.html.erb:6
+Started GET "/articles?class=nav-link" for ::1 at 2020-04-26 11:44:55 +0900
+Processing by ArticlesController#index as HTML
+  Parameters: {"class"=>"nav-link"}
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (1.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Article Load (0.0ms)[0m  [1m[34mSELECT "articles".* FROM "articles" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Article Load (0.0ms)[0m  [1m[34mSELECT "articles".* FROM "articles" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Article Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Article Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Article Load (0.0ms)[0m  [1m[34mSELECT "articles".* FROM "articles" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Article Load (0.0ms)[0m  [1m[34mSELECT "articles".* FROM "articles" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Article Load (0.0ms)[0m  [1m[34mSELECT "articles".* FROM "articles" LIMIT ?[0m  [["LIMIT", 11]]
+  Rendered articles/index.html.erb within layouts/application (Duration: 1502.1ms | Allocations: 184608)
+Completed 500 Internal Server Error in 1513ms (ActiveRecord: 1.7ms | Allocations: 185070)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `search_path' for #<#<Class:0x000000000c2cc278>:0x0000000007ae1dc8>
+Did you mean?  search_field_tag):
+    3: <%= link_to 'New article', new_article_path%>
+    4: 
+    5: <p>Search</p>
+    6: <%= form_tag(search_path, :method => 'get') do %>
+    7:     <%= text_field_tag :search %>
+    8:     <%= submit_tag 'Search', :name => nil %>
+    9: <% end %>
+  
+app/views/articles/index.html.erb:6
+Started GET "/articles" for ::1 at 2020-04-26 11:45:05 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (2.0ms)[0m  [1m[34mSELECT "articles".* FROM "articles" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Article Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Article Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Article Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Article Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Article Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/" for ::1 at 2020-04-26 11:45:06 +0900
+  [1m[36mCACHE Article Load (0.0ms)[0m  [1m[34mSELECT "articles".* FROM "articles" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Article Load (0.0ms)[0m  [1m[34mSELECT "articles".* FROM "articles" LIMIT ?[0m  [["LIMIT", 11]]
+  Rendered articles/index.html.erb within layouts/application (Duration: 2109.6ms | Allocations: 185705)
+Completed 500 Internal Server Error in 2123ms (ActiveRecord: 2.5ms | Allocations: 186166)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `search_path' for #<#<Class:0x000000000c2cc278>:0x00000000080ac028>
+Did you mean?  search_field_tag):
+    3: <%= link_to 'New article', new_article_path%>
+    4: 
+    5: <p>Search</p>
+    6: <%= form_tag(search_path, :method => 'get') do %>
+    7:     <%= text_field_tag :search %>
+    8:     <%= submit_tag 'Search', :name => nil %>
+    9: <% end %>
+  
+app/views/articles/index.html.erb:6
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 126.3ms | Allocations: 26954)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 637ms (Views: 612.0ms | ActiveRecord: 0.0ms | Allocations: 100047)
+
+
+Started GET "/articles?class=nav-link" for ::1 at 2020-04-26 11:45:15 +0900
+Processing by ArticlesController#index as HTML
+  Parameters: {"class"=>"nav-link"}
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (1.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Article Load (0.0ms)[0m  [1m[34mSELECT "articles".* FROM "articles" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Article Load (0.0ms)[0m  [1m[34mSELECT "articles".* FROM "articles" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Article Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Article Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Article Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Article Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Article Load (0.0ms)[0m  [1m[34mSELECT "articles".* FROM "articles" LIMIT ?[0m  [["LIMIT", 11]]
+  Rendered articles/index.html.erb within layouts/application (Duration: 1729.6ms | Allocations: 184662)
+Completed 500 Internal Server Error in 1739ms (ActiveRecord: 1.5ms | Allocations: 185110)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `search_path' for #<#<Class:0x000000000c2cc278>:0x000000000bbb2b18>
+Did you mean?  search_field_tag):
+    3: <%= link_to 'New article', new_article_path%>
+    4: 
+    5: <p>Search</p>
+    6: <%= form_tag(search_path, :method => 'get') do %>
+    7:     <%= text_field_tag :search %>
+    8:     <%= submit_tag 'Search', :name => nil %>
+    9: <% end %>
+  
+app/views/articles/index.html.erb:6
+Started PUT "/__web_console/repl_sessions/46896a76db9fc2c16dac1da6cc6c8bab" for ::1 at 2020-04-26 11:45:30 +0900
+Started GET "/" for ::1 at 2020-04-26 11:48:33 +0900
+  [1m[35m (59.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 994.2ms | Allocations: 27376)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 1949ms (Views: 1835.2ms | ActiveRecord: 0.0ms | Allocations: 51715)
+
+
+Started GET "/" for ::1 at 2020-04-26 11:48:44 +0900
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 30.9ms | Allocations: 1021)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 847ms (Views: 844.4ms | ActiveRecord: 0.0ms | Allocations: 22769)
+
+
+Started GET "/" for ::1 at 2020-04-26 11:48:51 +0900
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 12.4ms | Allocations: 1012)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 881ms (Views: 879.3ms | ActiveRecord: 0.0ms | Allocations: 22746)
+
+
+Started GET "/articles" for ::1 at 2020-04-26 11:49:16 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (1.8ms)[0m  [1m[34mSELECT "articles".* FROM "articles" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Article Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Article Load (0.0ms)[0m  [1m[34mSELECT "articles".* FROM "articles" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Article Load (0.0ms)[0m  [1m[34mSELECT "articles".* FROM "articles" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Article Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Article Load (0.0ms)[0m  [1m[34mSELECT "articles".* FROM "articles" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Article Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Article Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" LIMIT ?[0m  [["LIMIT", 11]]
+  Rendered articles/index.html.erb within layouts/application (Duration: 2320.6ms | Allocations: 193158)
+Completed 500 Internal Server Error in 2477ms (ActiveRecord: 9.9ms | Allocations: 194584)
+
+
+
+ActionView::Template::Error - undefined local variable or method `search_path' for #<#<Class:0x0000000008712c78>:0x00000000087439e0>
+Did you mean?  search_field_tag:
+
+Started POST "/__better_errors/07a5b4347ac53491/variables" for ::1 at 2020-04-26 11:49:22 +0900
+  [1m[36mArticle Load (0.8ms)[0m  [1m[34mSELECT "articles".* FROM "articles" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Article Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Article Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Article Load (0.0ms)[0m  [1m[34mSELECT "articles".* FROM "articles" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Article Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/articles" for ::1 at 2020-04-26 11:54:54 +0900
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/index.html.erb within layouts/application (Duration: 14.2ms | Allocations: 2815)
+Completed 500 Internal Server Error in 419ms (ActiveRecord: 0.0ms | Allocations: 4019)
+
+
+
+ActionView::Template::Error - No route matches {:action=>"show", :controller=>"articles"}, missing required keys: [:id]:
+
+Started POST "/__better_errors/e5452f07eab21312/variables" for ::1 at 2020-04-26 11:54:57 +0900
+  [1m[36mArticle Load (1.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles" LIMIT ?[0m  [["LIMIT", 11]]
+Started POST "/__better_errors/e5452f07eab21312/variables" for ::1 at 2020-04-26 11:56:07 +0900
+  [1m[36mArticle Load (1.0ms)[0m  [1m[34mSELECT "articles".* FROM "articles" LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/articles" for ::1 at 2020-04-26 11:58:18 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/index.html.erb within layouts/application (Duration: 7.8ms | Allocations: 2602)
+Completed 500 Internal Server Error in 244ms (ActiveRecord: 0.0ms | Allocations: 3800)
+
+
+
+ActionView::Template::Error - No route matches {:action=>"show", :controller=>"articles"}, missing required keys: [:id]:
+
+Started POST "/__better_errors/bb842d4a2ad7f2ce/variables" for ::1 at 2020-04-26 11:58:20 +0900
+  [1m[36mArticle Load (1.0ms)[0m  [1m[34mSELECT "articles".* FROM "articles" LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/articles" for ::1 at 2020-04-26 11:59:31 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (4.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:15
+  Rendered articles/index.html.erb within layouts/application (Duration: 336.0ms | Allocations: 3085)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 1202ms (Views: 1186.0ms | ActiveRecord: 4.3ms | Allocations: 25862)
+
+
+Started GET "/articles" for ::1 at 2020-04-26 12:19:28 +0900
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (1.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Article Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Article Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Article Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Article Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Article Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Article Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Article Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Article Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Article Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Article Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Article Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Article Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Article Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Article Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Article Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Article Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Article Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Article Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Article Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" LIMIT ?[0m  [["LIMIT", 11]]
+  Rendered articles/index.html.erb within layouts/application (Duration: 5705.0ms | Allocations: 239186)
+Completed 500 Internal Server Error in 5895ms (ActiveRecord: 2.7ms | Allocations: 240757)
+
+
+
+ActionView::Template::Error - undefined local variable or method `search_path' for #<#<Class:0x000000000bb74d90>:0x000000000bb7f308>
+Did you mean?  search_field_tag:
+
+Started POST "/__better_errors/bb6e33ec7c486c23/variables" for ::1 at 2020-04-26 12:19:37 +0900
+  [1m[36mArticle Load (2.0ms)[0m  [1m[34mSELECT "articles".* FROM "articles" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Article Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Article Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Article Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Article Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/articles" for ::1 at 2020-04-26 12:19:56 +0900
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (1.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Article Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Article Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Article Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Article Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Article Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Article Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Article Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Article Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Article Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Article Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Article Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Article Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Article Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Article Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Article Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Article Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Article Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Article Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Article Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" LIMIT ?[0m  [["LIMIT", 11]]
+  Rendered articles/index.html.erb within layouts/application (Duration: 6496.0ms | Allocations: 239153)
+Completed 500 Internal Server Error in 6641ms (ActiveRecord: 11.2ms | Allocations: 240138)
+
+
+
+ActionView::Template::Error - undefined local variable or method `search_path' for #<#<Class:0x000000000bdc8650>:0x000000000bdd1ac0>
+Did you mean?  search_field_tag:
+
+Started POST "/__better_errors/2a4a7fa0591f3499/variables" for ::1 at 2020-04-26 12:20:06 +0900
+  [1m[36mArticle Load (1.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Article Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Article Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Article Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Article Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/articles" for ::1 at 2020-04-26 12:22:27 +0900
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (1.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:21
+  Rendered articles/index.html.erb within layouts/application (Duration: 194.6ms | Allocations: 7995)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 1282ms (Views: 1259.3ms | ActiveRecord: 7.9ms | Allocations: 30545)
+
+
+Started GET "/search?search=%E5%90%9B" for ::1 at 2020-04-26 12:22:42 +0900
+
+ActionController::RoutingError - uninitialized constant ControllerController:
+
+Started POST "/__better_errors/463f29c5b1dee414/variables" for ::1 at 2020-04-26 12:22:44 +0900
+Started GET "/search?search=%E5%90%9B" for ::1 at 2020-04-26 12:24:29 +0900
+
+ActionController::RoutingError - uninitialized constant ControllerController:
+
+Started POST "/__better_errors/382a5dfc8aeb6d53/variables" for ::1 at 2020-04-26 12:24:30 +0900
+Started GET "/search?search=%E5%90%9B" for ::1 at 2020-04-26 12:27:18 +0900
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+
+ActionController::RoutingError - uninitialized constant ControllerController:
+
+Started POST "/__better_errors/71dab88275a05dc1/variables" for ::1 at 2020-04-26 12:27:21 +0900
+Started GET "/search?search=%E5%90%9B" for ::1 at 2020-04-26 12:27:30 +0900
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+
+ActionController::RoutingError - uninitialized constant ControllerController:
+
+Started POST "/__better_errors/2f7355a2f62046b0/variables" for ::1 at 2020-04-26 12:27:35 +0900
+Started GET "/search?search=%E5%90%9B" for ::1 at 2020-04-26 12:32:39 +0900
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+
+ActionController::RoutingError - uninitialized constant ControllerController:
+
+Started POST "/__better_errors/3ac70cfa053b261d/variables" for ::1 at 2020-04-26 12:32:40 +0900
+Started GET "/" for ::1 at 2020-04-26 12:38:01 +0900
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 25.4ms | Allocations: 1600)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 376ms (Views: 366.5ms | ActiveRecord: 0.0ms | Allocations: 24372)
+
+
+Started GET "/articles" for ::1 at 2020-04-26 12:39:07 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (1.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:21
+  Rendered articles/index.html.erb within layouts/application (Duration: 86.1ms | Allocations: 8406)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 423ms (Views: 395.1ms | ActiveRecord: 6.0ms | Allocations: 31557)
+
+
+Started GET "/search?search=%E5%90%9B" for ::1 at 2020-04-26 12:39:13 +0900
+
+ActionController::RoutingError - uninitialized constant ControllerController:
+
+Started POST "/__better_errors/b3822d0d0f66c844/variables" for ::1 at 2020-04-26 12:39:14 +0900
+Started GET "/search?search=%E5%90%9B" for ::1 at 2020-04-26 12:39:19 +0900
+
+ActionController::RoutingError - uninitialized constant ControllerController:
+
+Started POST "/__better_errors/1a1ae141b8c66cbb/variables" for ::1 at 2020-04-26 12:39:20 +0900
+Started GET "/search?search=%E5%90%9B" for ::1 at 2020-04-26 12:39:37 +0900
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+
+ActionController::RoutingError - uninitialized constant ControllerController:
+
+Started POST "/__better_errors/e56a33830308bf8c/variables" for ::1 at 2020-04-26 12:39:40 +0900
+Started GET "/articles" for ::1 at 2020-04-26 12:40:39 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (1.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:15
+  Rendered articles/index.html.erb within layouts/application (Duration: 130.1ms | Allocations: 8243)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 713ms (Views: 680.3ms | ActiveRecord: 7.9ms | Allocations: 31410)
+
+
+Started GET "/articles" for ::1 at 2020-04-26 12:41:18 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.7ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:16
+  Rendered articles/index.html.erb within layouts/application (Duration: 57.2ms | Allocations: 3043)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 415ms (Views: 406.0ms | ActiveRecord: 0.7ms | Allocations: 25730)
+
+
+Started GET "/search" for ::1 at 2020-04-26 12:41:21 +0900
+
+ActionController::RoutingError - uninitialized constant ControllerController:
+
+Started POST "/__better_errors/3efe083680446067/variables" for ::1 at 2020-04-26 12:41:22 +0900
+Started GET "/search" for ::1 at 2020-04-26 12:42:26 +0900
+
+ActionController::RoutingError - uninitialized constant ControllerController:
+
+Started POST "/__better_errors/038fec0c2c95bd0d/variables" for ::1 at 2020-04-26 12:42:27 +0900
+Started GET "/search" for ::1 at 2020-04-26 12:42:34 +0900
+
+ActionController::RoutingError - uninitialized constant ControllerController:
+
+Started POST "/__better_errors/cd30bea58e1ab2a1/variables" for ::1 at 2020-04-26 12:42:37 +0900
+Started GET "/search" for ::1 at 2020-04-26 12:42:46 +0900
+
+ActionController::RoutingError - uninitialized constant ControllerController:
+
+Started POST "/__better_errors/019e25160f157a1d/variables" for ::1 at 2020-04-26 12:42:47 +0900
+Started GET "/search" for ::1 at 2020-04-26 12:45:03 +0900
+
+ActionController::RoutingError - uninitialized constant ControllerController:
+
+Started POST "/__better_errors/b2737c041675b68f/variables" for ::1 at 2020-04-26 12:45:05 +0900
