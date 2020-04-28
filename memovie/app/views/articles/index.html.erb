@@ -2,7 +2,6 @@
 
 <%= link_to 'New article', new_article_path%>
 
-<p>Search</p>
 <%= form_tag(search_path, :method => 'get') do %>
     <%= text_field_tag :search %>
     <%= submit_tag 'Search', :name => nil %>
@@ -22,7 +21,7 @@
         <tr>
             <td><%= article.title %></td>
             <td><%= article.theater %></td>
-            <td><%= article.watched_date %></td>
+            <td><%= l article.watched_date %></td>
             <td><div id="star-rate-<%= article.rate %>"></div></td>
             <script>
                 $('#star-rate-<%= article.rate %>').raty({
