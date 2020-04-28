@@ -2920,3 +2920,251 @@ Processing by ArticlesController#index as HTML
 Completed 200 OK in 1278ms (Views: 1272.3ms | ActiveRecord: 1.3ms | Allocations: 24518)
 
 
+Started GET "/articles?class=nav-link" for ::1 at 2020-04-28 15:31:09 +0900
+  [1m[35m (22.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ArticlesController#index as HTML
+  Parameters: {"class"=>"nav-link"}
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (1.9ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:20
+  Rendered articles/index.html.erb within layouts/application (Duration: 992.7ms | Allocations: 37360)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 1722ms (Views: 1600.3ms | ActiveRecord: 16.9ms | Allocations: 62283)
+
+
+Started GET "/articles?class=nav-link" for ::1 at 2020-04-28 15:32:32 +0900
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ArticlesController#index as HTML
+  Parameters: {"class"=>"nav-link"}
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.9ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:20
+  Rendered articles/index.html.erb within layouts/application (Duration: 120.7ms | Allocations: 10650)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 454ms (Views: 420.4ms | ActiveRecord: 5.2ms | Allocations: 33366)
+
+
+Started GET "/articles?class=nav-link" for ::1 at 2020-04-28 15:36:09 +0900
+Processing by ArticlesController#index as HTML
+  Parameters: {"class"=>"nav-link"}
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (1.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:20
+  Rendered articles/index.html.erb within layouts/application (Duration: 71.0ms | Allocations: 3206)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 529ms (Views: 516.6ms | ActiveRecord: 1.2ms | Allocations: 25958)
+
+
+Started GET "/search?search=%E5%90%9B" for ::1 at 2020-04-28 15:36:19 +0900
+Processing by ArticlesController#search as HTML
+  Parameters: {"search"=>"君"}
+  Rendering articles/search.html.erb within layouts/application
+  [1m[36mArticle Load (1.8ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE (title LIKE '%君%')[0m
+  ↳ app/views/articles/search.html.erb:12
+  Rendered articles/search.html.erb within layouts/application (Duration: 56.6ms | Allocations: 3043)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 438ms (Views: 424.3ms | ActiveRecord: 1.8ms | Allocations: 25043)
+
+
+Started GET "/articles?class=nav-link" for ::1 at 2020-04-28 15:37:23 +0900
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ArticlesController#index as HTML
+  Parameters: {"class"=>"nav-link"}
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (2.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:20
+  Rendered articles/index.html.erb within layouts/application (Duration: 217.9ms | Allocations: 7990)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 1579ms (Views: 1534.2ms | ActiveRecord: 10.9ms | Allocations: 30714)
+
+
+Started GET "/search?search=MOVIX" for ::1 at 2020-04-28 15:37:36 +0900
+Processing by ArticlesController#search as HTML
+  Parameters: {"search"=>"MOVIX"}
+  Rendering articles/search.html.erb within layouts/application
+  [1m[36mArticle Load (1.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE (watched_date LIKE '%MOVIX%')[0m
+  ↳ app/views/articles/search.html.erb:12
+  Rendered articles/search.html.erb within layouts/application (Duration: 104.2ms | Allocations: 615)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 1121ms (Views: 1114.7ms | ActiveRecord: 1.1ms | Allocations: 22625)
+
+
+Started GET "/search?search=2020" for ::1 at 2020-04-28 15:38:01 +0900
+Processing by ArticlesController#search as HTML
+  Parameters: {"search"=>"2020"}
+  Rendering articles/search.html.erb within layouts/application
+  [1m[36mArticle Load (1.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE (watched_date LIKE '%2020%')[0m
+  ↳ app/views/articles/search.html.erb:12
+  Rendered articles/search.html.erb within layouts/application (Duration: 51.9ms | Allocations: 2650)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 357ms (Views: 351.9ms | ActiveRecord: 1.2ms | Allocations: 24552)
+
+
+Started GET "/search?search=%E4%BA%AC%E9%83%BD" for ::1 at 2020-04-28 15:38:14 +0900
+Processing by ArticlesController#search as HTML
+  Parameters: {"search"=>"京都"}
+  Rendering articles/search.html.erb within layouts/application
+  [1m[36mArticle Load (1.7ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE (watched_date LIKE '%京都%')[0m
+  ↳ app/views/articles/search.html.erb:12
+  Rendered articles/search.html.erb within layouts/application (Duration: 10.6ms | Allocations: 604)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 375ms (Views: 368.5ms | ActiveRecord: 1.7ms | Allocations: 22711)
+
+
+Started GET "/search?search=MOVIX%E4%BA%AC%E9%83%BD" for ::1 at 2020-04-28 15:38:55 +0900
+Processing by ArticlesController#search as HTML
+  Parameters: {"search"=>"MOVIX京都"}
+  Rendering articles/search.html.erb within layouts/application
+  [1m[36mArticle Load (1.7ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE (watched_date LIKE '%MOVIX京都%')[0m
+  ↳ app/views/articles/search.html.erb:12
+  Rendered articles/search.html.erb within layouts/application (Duration: 12.2ms | Allocations: 604)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 316ms (Views: 310.0ms | ActiveRecord: 1.7ms | Allocations: 22607)
+
+
+Started GET "/search?search=MOVIX%E4%BA%AC%E9%83%BD" for ::1 at 2020-04-28 15:38:59 +0900
+Processing by ArticlesController#search as HTML
+  Parameters: {"search"=>"MOVIX京都"}
+  Rendering articles/search.html.erb within layouts/application
+  [1m[36mArticle Load (1.9ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE (watched_date LIKE '%MOVIX京都%')[0m
+  ↳ app/views/articles/search.html.erb:12
+  Rendered articles/search.html.erb within layouts/application (Duration: 12.5ms | Allocations: 604)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 319ms (Views: 314.0ms | ActiveRecord: 1.9ms | Allocations: 22605)
+
+
+Started GET "/search?search=04" for ::1 at 2020-04-28 15:39:20 +0900
+Processing by ArticlesController#search as HTML
+  Parameters: {"search"=>"04"}
+  Rendering articles/search.html.erb within layouts/application
+  [1m[36mArticle Load (1.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE (watched_date LIKE '%04%')[0m
+  ↳ app/views/articles/search.html.erb:12
+  Rendered articles/search.html.erb within layouts/application (Duration: 51.0ms | Allocations: 2650)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 407ms (Views: 401.1ms | ActiveRecord: 1.3ms | Allocations: 24551)
+
+
+Started GET "/search?search=%E3%81%A4%E3%81%84%E3%81%A6" for ::1 at 2020-04-28 15:39:30 +0900
+Processing by ArticlesController#search as HTML
+  Parameters: {"search"=>"ついて"}
+  Rendering articles/search.html.erb within layouts/application
+  [1m[36mArticle Load (1.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE (watched_date LIKE '%ついて%')[0m
+  ↳ app/views/articles/search.html.erb:12
+  Rendered articles/search.html.erb within layouts/application (Duration: 12.7ms | Allocations: 604)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 316ms (Views: 310.3ms | ActiveRecord: 1.1ms | Allocations: 22603)
+
+
+Started GET "/search?search=%E9%83%BD" for ::1 at 2020-04-28 15:40:22 +0900
+Processing by ArticlesController#search as HTML
+  Parameters: {"search"=>"都"}
+  Rendering articles/search.html.erb within layouts/application
+  [1m[36mArticle Load (1.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE (watched_date LIKE '%都%')[0m
+  ↳ app/views/articles/search.html.erb:12
+  Rendered articles/search.html.erb within layouts/application (Duration: 14.5ms | Allocations: 604)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 332ms (Views: 327.0ms | ActiveRecord: 1.1ms | Allocations: 22615)
+
+
+Started GET "/search?search=%E9%83%BD" for ::1 at 2020-04-28 15:40:58 +0900
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ArticlesController#search as HTML
+  Parameters: {"search"=>"都"}
+  Rendering articles/search.html.erb within layouts/application
+  [1m[36mArticle Load (4.8ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE (watched_date LIKE '%都%')[0m
+  ↳ app/views/articles/search.html.erb:12
+  Rendered articles/search.html.erb within layouts/application (Duration: 249.0ms | Allocations: 1281)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 2071ms (Views: 2024.0ms | ActiveRecord: 7.0ms | Allocations: 24131)
+
+
+Started GET "/articles?class=nav-link" for ::1 at 2020-04-28 15:42:51 +0900
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ArticlesController#index as HTML
+  Parameters: {"class"=>"nav-link"}
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (1.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:20
+  Rendered articles/index.html.erb within layouts/application (Duration: 622.7ms | Allocations: 7990)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 3002ms (Views: 2785.3ms | ActiveRecord: 9.6ms | Allocations: 30614)
+
+
+Started GET "/search?search=%E9%83%BD" for ::1 at 2020-04-28 15:43:08 +0900
+Processing by ArticlesController#search as HTML
+  Parameters: {"search"=>"都"}
+  Rendering articles/search.html.erb within layouts/application
+  [1m[36mArticle Load (1.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE (watched_date LIKE '%都%')[0m
+  ↳ app/views/articles/search.html.erb:12
+  Rendered articles/search.html.erb within layouts/application (Duration: 15.4ms | Allocations: 605)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 355ms (Views: 349.4ms | ActiveRecord: 1.3ms | Allocations: 22571)
+
+
+Started GET "/search?search=%E5%90%9B" for ::1 at 2020-04-28 15:43:18 +0900
+Processing by ArticlesController#search as HTML
+  Parameters: {"search"=>"君"}
+  Rendering articles/search.html.erb within layouts/application
+  [1m[36mArticle Load (5.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE (watched_date LIKE '%君%')[0m
+  ↳ app/views/articles/search.html.erb:12
+  Rendered articles/search.html.erb within layouts/application (Duration: 15.7ms | Allocations: 604)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 301ms (Views: 292.7ms | ActiveRecord: 5.3ms | Allocations: 22656)
+
+
+Started GET "/search?search=%E5%90%9B" for ::1 at 2020-04-28 15:43:31 +0900
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ArticlesController#search as HTML
+  Parameters: {"search"=>"君"}
+  Rendering articles/search.html.erb within layouts/application
+  [1m[36mArticle Load (1.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE (watched_date LIKE '%君%')[0m
+  ↳ app/views/articles/search.html.erb:12
+  Rendered articles/search.html.erb within layouts/application (Duration: 129.7ms | Allocations: 1281)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 1240ms (Views: 1140.3ms | ActiveRecord: 6.6ms | Allocations: 24076)
+
+
+Started GET "/articles?class=nav-link" for ::1 at 2020-04-28 15:44:12 +0900
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ArticlesController#index as HTML
+  Parameters: {"class"=>"nav-link"}
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (1.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:20
+  Rendered articles/index.html.erb within layouts/application (Duration: 1460.3ms | Allocations: 7990)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 3637ms (Views: 3388.7ms | ActiveRecord: 7.4ms | Allocations: 30711)
+
+
+Started GET "/search?search=%E9%A3%9F%E3%81%B9%E3%81%9F%E3%81%84" for ::1 at 2020-04-28 15:44:27 +0900
+Processing by ArticlesController#search as HTML
+  Parameters: {"search"=>"食べたい"}
+  Rendering articles/search.html.erb within layouts/application
+  [1m[36mArticle Load (3.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE (watched_date LIKE '%食べたい%')[0m
+  ↳ app/views/articles/search.html.erb:12
+  Rendered articles/search.html.erb within layouts/application (Duration: 388.3ms | Allocations: 605)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 1420ms (Views: 1412.4ms | ActiveRecord: 3.3ms | Allocations: 22606)
+
+

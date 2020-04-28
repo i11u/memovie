@@ -13,7 +13,7 @@
         <tr>
             <td><%= article.title %></td>
             <td><%= article.theater %></td>
-            <td><%= article.watched_date %></td>
+            <td><%= l article.watched_date %></td>
             <td><div id="star-rate-<%= article.rate %>"></div></td>
             <script>
                 $('#star-rate-<%= article.rate %>').raty({
