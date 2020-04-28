@@ -362,3 +362,369 @@ ArticleTest: test_should_report_error
 -------------------------------------
   [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
   [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (14.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (1.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (6.2ms)[0m  [1m[31mDELETE FROM "articles";
+INSERT INTO "articles" ("id", "title", "text", "theater", "watched_date", "rate", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyText', 'MyString', '2020-04-19 19:42:47', 1, '2020-04-28 12:10:22.546075', '2020-04-28 12:10:22.546075');
+INSERT INTO "articles" ("id", "title", "text", "theater", "watched_date", "rate", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyText', 'MyString', '2020-04-19 19:42:47', 1, '2020-04-28 12:10:22.546075', '2020-04-28 12:10:22.546075')[0m
+  [1m[35m (10.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------
+ArticleTest: test_should_report_error
+-------------------------------------
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (14.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (5.4ms)[0m  [1m[31mDELETE FROM "articles";
+INSERT INTO "articles" ("id", "title", "text", "theater", "watched_date", "rate", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyText', 'MyString', '2020-04-19 19:42:47', 1, '2020-04-28 12:11:12.214899', '2020-04-28 12:11:12.214899');
+INSERT INTO "articles" ("id", "title", "text", "theater", "watched_date", "rate", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyText', 'MyString', '2020-04-19 19:42:47', 1, '2020-04-28 12:11:12.214899', '2020-04-28 12:11:12.214899')[0m
+  [1m[35m (7.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------
+ArticleTest: test_should_not_save_article_without_title
+-------------------------------------------------------
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (14.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (7.0ms)[0m  [1m[31mDELETE FROM "articles";
+INSERT INTO "articles" ("id", "title", "text", "theater", "watched_date", "rate", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyText', 'MyString', '2020-04-19 19:42:47', 1, '2020-04-28 12:12:07.657360', '2020-04-28 12:12:07.657360');
+INSERT INTO "articles" ("id", "title", "text", "theater", "watched_date", "rate", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyText', 'MyString', '2020-04-19 19:42:47', 1, '2020-04-28 12:12:07.657360', '2020-04-28 12:12:07.657360')[0m
+  [1m[35m (7.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------
+ArticleTest: test_should_report_error
+-------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (15.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (3.1ms)[0m  [1m[31mDELETE FROM "articles";
+INSERT INTO "articles" ("id", "title", "text", "theater", "watched_date", "rate", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyText', 'MyString', '2020-04-19 19:42:47', 1, '2020-04-28 12:19:50.905604', '2020-04-28 12:19:50.905604');
+INSERT INTO "articles" ("id", "title", "text", "theater", "watched_date", "rate", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyText', 'MyString', '2020-04-19 19:42:47', 1, '2020-04-28 12:19:50.905604', '2020-04-28 12:19:50.905604')[0m
+  [1m[35m (7.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------
+ArticlesTest: test_viewing_the_index
+------------------------------------
+Started GET "/articles" for 127.0.0.1 at 2020-04-28 21:20:07 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mArticle Load (1.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (Duration: 18296.1ms | Allocations: 94867)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in C:/assignment/memovie/public/packs-test
+[Webpacker] Hash: a0d76b6b9bf4ff8f2195
+Version: webpack 4.42.1
+Time: 38720ms
+Built at: 2020-04-28 21:21:22
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-c6ece846e95fd771ac04.js    842 KiB  application  [emitted] [immutable]  application
+js/application-c6ece846e95fd771ac04.js.map    898 KiB  application  [emitted] [dev]        application
+           js/raty-8c52ba8b820af246a2dd.js    432 KiB         raty  [emitted] [immutable]  raty
+       js/raty-8c52ba8b820af246a2dd.js.map    420 KiB         raty  [emitted] [dev]        raty
+                             manifest.json  694 bytes               [emitted]              
+Entrypoint application = js/application-c6ece846e95fd771ac04.js js/application-c6ece846e95fd771ac04.js.map
+Entrypoint raty = js/raty-8c52ba8b820af246a2dd.js js/raty-8c52ba8b820af246a2dd.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 769 bytes {application} [built]
+[./app/javascript/packs/raty.js] 19.1 KiB {raty} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 111 hidden modules
+
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 74904ms (Views: 74805.3ms | ActiveRecord: 4.6ms | Allocations: 101818)
+Started GET "/assets/application-5938c676e174c17751cb7248d66d4a4b21a6c4a58c737a08e8a8f0f542907b64.css" for 127.0.0.1 at 2020-04-28 21:21:22 +0900
+Started GET "/assets/star-on-fd26bf0ea0990cfd808f7540f958eed324b86fc609bf56ec2b3a5612cdfde5f5.png" for 127.0.0.1 at 2020-04-28 21:21:23 +0900
+Started GET "/assets/star-off-6aaeebdaab93d594c005d366ce0d94fba02e7a07fd03557dbee8482f04a91c22.png" for 127.0.0.1 at 2020-04-28 21:21:23 +0900
+  [1m[35m (0.5ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (14.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.6ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (4.4ms)[0m  [1m[31mDELETE FROM "articles";
+INSERT INTO "articles" ("id", "title", "text", "theater", "watched_date", "rate", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyText', 'MyString', '2020-04-19 19:42:47', 1, '2020-04-28 12:22:25.259041', '2020-04-28 12:22:25.259041');
+INSERT INTO "articles" ("id", "title", "text", "theater", "watched_date", "rate", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyText', 'MyString', '2020-04-19 19:42:47', 1, '2020-04-28 12:22:25.259041', '2020-04-28 12:22:25.259041')[0m
+  [1m[35m (8.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------
+ArticlesTest: test_viewing_the_index
+------------------------------------
+Started GET "/articles" for 127.0.0.1 at 2020-04-28 21:22:39 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mArticle Load (1.0ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (Duration: 13071.4ms | Allocations: 78553)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13284ms (Views: 13218.4ms | ActiveRecord: 3.3ms | Allocations: 83497)
+Started GET "/assets/application-5938c676e174c17751cb7248d66d4a4b21a6c4a58c737a08e8a8f0f542907b64.css" for 127.0.0.1 at 2020-04-28 21:22:53 +0900
+Started GET "/assets/star-off-6aaeebdaab93d594c005d366ce0d94fba02e7a07fd03557dbee8482f04a91c22.png" for 127.0.0.1 at 2020-04-28 21:22:53 +0900
+Started GET "/assets/star-on-fd26bf0ea0990cfd808f7540f958eed324b86fc609bf56ec2b3a5612cdfde5f5.png" for 127.0.0.1 at 2020-04-28 21:22:53 +0900
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (16.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (3.8ms)[0m  [1m[31mDELETE FROM "articles";
+INSERT INTO "articles" ("id", "title", "text", "theater", "watched_date", "rate", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyText', 'MyString', '2020-04-19 19:42:47', 1, '2020-04-28 12:24:48.079884', '2020-04-28 12:24:48.079884');
+INSERT INTO "articles" ("id", "title", "text", "theater", "watched_date", "rate", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyText', 'MyString', '2020-04-19 19:42:47', 1, '2020-04-28 12:24:48.079884', '2020-04-28 12:24:48.079884')[0m
+  [1m[35m (6.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------
+ArticlesTest: test_viewing_the_index
+------------------------------------
+Started GET "/articles" for 127.0.0.1 at 2020-04-28 21:25:03 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mArticle Load (15.8ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (Duration: 13226.7ms | Allocations: 84150)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13538ms (Views: 13400.6ms | ActiveRecord: 19.5ms | Allocations: 89091)
+Started GET "/assets/application-5938c676e174c17751cb7248d66d4a4b21a6c4a58c737a08e8a8f0f542907b64.css" for 127.0.0.1 at 2020-04-28 21:25:16 +0900
+Started GET "/assets/star-off-6aaeebdaab93d594c005d366ce0d94fba02e7a07fd03557dbee8482f04a91c22.png" for 127.0.0.1 at 2020-04-28 21:25:17 +0900
+Started GET "/assets/star-on-fd26bf0ea0990cfd808f7540f958eed324b86fc609bf56ec2b3a5612cdfde5f5.png" for 127.0.0.1 at 2020-04-28 21:25:17 +0900
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (14.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (6.5ms)[0m  [1m[31mDELETE FROM "articles";
+INSERT INTO "articles" ("id", "title", "text", "theater", "watched_date", "rate", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyText', 'MyString', '2020-04-19 19:42:47', 1, '2020-04-28 12:26:35.554786', '2020-04-28 12:26:35.554786');
+INSERT INTO "articles" ("id", "title", "text", "theater", "watched_date", "rate", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyText', 'MyString', '2020-04-19 19:42:47', 1, '2020-04-28 12:26:35.554786', '2020-04-28 12:26:35.554786')[0m
+  [1m[35m (6.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------
+ArticlesTest: test_viewing_the_index
+------------------------------------
+Started GET "/articles" for 127.0.0.1 at 2020-04-28 21:26:49 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mArticle Load (3.9ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (Duration: 14000.0ms | Allocations: 84156)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14276ms (Views: 14178.1ms | ActiveRecord: 9.1ms | Allocations: 89099)
+Started GET "/assets/application-5938c676e174c17751cb7248d66d4a4b21a6c4a58c737a08e8a8f0f542907b64.css" for 127.0.0.1 at 2020-04-28 21:27:04 +0900
+Started GET "/assets/star-off-6aaeebdaab93d594c005d366ce0d94fba02e7a07fd03557dbee8482f04a91c22.png" for 127.0.0.1 at 2020-04-28 21:27:04 +0900
+Started GET "/assets/star-on-fd26bf0ea0990cfd808f7540f958eed324b86fc609bf56ec2b3a5612cdfde5f5.png" for 127.0.0.1 at 2020-04-28 21:27:04 +0900
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (14.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (4.3ms)[0m  [1m[31mDELETE FROM "articles";
+INSERT INTO "articles" ("id", "title", "text", "theater", "watched_date", "rate", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyText', 'MyString', '2020-04-19 19:42:47', 1, '2020-04-28 12:32:04.319751', '2020-04-28 12:32:04.319751');
+INSERT INTO "articles" ("id", "title", "text", "theater", "watched_date", "rate", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyText', 'MyString', '2020-04-19 19:42:47', 1, '2020-04-28 12:32:04.319751', '2020-04-28 12:32:04.319751')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (2.7ms)[0m  [1m[31mDELETE FROM "articles";
+INSERT INTO "articles" ("id", "title", "text", "theater", "watched_date", "rate", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyText', 'MyString', '2020-04-19 19:42:47', 1, '2020-04-28 12:32:04.313403', '2020-04-28 12:32:04.313403');
+INSERT INTO "articles" ("id", "title", "text", "theater", "watched_date", "rate", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyText', 'MyString', '2020-04-19 19:42:47', 1, '2020-04-28 12:32:04.313403', '2020-04-28 12:32:04.313403')[0m
+  [1m[35m (7.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------
+ArticlesTest: test_creating_an_article
+--------------------------------------
+  [1m[35m (7.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------
+ArticlesTest: test_viewing_the_index
+------------------------------------
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (19.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.4ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (4.7ms)[0m  [1m[31mDELETE FROM "articles";
+INSERT INTO "articles" ("id", "title", "text", "theater", "watched_date", "rate", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyText', 'MyString', '2020-04-19 19:42:47', 1, '2020-04-28 12:39:54.072853', '2020-04-28 12:39:54.072853');
+INSERT INTO "articles" ("id", "title", "text", "theater", "watched_date", "rate", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyText', 'MyString', '2020-04-19 19:42:47', 1, '2020-04-28 12:39:54.072853', '2020-04-28 12:39:54.072853')[0m
+  [1m[35m (7.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------
+ArticlesTest: test_creating_an_article
+--------------------------------------
+Started GET "/articles" for 127.0.0.1 at 2020-04-28 21:40:11 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mArticle Load (2.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (Duration: 19829.0ms | Allocations: 84205)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 20160ms (Views: 19985.7ms | ActiveRecord: 4.5ms | Allocations: 89148)
+Started GET "/assets/application-5938c676e174c17751cb7248d66d4a4b21a6c4a58c737a08e8a8f0f542907b64.css" for 127.0.0.1 at 2020-04-28 21:40:31 +0900
+Started GET "/assets/star-off-6aaeebdaab93d594c005d366ce0d94fba02e7a07fd03557dbee8482f04a91c22.png" for 127.0.0.1 at 2020-04-28 21:40:32 +0900
+Started GET "/assets/star-on-fd26bf0ea0990cfd808f7540f958eed324b86fc609bf56ec2b3a5612cdfde5f5.png" for 127.0.0.1 at 2020-04-28 21:40:32 +0900
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (14.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (4.0ms)[0m  [1m[31mDELETE FROM "articles";
+INSERT INTO "articles" ("id", "title", "text", "theater", "watched_date", "rate", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyText', 'MyString', '2020-04-19 19:42:47', 1, '2020-04-28 13:23:07.138345', '2020-04-28 13:23:07.138345');
+INSERT INTO "articles" ("id", "title", "text", "theater", "watched_date", "rate", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyText', 'MyString', '2020-04-19 19:42:47', 1, '2020-04-28 13:23:07.138345', '2020-04-28 13:23:07.138345')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.4ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (8.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------
+ArticlesTest: test_viewing_the_index
+------------------------------------
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (3.2ms)[0m  [1m[31mDELETE FROM "articles";
+INSERT INTO "articles" ("id", "title", "text", "theater", "watched_date", "rate", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyText', 'MyString', '2020-04-19 19:42:47', 1, '2020-04-28 13:23:07.133397', '2020-04-28 13:23:07.133397');
+INSERT INTO "articles" ("id", "title", "text", "theater", "watched_date", "rate", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyText', 'MyString', '2020-04-19 19:42:47', 1, '2020-04-28 13:23:07.133397', '2020-04-28 13:23:07.133397')[0m
+  [1m[35m (6.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------
+ArticlesTest: test_creating_an_article
+--------------------------------------
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (16.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.5ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.6ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (3.1ms)[0m  [1m[31mDELETE FROM "articles";
+INSERT INTO "articles" ("id", "title", "text", "theater", "watched_date", "rate", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyText', 'MyString', '2020-04-19 19:42:47', 1, '2020-04-28 13:33:56.266089', '2020-04-28 13:33:56.266089');
+INSERT INTO "articles" ("id", "title", "text", "theater", "watched_date", "rate", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyText', 'MyString', '2020-04-19 19:42:47', 1, '2020-04-28 13:33:56.266089', '2020-04-28 13:33:56.266089')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (3.3ms)[0m  [1m[31mDELETE FROM "articles";
+INSERT INTO "articles" ("id", "title", "text", "theater", "watched_date", "rate", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyText', 'MyString', '2020-04-19 19:42:47', 1, '2020-04-28 13:33:56.258723', '2020-04-28 13:33:56.258723');
+INSERT INTO "articles" ("id", "title", "text", "theater", "watched_date", "rate", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyText', 'MyString', '2020-04-19 19:42:47', 1, '2020-04-28 13:33:56.258723', '2020-04-28 13:33:56.258723')[0m
+  [1m[35m (8.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------
+ArticlesTest: test_viewing_the_index
+------------------------------------
+  [1m[35m (12.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------
+ArticlesTest: test_creating_an_article
+--------------------------------------
+  [1m[35m (0.5ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
