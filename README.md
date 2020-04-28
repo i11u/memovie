@@ -8,7 +8,8 @@
 
 4/25にBootStrapでデザイン変更。Gitにコミット，プッシュした際にGithub上でmemovieディレクトリが見れなくなるエラーに陥ったためネット記事を見て対処しようとするが，泥沼にはまったのでリモートレポジトリを削除，新規作成した。（後にエラーは解消。memovieがsubmoduleになっていたらしく，submodule init&updateで解決。）
 
-4/26に検索機能追加。articles/index.html.erbに検索ボックスを設置し，検索ワードがタイトル，劇場，日時のいずれかに合致するとsearch.html.erbに飛んで検索結果を表示する。
+4/26に検索機能追加。articles/index.html.erbに検索ボックスを設置し，検索ワードがタイトルに合致するとsearch.html.erbに飛んで検索結果を表示する。
 
 4/27に日時のFormatを変更（参照：https://qiita.com/jnchito/items/831654253fb8a958ec25）。
+検索ワードがタイトル，劇場，日時のいずれかに合致すると検索結果を表示するようにmodels/artcile.rbを変更（参照：https://qiita.com/bSRATulen2N90kL/items/6a7c99bf3641ac6838fb）。
 また，テスト機能を設定完了。
