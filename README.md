@@ -12,4 +12,48 @@
 
 4/27に日時のFormatを変更（参照：https://qiita.com/jnchito/items/831654253fb8a958ec25）。
 検索ワードがタイトル，劇場，日時のいずれかに合致すると検索結果を表示するようにmodels/artcile.rbを変更（参照：https://qiita.com/bSRATulen2N90kL/items/6a7c99bf3641ac6838fb）。
-また，テスト機能を設定完了。
+システムテストを作成途中（https://railsguides.jp/testing.html「6.3.1 記事のシステムテストを作成する」）でIOErrorが出てきたが，修正方法がヒットしないので放置。
+
+↓↓以下エラー文
+Error:
+ArticlesTest#test_creating_an_article:
+IOError: stream closed in another thread
+    test/system/articles_test.rb:10:in `block in <class:ArticlesTest>'
+
+Error:
+ArticlesTest#test_creating_an_article:
+IOError: stream closed in another thread
+
+
+Error:
+ArticlesTest#test_creating_an_article:
+IOError: stream closed in another thread
+
+
+
+rails test test/system/articles_test.rb:9
+
+E
+
+Error:
+ArticlesTest#test_viewing_the_index:
+Net::ReadTimeout: Net::ReadTimeout with #<TCPSocket:(closed)>    
+    test/system/articles_test.rb:5:in `block in <class:ArticlesTest>'
+
+Error:
+ArticlesTest#test_viewing_the_index:
+Net::ReadTimeout: Net::ReadTimeout with #<TCPSocket:fd 16, AF_INET, 127.0.0.1, 58213>
+
+
+Error:
+ArticlesTest#test_viewing_the_index:
+Net::ReadTimeout: Net::ReadTimeout with #<TCPSocket:fd 5, AF_INET, 127.0.0.1, 58224>
+
+
+
+rails test test/system/articles_test.rb:4
+
+
+
+Finished in 259.011793s, 0.0077 runs/s, 0.0000 assertions/s.     
+2 runs, 0 assertions, 0 failures, 2 errors, 0 skips
