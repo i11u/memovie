@@ -12,7 +12,9 @@ class ArticlesTest < ApplicationSystemTestCase
     click_on "New Article"
 
     fill_in "Title", with: "Creating an Article"
-    fill_in "Theater", with: "Created this article successfully!"
+    fill_in "Theater", with: "ユナイテッドシネマ福岡"
+    fill_in "Watched date", with: "2018/07/16 12:00:00 +09:00"
+    fill_in "Text", with: "Created this article successfully!"
 
     click_on "Create Article"
 

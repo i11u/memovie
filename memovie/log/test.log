@@ -728,3 +728,1607 @@ ArticlesTest: test_creating_an_article
 --------------------------------------
   [1m[35m (0.5ms)[0m  [1m[31mrollback transaction[0m
   [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (26.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (6.3ms)[0m  [1m[31mDELETE FROM "articles";
+INSERT INTO "articles" ("id", "title", "text", "theater", "watched_date", "rate", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyText', 'MyString', '2020-04-19 19:42:47', 1, '2020-04-29 07:54:40.529192', '2020-04-29 07:54:40.529192');
+INSERT INTO "articles" ("id", "title", "text", "theater", "watched_date", "rate", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyText', 'MyString', '2020-04-19 19:42:47', 1, '2020-04-29 07:54:40.529192', '2020-04-29 07:54:40.529192')[0m
+  [1m[35m (8.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.4ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------
+ArticlesTest: test_viewing_the_index
+------------------------------------
+Started GET "/articles" for 127.0.0.1 at 2020-04-29 16:55:02 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mArticle Load (1.9ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (Duration: 22467.5ms | Allocations: 84310)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 22858ms (Views: 22681.7ms | ActiveRecord: 4.6ms | Allocations: 89255)
+Started GET "/assets/application-5938c676e174c17751cb7248d66d4a4b21a6c4a58c737a08e8a8f0f542907b64.css" for 127.0.0.1 at 2020-04-29 16:55:26 +0900
+Started GET "/assets/star-on-fd26bf0ea0990cfd808f7540f958eed324b86fc609bf56ec2b3a5612cdfde5f5.png" for 127.0.0.1 at 2020-04-29 16:55:27 +0900
+Started GET "/assets/star-off-6aaeebdaab93d594c005d366ce0d94fba02e7a07fd03557dbee8482f04a91c22.png" for 127.0.0.1 at 2020-04-29 16:55:27 +0900
+Started GET "/articles/new" for 127.0.0.1 at 2020-04-29 16:56:10 +0900
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (Duration: 182.3ms | Allocations: 3778)
+  Rendered articles/new.html.erb within layouts/application (Duration: 203.3ms | Allocations: 4106)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 335ms (Views: 305.1ms | ActiveRecord: 0.0ms | Allocations: 6893)
+  [1m[35m (0.5ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (23.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.5ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (6.6ms)[0m  [1m[31mDELETE FROM "articles";
+INSERT INTO "articles" ("id", "title", "text", "theater", "watched_date", "rate", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyText', 'MyString', '2020-04-19 19:42:47', 1, '2020-04-29 07:58:33.602918', '2020-04-29 07:58:33.602918');
+INSERT INTO "articles" ("id", "title", "text", "theater", "watched_date", "rate", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyText', 'MyString', '2020-04-19 19:42:47', 1, '2020-04-29 07:58:33.602918', '2020-04-29 07:58:33.602918')[0m
+  [1m[35m (11.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------
+ArticlesTest: test_viewing_the_index
+------------------------------------
+Started GET "/articles" for 127.0.0.1 at 2020-04-29 16:58:50 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mArticle Load (5.5ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (Duration: 16324.6ms | Allocations: 84335)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16653ms (Views: 16523.0ms | ActiveRecord: 11.0ms | Allocations: 89279)
+Started GET "/assets/application-5938c676e174c17751cb7248d66d4a4b21a6c4a58c737a08e8a8f0f542907b64.css" for 127.0.0.1 at 2020-04-29 16:59:07 +0900
+Started GET "/assets/star-on-fd26bf0ea0990cfd808f7540f958eed324b86fc609bf56ec2b3a5612cdfde5f5.png" for 127.0.0.1 at 2020-04-29 16:59:08 +0900
+Started GET "/assets/star-off-6aaeebdaab93d594c005d366ce0d94fba02e7a07fd03557dbee8482f04a91c22.png" for 127.0.0.1 at 2020-04-29 16:59:08 +0900
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (44.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.6ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (2.2ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (1.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (7.9ms)[0m  [1m[31mDELETE FROM "articles";
+INSERT INTO "articles" ("id", "title", "text", "theater", "watched_date", "rate", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyText', 'MyString', '2020-04-19 19:42:47', 1, '2020-04-29 08:00:34.875659', '2020-04-29 08:00:34.875659');
+INSERT INTO "articles" ("id", "title", "text", "theater", "watched_date", "rate", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyText', 'MyString', '2020-04-19 19:42:47', 1, '2020-04-29 08:00:34.875659', '2020-04-29 08:00:34.875659')[0m
+  [1m[35m (9.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------
+ArticlesTest: test_creating_an_article
+--------------------------------------
+Started GET "/articles" for 127.0.0.1 at 2020-04-29 17:00:50 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mArticle Load (1.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (Duration: 16199.8ms | Allocations: 84382)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16512ms (Views: 16421.0ms | ActiveRecord: 3.2ms | Allocations: 89326)
+Started GET "/assets/application-5938c676e174c17751cb7248d66d4a4b21a6c4a58c737a08e8a8f0f542907b64.css" for 127.0.0.1 at 2020-04-29 17:01:07 +0900
+Started GET "/assets/star-off-6aaeebdaab93d594c005d366ce0d94fba02e7a07fd03557dbee8482f04a91c22.png" for 127.0.0.1 at 2020-04-29 17:01:07 +0900
+Started GET "/assets/star-on-fd26bf0ea0990cfd808f7540f958eed324b86fc609bf56ec2b3a5612cdfde5f5.png" for 127.0.0.1 at 2020-04-29 17:01:07 +0900
+Started GET "/articles/new" for 127.0.0.1 at 2020-04-29 17:01:09 +0900
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (Duration: 153.5ms | Allocations: 4967)
+  Rendered articles/new.html.erb within layouts/application (Duration: 179.4ms | Allocations: 6318)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 277ms (Views: 263.0ms | ActiveRecord: 0.0ms | Allocations: 10629)
+Started POST "/articles" for 127.0.0.1 at 2020-04-29 17:01:11 +0900
+Processing by ArticlesController#create as HTML
+  Parameters: {"article"=>{"title"=>"Creating an Article", "theater"=>"Created this article successfully!", "watched_date"=>"", "rate"=>"", "text"=>""}, "commit"=>"Create Article"}
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mArticle Create (5.4ms)[0m  [1m[32mINSERT INTO "articles" ("title", "text", "theater", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Creating an Article"], ["text", ""], ["theater", "Created this article successfully!"], ["created_at", "2020-04-29 08:01:11.360817"], ["updated_at", "2020-04-29 08:01:11.360817"]]
+  [1m[35m (7.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://127.0.0.1:61030/articles/980190963
+Completed 302 Found in 33ms (ActiveRecord: 12.7ms | Allocations: 1024)
+Started GET "/articles/980190963" for 127.0.0.1 at 2020-04-29 17:01:11 +0900
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"980190963"}
+  [1m[36mArticle Load (1.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190963], ["LIMIT", 1]]
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (Duration: 25.7ms | Allocations: 1026)
+Completed 500 Internal Server Error in 41ms (ActiveRecord: 1.2ms | Allocations: 1743)
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (32.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (5.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (5.6ms)[0m  [1m[31mDELETE FROM "articles";
+INSERT INTO "articles" ("id", "title", "text", "theater", "watched_date", "rate", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyText', 'MyString', '2020-04-19 19:42:47', 1, '2020-04-29 08:03:41.210974', '2020-04-29 08:03:41.210974');
+INSERT INTO "articles" ("id", "title", "text", "theater", "watched_date", "rate", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyText', 'MyString', '2020-04-19 19:42:47', 1, '2020-04-29 08:03:41.210974', '2020-04-29 08:03:41.210974')[0m
+  [1m[35m (9.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------
+ArticlesTest: test_creating_an_article
+--------------------------------------
+Started GET "/articles" for 127.0.0.1 at 2020-04-29 17:03:57 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mArticle Load (1.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (Duration: 16321.8ms | Allocations: 84405)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16541ms (Views: 16478.2ms | ActiveRecord: 2.9ms | Allocations: 89348)
+Started GET "/assets/application-5938c676e174c17751cb7248d66d4a4b21a6c4a58c737a08e8a8f0f542907b64.css" for 127.0.0.1 at 2020-04-29 17:04:14 +0900
+Started GET "/assets/star-off-6aaeebdaab93d594c005d366ce0d94fba02e7a07fd03557dbee8482f04a91c22.png" for 127.0.0.1 at 2020-04-29 17:04:14 +0900
+Started GET "/assets/star-on-fd26bf0ea0990cfd808f7540f958eed324b86fc609bf56ec2b3a5612cdfde5f5.png" for 127.0.0.1 at 2020-04-29 17:04:14 +0900
+Started GET "/articles/new" for 127.0.0.1 at 2020-04-29 17:04:16 +0900
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (Duration: 168.1ms | Allocations: 5681)
+  Rendered articles/new.html.erb within layouts/application (Duration: 178.7ms | Allocations: 6009)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 275ms (Views: 267.0ms | ActiveRecord: 0.0ms | Allocations: 10629)
+Started POST "/articles" for 127.0.0.1 at 2020-04-29 17:04:18 +0900
+Processing by ArticlesController#create as HTML
+  Parameters: {"article"=>{"title"=>"Creating an Article", "theater"=>"", "watched_date"=>"", "rate"=>"", "text"=>"Created this article successfully!"}, "commit"=>"Create Article"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mArticle Create (5.0ms)[0m  [1m[32mINSERT INTO "articles" ("title", "text", "theater", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Creating an Article"], ["text", "Created this article successfully!"], ["theater", ""], ["created_at", "2020-04-29 08:04:18.075976"], ["updated_at", "2020-04-29 08:04:18.075976"]]
+  [1m[35m (7.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://127.0.0.1:61076/articles/980190964
+Completed 302 Found in 32ms (ActiveRecord: 12.4ms | Allocations: 1024)
+Started GET "/articles/980190964" for 127.0.0.1 at 2020-04-29 17:04:18 +0900
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"980190964"}
+  [1m[36mArticle Load (1.0ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190964], ["LIMIT", 1]]
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (Duration: 21.7ms | Allocations: 1025)
+Completed 500 Internal Server Error in 40ms (ActiveRecord: 1.0ms | Allocations: 1742)
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (15.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (4.7ms)[0m  [1m[31mDELETE FROM "articles";
+INSERT INTO "articles" ("id", "title", "text", "theater", "watched_date", "rate", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyText', 'MyString', '2020-04-19 19:42:47', 1, '2020-04-29 08:13:23.376675', '2020-04-29 08:13:23.376675');
+INSERT INTO "articles" ("id", "title", "text", "theater", "watched_date", "rate", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyText', 'MyString', '2020-04-19 19:42:47', 1, '2020-04-29 08:13:23.376675', '2020-04-29 08:13:23.376675')[0m
+  [1m[35m (6.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------
+ArticlesTest: test_creating_an_article
+--------------------------------------
+Started GET "/articles" for 127.0.0.1 at 2020-04-29 17:13:36 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mArticle Load (0.8ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (Duration: 15731.9ms | Allocations: 84493)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15939ms (Views: 15878.9ms | ActiveRecord: 2.3ms | Allocations: 89437)
+Started GET "/assets/application-5938c676e174c17751cb7248d66d4a4b21a6c4a58c737a08e8a8f0f542907b64.css" for 127.0.0.1 at 2020-04-29 17:13:52 +0900
+Started GET "/assets/star-off-6aaeebdaab93d594c005d366ce0d94fba02e7a07fd03557dbee8482f04a91c22.png" for 127.0.0.1 at 2020-04-29 17:13:53 +0900
+Started GET "/assets/star-on-fd26bf0ea0990cfd808f7540f958eed324b86fc609bf56ec2b3a5612cdfde5f5.png" for 127.0.0.1 at 2020-04-29 17:13:53 +0900
+Started GET "/articles/new" for 127.0.0.1 at 2020-04-29 17:13:54 +0900
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (Duration: 132.4ms | Allocations: 4657)
+  Rendered articles/new.html.erb within layouts/application (Duration: 153.0ms | Allocations: 6009)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 257ms (Views: 240.0ms | ActiveRecord: 0.0ms | Allocations: 10638)
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (14.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (4.5ms)[0m  [1m[31mDELETE FROM "articles";
+INSERT INTO "articles" ("id", "title", "text", "theater", "watched_date", "rate", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyText', 'MyString', '2020-04-19 19:42:47', 1, '2020-04-29 08:15:08.325551', '2020-04-29 08:15:08.325551');
+INSERT INTO "articles" ("id", "title", "text", "theater", "watched_date", "rate", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyText', 'MyString', '2020-04-19 19:42:47', 1, '2020-04-29 08:15:08.325551', '2020-04-29 08:15:08.325551')[0m
+  [1m[35m (7.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------
+ArticlesTest: test_creating_an_article
+--------------------------------------
+Started GET "/articles" for 127.0.0.1 at 2020-04-29 17:15:22 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mArticle Load (0.7ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (Duration: 13696.6ms | Allocations: 84499)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13874ms (Views: 13826.0ms | ActiveRecord: 2.2ms | Allocations: 89441)
+Started GET "/assets/application-5938c676e174c17751cb7248d66d4a4b21a6c4a58c737a08e8a8f0f542907b64.css" for 127.0.0.1 at 2020-04-29 17:15:36 +0900
+Started GET "/assets/star-off-6aaeebdaab93d594c005d366ce0d94fba02e7a07fd03557dbee8482f04a91c22.png" for 127.0.0.1 at 2020-04-29 17:15:36 +0900
+Started GET "/assets/star-on-fd26bf0ea0990cfd808f7540f958eed324b86fc609bf56ec2b3a5612cdfde5f5.png" for 127.0.0.1 at 2020-04-29 17:15:36 +0900
+Started GET "/articles/new" for 127.0.0.1 at 2020-04-29 17:15:37 +0900
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (Duration: 136.9ms | Allocations: 5681)
+  Rendered articles/new.html.erb within layouts/application (Duration: 146.7ms | Allocations: 6009)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 228ms (Views: 219.4ms | ActiveRecord: 0.0ms | Allocations: 10629)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (14.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.4ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (3.2ms)[0m  [1m[31mDELETE FROM "articles";
+INSERT INTO "articles" ("id", "title", "text", "theater", "watched_date", "rate", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyText', 'MyString', '2020-04-19 19:42:47', 1, '2020-04-29 08:16:53.413614', '2020-04-29 08:16:53.413614');
+INSERT INTO "articles" ("id", "title", "text", "theater", "watched_date", "rate", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyText', 'MyString', '2020-04-19 19:42:47', 1, '2020-04-29 08:16:53.413614', '2020-04-29 08:16:53.413614')[0m
+  [1m[35m (7.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------
+ArticlesTest: test_creating_an_article
+--------------------------------------
+Started GET "/articles" for 127.0.0.1 at 2020-04-29 17:17:09 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mArticle Load (1.5ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (Duration: 12990.6ms | Allocations: 84553)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13215ms (Views: 13138.8ms | ActiveRecord: 4.3ms | Allocations: 89495)
+Started GET "/assets/application-5938c676e174c17751cb7248d66d4a4b21a6c4a58c737a08e8a8f0f542907b64.css" for 127.0.0.1 at 2020-04-29 17:17:23 +0900
+Started GET "/assets/star-on-fd26bf0ea0990cfd808f7540f958eed324b86fc609bf56ec2b3a5612cdfde5f5.png" for 127.0.0.1 at 2020-04-29 17:17:23 +0900
+Started GET "/assets/star-off-6aaeebdaab93d594c005d366ce0d94fba02e7a07fd03557dbee8482f04a91c22.png" for 127.0.0.1 at 2020-04-29 17:17:23 +0900
+Started GET "/articles/new" for 127.0.0.1 at 2020-04-29 17:17:24 +0900
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (Duration: 129.1ms | Allocations: 4967)
+  Rendered articles/new.html.erb within layouts/application (Duration: 147.6ms | Allocations: 6318)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 231ms (Views: 220.2ms | ActiveRecord: 0.0ms | Allocations: 10629)
+Started POST "/articles" for 127.0.0.1 at 2020-04-29 17:17:27 +0900
+Processing by ArticlesController#create as HTML
+  Parameters: {"article"=>{"title"=>"Creating an Article", "theater"=>"ユナイテッドシネマ福岡", "watched_date"=>"201807-12-12T00:00", "rate"=>"", "text"=>"Created this article successfully!"}, "commit"=>"Create Article"}
+  [1m[35m (0.9ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mArticle Create (3.4ms)[0m  [1m[32mINSERT INTO "articles" ("title", "text", "theater", "watched_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Creating an Article"], ["text", "Created this article successfully!"], ["theater", "ユナイテッドシネマ福岡"], ["watched_date", "201807-12-11 15:00:00"], ["created_at", "2020-04-29 08:17:27.936168"], ["updated_at", "2020-04-29 08:17:27.936168"]]
+  [1m[35m (7.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://127.0.0.1:61431/articles/980190965
+Completed 302 Found in 33ms (ActiveRecord: 11.4ms | Allocations: 1155)
+Started GET "/articles/980190965" for 127.0.0.1 at 2020-04-29 17:17:27 +0900
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"980190965"}
+  [1m[36mArticle Load (1.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190965], ["LIMIT", 1]]
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (Duration: 15.3ms | Allocations: 1203)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 109ms (Views: 93.7ms | ActiveRecord: 1.2ms | Allocations: 4213)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (17.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (3.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (5.5ms)[0m  [1m[31mDELETE FROM "articles";
+INSERT INTO "articles" ("id", "title", "text", "theater", "watched_date", "rate", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyText', 'MyString', '2020-04-19 19:42:47', 1, '2020-04-29 08:18:25.507521', '2020-04-29 08:18:25.507521');
+INSERT INTO "articles" ("id", "title", "text", "theater", "watched_date", "rate", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyText', 'MyString', '2020-04-19 19:42:47', 1, '2020-04-29 08:18:25.507521', '2020-04-29 08:18:25.507521')[0m
+  [1m[35m (7.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------
+ArticlesTest: test_viewing_the_index
+------------------------------------
+Started GET "/articles" for 127.0.0.1 at 2020-04-29 17:18:44 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (1.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (Duration: 17312.6ms | Allocations: 84504)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 17590ms (Views: 17504.8ms | ActiveRecord: 1.4ms | Allocations: 89446)
+Started GET "/assets/application-5938c676e174c17751cb7248d66d4a4b21a6c4a58c737a08e8a8f0f542907b64.css" for 127.0.0.1 at 2020-04-29 17:19:02 +0900
+Started GET "/assets/star-off-6aaeebdaab93d594c005d366ce0d94fba02e7a07fd03557dbee8482f04a91c22.png" for 127.0.0.1 at 2020-04-29 17:19:03 +0900
+Started GET "/assets/star-on-fd26bf0ea0990cfd808f7540f958eed324b86fc609bf56ec2b3a5612cdfde5f5.png" for 127.0.0.1 at 2020-04-29 17:19:03 +0900
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (18.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (4.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.7ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (4.0ms)[0m  [1m[31mDELETE FROM "articles";
+INSERT INTO "articles" ("id", "title", "text", "theater", "watched_date", "rate", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyText', 'MyString', '2020-04-19 19:42:47', 1, '2020-04-29 08:22:00.508973', '2020-04-29 08:22:00.508973');
+INSERT INTO "articles" ("id", "title", "text", "theater", "watched_date", "rate", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyText', 'MyString', '2020-04-19 19:42:47', 1, '2020-04-29 08:22:00.508973', '2020-04-29 08:22:00.508973')[0m
+  [1m[35m (7.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.4ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------
+ArticlesTest: test_creating_an_article
+--------------------------------------
+Started GET "/articles" for 127.0.0.1 at 2020-04-29 17:22:16 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mArticle Load (1.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (Duration: 19974.8ms | Allocations: 84639)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 20333ms (Views: 20174.6ms | ActiveRecord: 3.7ms | Allocations: 89583)
+Started GET "/assets/application-5938c676e174c17751cb7248d66d4a4b21a6c4a58c737a08e8a8f0f542907b64.css" for 127.0.0.1 at 2020-04-29 17:22:36 +0900
+Started GET "/assets/star-off-6aaeebdaab93d594c005d366ce0d94fba02e7a07fd03557dbee8482f04a91c22.png" for 127.0.0.1 at 2020-04-29 17:22:37 +0900
+Started GET "/assets/star-on-fd26bf0ea0990cfd808f7540f958eed324b86fc609bf56ec2b3a5612cdfde5f5.png" for 127.0.0.1 at 2020-04-29 17:22:37 +0900
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (17.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (3.9ms)[0m  [1m[31mDELETE FROM "articles";
+INSERT INTO "articles" ("id", "title", "text", "theater", "watched_date", "rate", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyText', 'MyString', '2020-04-19 19:42:47', 1, '2020-04-29 08:25:25.733234', '2020-04-29 08:25:25.733234');
+INSERT INTO "articles" ("id", "title", "text", "theater", "watched_date", "rate", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyText', 'MyString', '2020-04-19 19:42:47', 1, '2020-04-29 08:25:25.733234', '2020-04-29 08:25:25.733234')[0m
+  [1m[35m (7.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.4ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------
+ArticlesTest: test_creating_an_article
+--------------------------------------
+Started GET "/articles" for 127.0.0.1 at 2020-04-29 17:25:41 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mArticle Load (1.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (Duration: 18655.2ms | Allocations: 84688)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 18962ms (Views: 18877.7ms | ActiveRecord: 10.8ms | Allocations: 89554)
+Started GET "/assets/application-5938c676e174c17751cb7248d66d4a4b21a6c4a58c737a08e8a8f0f542907b64.css" for 127.0.0.1 at 2020-04-29 17:26:01 +0900
+Started GET "/assets/star-off-6aaeebdaab93d594c005d366ce0d94fba02e7a07fd03557dbee8482f04a91c22.png" for 127.0.0.1 at 2020-04-29 17:26:02 +0900
+Started GET "/assets/star-on-fd26bf0ea0990cfd808f7540f958eed324b86fc609bf56ec2b3a5612cdfde5f5.png" for 127.0.0.1 at 2020-04-29 17:26:02 +0900
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (14.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.4ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (6.2ms)[0m  [1m[31mDELETE FROM "articles";
+INSERT INTO "articles" ("id", "title", "text", "theater", "watched_date", "rate", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyText', 'MyString', '2020-04-19 19:42:47', 1, '2020-04-29 08:28:30.321446', '2020-04-29 08:28:30.321446');
+INSERT INTO "articles" ("id", "title", "text", "theater", "watched_date", "rate", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyText', 'MyString', '2020-04-19 19:42:47', 1, '2020-04-29 08:28:30.321446', '2020-04-29 08:28:30.321446')[0m
+  [1m[35m (8.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------
+ArticlesTest: test_viewing_the_index
+------------------------------------
+Started GET "/articles" for 127.0.0.1 at 2020-04-29 17:28:48 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mArticle Load (1.8ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (Duration: 17513.2ms | Allocations: 84765)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 17804ms (Views: 17699.2ms | ActiveRecord: 4.0ms | Allocations: 89717)
+Started GET "/assets/application-5938c676e174c17751cb7248d66d4a4b21a6c4a58c737a08e8a8f0f542907b64.css" for 127.0.0.1 at 2020-04-29 17:29:06 +0900
+Started GET "/assets/star-off-6aaeebdaab93d594c005d366ce0d94fba02e7a07fd03557dbee8482f04a91c22.png" for 127.0.0.1 at 2020-04-29 17:29:07 +0900
+Started GET "/assets/star-on-fd26bf0ea0990cfd808f7540f958eed324b86fc609bf56ec2b3a5612cdfde5f5.png" for 127.0.0.1 at 2020-04-29 17:29:07 +0900
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (14.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.4ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (5.5ms)[0m  [1m[31mDELETE FROM "articles";
+INSERT INTO "articles" ("id", "title", "text", "theater", "watched_date", "rate", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyText', 'MyString', '2020-04-19 19:42:47', 1, '2020-04-29 08:40:40.959193', '2020-04-29 08:40:40.959193');
+INSERT INTO "articles" ("id", "title", "text", "theater", "watched_date", "rate", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyText', 'MyString', '2020-04-19 19:42:47', 1, '2020-04-29 08:40:40.959193', '2020-04-29 08:40:40.959193')[0m
+  [1m[35m (8.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------
+ArticlesTest: test_viewing_the_index
+------------------------------------
+Started GET "/articles" for 127.0.0.1 at 2020-04-29 17:41:01 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mArticle Load (1.6ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (Duration: 20802.1ms | Allocations: 84837)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 21102ms (Views: 21006.4ms | ActiveRecord: 3.9ms | Allocations: 89782)
+Started GET "/assets/application-5938c676e174c17751cb7248d66d4a4b21a6c4a58c737a08e8a8f0f542907b64.css" for 127.0.0.1 at 2020-04-29 17:41:23 +0900
+Started GET "/assets/star-off-6aaeebdaab93d594c005d366ce0d94fba02e7a07fd03557dbee8482f04a91c22.png" for 127.0.0.1 at 2020-04-29 17:41:24 +0900
+Started GET "/assets/star-on-fd26bf0ea0990cfd808f7540f958eed324b86fc609bf56ec2b3a5612cdfde5f5.png" for 127.0.0.1 at 2020-04-29 17:41:24 +0900
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (14.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.4ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.5ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.5ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (5.5ms)[0m  [1m[31mDELETE FROM "articles";
+INSERT INTO "articles" ("id", "title", "text", "theater", "watched_date", "rate", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyText', 'MyString', '2020-04-19 19:42:47', 1, '2020-04-29 08:44:52.388127', '2020-04-29 08:44:52.388127');
+INSERT INTO "articles" ("id", "title", "text", "theater", "watched_date", "rate", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyText', 'MyString', '2020-04-19 19:42:47', 1, '2020-04-29 08:44:52.388127', '2020-04-29 08:44:52.388127')[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (2.6ms)[0m  [1m[31mDELETE FROM "articles";
+INSERT INTO "articles" ("id", "title", "text", "theater", "watched_date", "rate", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyText', 'MyString', '2020-04-19 19:42:47', 1, '2020-04-29 08:44:52.394089', '2020-04-29 08:44:52.394089');
+INSERT INTO "articles" ("id", "title", "text", "theater", "watched_date", "rate", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyText', 'MyString', '2020-04-19 19:42:47', 1, '2020-04-29 08:44:52.394089', '2020-04-29 08:44:52.394089')[0m
+  [1m[35m (7.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------
+ArticlesTest: test_creating_an_article
+--------------------------------------
+  [1m[35m (7.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------
+ArticlesTest: test_viewing_the_index
+------------------------------------
+  [1m[35m (0.5ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (14.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (5.8ms)[0m  [1m[31mDELETE FROM "articles";
+INSERT INTO "articles" ("id", "title", "text", "theater", "watched_date", "rate", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyText', 'MyString', '2020-04-19 19:42:47', 1, '2020-04-29 08:57:14.635587', '2020-04-29 08:57:14.635587');
+INSERT INTO "articles" ("id", "title", "text", "theater", "watched_date", "rate", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyText', 'MyString', '2020-04-19 19:42:47', 1, '2020-04-29 08:57:14.635587', '2020-04-29 08:57:14.635587')[0m
+  [1m[35m (8.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------
+ArticlesTest: test_viewing_the_index
+------------------------------------
+Started GET "/articles" for 127.0.0.1 at 2020-04-29 17:57:33 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mArticle Load (3.7ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (Duration: 21331.0ms | Allocations: 84882)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 21650ms (Views: 21549.1ms | ActiveRecord: 6.0ms | Allocations: 89827)
+Started GET "/assets/application-5938c676e174c17751cb7248d66d4a4b21a6c4a58c737a08e8a8f0f542907b64.css" for 127.0.0.1 at 2020-04-29 17:57:55 +0900
+Started GET "/assets/star-off-6aaeebdaab93d594c005d366ce0d94fba02e7a07fd03557dbee8482f04a91c22.png" for 127.0.0.1 at 2020-04-29 17:57:56 +0900
+Started GET "/assets/star-on-fd26bf0ea0990cfd808f7540f958eed324b86fc609bf56ec2b3a5612cdfde5f5.png" for 127.0.0.1 at 2020-04-29 17:57:56 +0900
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (14.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.4ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (4.0ms)[0m  [1m[31mDELETE FROM "articles";
+INSERT INTO "articles" ("id", "title", "text", "theater", "watched_date", "rate", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyText', 'MyString', '2020-04-19 19:42:47', 1, '2020-04-29 08:59:56.737413', '2020-04-29 08:59:56.737413');
+INSERT INTO "articles" ("id", "title", "text", "theater", "watched_date", "rate", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyText', 'MyString', '2020-04-19 19:42:47', 1, '2020-04-29 08:59:56.737413', '2020-04-29 08:59:56.737413')[0m
+  [1m[35m (7.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------
+ArticlesTest: test_viewing_the_index
+------------------------------------
+Started GET "/articles" for 127.0.0.1 at 2020-04-29 18:00:16 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mArticle Load (1.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (Duration: 19900.4ms | Allocations: 84928)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 20168ms (Views: 20084.9ms | ActiveRecord: 4.4ms | Allocations: 89798)
+Started GET "/assets/application-5938c676e174c17751cb7248d66d4a4b21a6c4a58c737a08e8a8f0f542907b64.css" for 127.0.0.1 at 2020-04-29 18:00:36 +0900
+Started GET "/assets/star-off-6aaeebdaab93d594c005d366ce0d94fba02e7a07fd03557dbee8482f04a91c22.png" for 127.0.0.1 at 2020-04-29 18:00:37 +0900
+Started GET "/assets/star-on-fd26bf0ea0990cfd808f7540f958eed324b86fc609bf56ec2b3a5612cdfde5f5.png" for 127.0.0.1 at 2020-04-29 18:00:37 +0900
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (35.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (3.7ms)[0m  [1m[31mDELETE FROM "articles";
+INSERT INTO "articles" ("id", "title", "text", "theater", "watched_date", "rate", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyText', 'MyString', '2020-04-19 19:42:47', 1, '2020-04-29 09:03:52.364968', '2020-04-29 09:03:52.364968');
+INSERT INTO "articles" ("id", "title", "text", "theater", "watched_date", "rate", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyText', 'MyString', '2020-04-19 19:42:47', 1, '2020-04-29 09:03:52.364968', '2020-04-29 09:03:52.364968')[0m
+  [1m[35m (9.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------
+ArticlesTest: test_viewing_the_index
+------------------------------------
+Started GET "/articles" for 127.0.0.1 at 2020-04-29 18:04:12 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (1.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (Duration: 17829.0ms | Allocations: 84843)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 18122ms (Views: 18010.2ms | ActiveRecord: 1.2ms | Allocations: 89793)
+Started GET "/assets/application-5938c676e174c17751cb7248d66d4a4b21a6c4a58c737a08e8a8f0f542907b64.css" for 127.0.0.1 at 2020-04-29 18:04:30 +0900
+Started GET "/assets/star-off-6aaeebdaab93d594c005d366ce0d94fba02e7a07fd03557dbee8482f04a91c22.png" for 127.0.0.1 at 2020-04-29 18:04:31 +0900
+Started GET "/assets/star-on-fd26bf0ea0990cfd808f7540f958eed324b86fc609bf56ec2b3a5612cdfde5f5.png" for 127.0.0.1 at 2020-04-29 18:04:31 +0900
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (14.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (14.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (18.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------
+ArticlesTest: test_viewing_the_index
+------------------------------------
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------
+ArticlesTest: test_creating_an_article
+--------------------------------------
+  [1m[35m (0.6ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (19.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------
+ArticlesTest: test_creating_an_article
+--------------------------------------
+Started GET "/articles" for 127.0.0.1 at 2020-04-29 19:10:31 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mArticle Load (1.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (Duration: 16614.6ms | Allocations: 85896)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16909ms (Views: 16787.8ms | ActiveRecord: 12.0ms | Allocations: 91505)
+Started GET "/assets/application-5938c676e174c17751cb7248d66d4a4b21a6c4a58c737a08e8a8f0f542907b64.css" for 127.0.0.1 at 2020-04-29 19:10:48 +0900
+Started GET "/assets/star-off-6aaeebdaab93d594c005d366ce0d94fba02e7a07fd03557dbee8482f04a91c22.png" for 127.0.0.1 at 2020-04-29 19:10:49 +0900
+Started GET "/assets/star-on-fd26bf0ea0990cfd808f7540f958eed324b86fc609bf56ec2b3a5612cdfde5f5.png" for 127.0.0.1 at 2020-04-29 19:10:49 +0900
+Started GET "/articles/new" for 127.0.0.1 at 2020-04-29 19:10:50 +0900
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (Duration: 148.5ms | Allocations: 5681)
+  Rendered articles/new.html.erb within layouts/application (Duration: 189.1ms | Allocations: 6318)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 288ms (Views: 277.4ms | ActiveRecord: 0.0ms | Allocations: 10629)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (18.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------
+ArticlesTest: test_creating_an_article
+--------------------------------------
+Started GET "/articles" for 127.0.0.1 at 2020-04-29 19:12:23 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mArticle Load (5.6ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (Duration: 14965.6ms | Allocations: 85917)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15233ms (Views: 15122.3ms | ActiveRecord: 13.1ms | Allocations: 91524)
+Started GET "/assets/application-5938c676e174c17751cb7248d66d4a4b21a6c4a58c737a08e8a8f0f542907b64.css" for 127.0.0.1 at 2020-04-29 19:12:39 +0900
+Started GET "/assets/star-off-6aaeebdaab93d594c005d366ce0d94fba02e7a07fd03557dbee8482f04a91c22.png" for 127.0.0.1 at 2020-04-29 19:12:39 +0900
+Started GET "/assets/star-on-fd26bf0ea0990cfd808f7540f958eed324b86fc609bf56ec2b3a5612cdfde5f5.png" for 127.0.0.1 at 2020-04-29 19:12:39 +0900
+Started GET "/articles/new" for 127.0.0.1 at 2020-04-29 19:12:41 +0900
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (Duration: 137.0ms | Allocations: 5681)
+  Rendered articles/new.html.erb within layouts/application (Duration: 157.3ms | Allocations: 6009)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 259ms (Views: 247.9ms | ActiveRecord: 0.0ms | Allocations: 10629)
+Started POST "/articles" for 127.0.0.1 at 2020-04-29 19:12:44 +0900
+Processing by ArticlesController#create as HTML
+  Parameters: {"article"=>{"title"=>"Creating an Article", "theater"=>"ユナイテッドシネマ福岡", "watched_date"=>"201807-12-12T00:00", "rate"=>"", "text"=>"Created this article successfully!"}, "commit"=>"Create Article"}
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mArticle Create (4.9ms)[0m  [1m[32mINSERT INTO "articles" ("title", "text", "theater", "watched_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Creating an Article"], ["text", "Created this article successfully!"], ["theater", "ユナイテッドシネマ福岡"], ["watched_date", "201807-12-11 15:00:00"], ["created_at", "2020-04-29 10:12:44.298549"], ["updated_at", "2020-04-29 10:12:44.298549"]]
+  [1m[35m (15.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://127.0.0.1:63089/articles/980190966
+Completed 302 Found in 41ms (ActiveRecord: 20.8ms | Allocations: 1193)
+Started GET "/articles/980190966" for 127.0.0.1 at 2020-04-29 19:12:44 +0900
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"980190966"}
+  [1m[36mArticle Load (1.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190966], ["LIMIT", 1]]
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (Duration: 14.5ms | Allocations: 1203)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 114ms (Views: 99.9ms | ActiveRecord: 1.2ms | Allocations: 4215)
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (15.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (3.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+-------------------------
+ArticlesTest: test_search
+-------------------------
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (58.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------
+ArticlesTest: test_creating_an_article
+--------------------------------------
+Started GET "/articles" for 127.0.0.1 at 2020-04-29 19:49:26 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mArticle Load (1.5ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (Duration: 16857.5ms | Allocations: 86917)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 17139ms (Views: 17013.6ms | ActiveRecord: 11.6ms | Allocations: 92525)
+Started GET "/assets/application-5938c676e174c17751cb7248d66d4a4b21a6c4a58c737a08e8a8f0f542907b64.css" for 127.0.0.1 at 2020-04-29 19:49:44 +0900
+Started GET "/assets/star-off-6aaeebdaab93d594c005d366ce0d94fba02e7a07fd03557dbee8482f04a91c22.png" for 127.0.0.1 at 2020-04-29 19:49:44 +0900
+Started GET "/assets/star-on-fd26bf0ea0990cfd808f7540f958eed324b86fc609bf56ec2b3a5612cdfde5f5.png" for 127.0.0.1 at 2020-04-29 19:49:44 +0900
+Started GET "/articles/new" for 127.0.0.1 at 2020-04-29 19:49:45 +0900
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (Duration: 148.1ms | Allocations: 5681)
+  Rendered articles/new.html.erb within layouts/application (Duration: 159.5ms | Allocations: 6008)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 272ms (Views: 262.6ms | ActiveRecord: 0.0ms | Allocations: 10628)
+Started POST "/articles" for 127.0.0.1 at 2020-04-29 19:49:49 +0900
+Processing by ArticlesController#create as HTML
+  Parameters: {"article"=>{"title"=>"Creating an Article", "theater"=>"ユナイテッドシネマ福岡", "watched_date"=>"201807-12-12T00:00", "rate"=>"", "text"=>"Created this article successfully!"}, "commit"=>"Create Article"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mArticle Create (7.4ms)[0m  [1m[32mINSERT INTO "articles" ("title", "text", "theater", "watched_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Creating an Article"], ["text", "Created this article successfully!"], ["theater", "ユナイテッドシネマ福岡"], ["watched_date", "201807-12-11 15:00:00"], ["created_at", "2020-04-29 10:49:49.233562"], ["updated_at", "2020-04-29 10:49:49.233562"]]
+  [1m[35m (7.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://127.0.0.1:63587/articles/980190967
+Completed 302 Found in 33ms (ActiveRecord: 14.7ms | Allocations: 1173)
+Started GET "/articles/980190967" for 127.0.0.1 at 2020-04-29 19:49:49 +0900
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"980190967"}
+  [1m[36mArticle Load (1.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190967], ["LIMIT", 1]]
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (Duration: 16.8ms | Allocations: 1203)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 114ms (Views: 100.0ms | ActiveRecord: 1.3ms | Allocations: 4215)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (15.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------
+ArticlesTest: test_creating_an_article
+--------------------------------------
+Started GET "/articles" for 127.0.0.1 at 2020-04-29 19:53:40 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mArticle Load (1.0ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (Duration: 14671.0ms | Allocations: 87938)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14929ms (Views: 14817.4ms | ActiveRecord: 8.7ms | Allocations: 93544)
+Started GET "/assets/application-5938c676e174c17751cb7248d66d4a4b21a6c4a58c737a08e8a8f0f542907b64.css" for 127.0.0.1 at 2020-04-29 19:53:55 +0900
+Started GET "/assets/star-on-fd26bf0ea0990cfd808f7540f958eed324b86fc609bf56ec2b3a5612cdfde5f5.png" for 127.0.0.1 at 2020-04-29 19:53:56 +0900
+Started GET "/assets/star-off-6aaeebdaab93d594c005d366ce0d94fba02e7a07fd03557dbee8482f04a91c22.png" for 127.0.0.1 at 2020-04-29 19:53:56 +0900
+Started GET "/articles/new" for 127.0.0.1 at 2020-04-29 19:53:57 +0900
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (Duration: 151.0ms | Allocations: 5990)
+  Rendered articles/new.html.erb within layouts/application (Duration: 169.5ms | Allocations: 6318)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 293ms (Views: 281.5ms | ActiveRecord: 0.0ms | Allocations: 11572)
+Started POST "/articles" for 127.0.0.1 at 2020-04-29 19:54:01 +0900
+Processing by ArticlesController#create as HTML
+  Parameters: {"article"=>{"title"=>"Creating an Article", "theater"=>"ユナイテッドシネマ福岡", "watched_date"=>"201807-12-12T00:00", "rate"=>"", "text"=>"Created this article successfully!"}, "commit"=>"Create Article"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mArticle Create (4.3ms)[0m  [1m[32mINSERT INTO "articles" ("title", "text", "theater", "watched_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Creating an Article"], ["text", "Created this article successfully!"], ["theater", "ユナイテッドシネマ福岡"], ["watched_date", "201807-12-11 15:00:00"], ["created_at", "2020-04-29 10:54:01.236690"], ["updated_at", "2020-04-29 10:54:01.236690"]]
+  [1m[35m (8.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://127.0.0.1:63619/articles/980190968
+Completed 302 Found in 34ms (ActiveRecord: 12.5ms | Allocations: 1160)
+Started GET "/articles/980190968" for 127.0.0.1 at 2020-04-29 19:54:01 +0900
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"980190968"}
+  [1m[36mArticle Load (1.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190968], ["LIMIT", 1]]
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (Duration: 18.0ms | Allocations: 1202)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 116ms (Views: 103.1ms | ActiveRecord: 1.1ms | Allocations: 4209)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (16.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------
+ArticleTest: test_should_not_save_article_without_title
+-------------------------------------------------------
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------
+ArticleTest: test_should_report_error
+-------------------------------------
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------
+WelcomeControllerTest: test_should_get_index
+--------------------------------------------
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+Started GET "/welcome/index" for 127.0.0.1 at 2020-04-29 19:58:09 +0900
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 10368.6ms | Allocations: 76141)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10504ms (Views: 10459.7ms | ActiveRecord: 0.0ms | Allocations: 80981)
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (14.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------
+ArticlesTest: test_creating_an_article
+--------------------------------------
+Started GET "/articles" for 127.0.0.1 at 2020-04-29 20:02:41 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mArticle Load (1.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (Duration: 13418.5ms | Allocations: 88949)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13628ms (Views: 13551.3ms | ActiveRecord: 6.4ms | Allocations: 94558)
+Started GET "/assets/application-5938c676e174c17751cb7248d66d4a4b21a6c4a58c737a08e8a8f0f542907b64.css" for 127.0.0.1 at 2020-04-29 20:02:55 +0900
+Started GET "/assets/star-off-6aaeebdaab93d594c005d366ce0d94fba02e7a07fd03557dbee8482f04a91c22.png" for 127.0.0.1 at 2020-04-29 20:02:55 +0900
+Started GET "/assets/star-on-fd26bf0ea0990cfd808f7540f958eed324b86fc609bf56ec2b3a5612cdfde5f5.png" for 127.0.0.1 at 2020-04-29 20:02:55 +0900
+Started GET "/articles/new" for 127.0.0.1 at 2020-04-29 20:02:56 +0900
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (Duration: 128.3ms | Allocations: 5681)
+  Rendered articles/new.html.erb within layouts/application (Duration: 138.4ms | Allocations: 6008)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 226ms (Views: 219.3ms | ActiveRecord: 0.0ms | Allocations: 10628)
+Started POST "/articles" for 127.0.0.1 at 2020-04-29 20:02:59 +0900
+Processing by ArticlesController#create as HTML
+  Parameters: {"article"=>{"title"=>"Creating an Article", "theater"=>"ユナイテッドシネマ福岡", "watched_date"=>"201807-12-12T00:00", "rate"=>"", "text"=>"Created this article successfully!"}, "commit"=>"Create Article"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mArticle Create (7.4ms)[0m  [1m[32mINSERT INTO "articles" ("title", "text", "theater", "watched_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Creating an Article"], ["text", "Created this article successfully!"], ["theater", "ユナイテッドシネマ福岡"], ["watched_date", "201807-12-11 15:00:00"], ["created_at", "2020-04-29 11:02:59.923335"], ["updated_at", "2020-04-29 11:02:59.923335"]]
+  [1m[35m (8.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://127.0.0.1:63668/articles/980190969
+Completed 302 Found in 39ms (ActiveRecord: 15.8ms | Allocations: 1173)
+Started GET "/articles/980190969" for 127.0.0.1 at 2020-04-29 20:02:59 +0900
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"980190969"}
+  [1m[36mArticle Load (1.6ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190969], ["LIMIT", 1]]
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (Duration: 30.9ms | Allocations: 1203)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 152ms (Views: 134.5ms | ActiveRecord: 1.6ms | Allocations: 4215)
+  [1m[35m (1.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (14.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------
+ArticleTest: test_should_report_error
+-------------------------------------
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.8ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------
+ArticleTest: test_should_not_save_article_without_title
+-------------------------------------------------------
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------
+WelcomeControllerTest: test_should_get_index
+--------------------------------------------
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+Started GET "/welcome/index" for 127.0.0.1 at 2020-04-29 20:07:56 +0900
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 12110.6ms | Allocations: 76234)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12281ms (Views: 12236.1ms | ActiveRecord: 0.0ms | Allocations: 81071)
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (18.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------
+ArticlesTest: test_creating_an_article
+--------------------------------------
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------
+ArticlesTest: test_viewing_the_index
+------------------------------------
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (26.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------
+ArticlesTest: test_creating_an_article
+--------------------------------------
+Started GET "/articles" for 127.0.0.1 at 2020-04-29 20:20:43 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mArticle Load (1.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (Duration: 14248.1ms | Allocations: 89949)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14507ms (Views: 14396.6ms | ActiveRecord: 10.0ms | Allocations: 95556)
+Started GET "/assets/application-5938c676e174c17751cb7248d66d4a4b21a6c4a58c737a08e8a8f0f542907b64.css" for 127.0.0.1 at 2020-04-29 20:20:57 +0900
+Started GET "/assets/star-off-6aaeebdaab93d594c005d366ce0d94fba02e7a07fd03557dbee8482f04a91c22.png" for 127.0.0.1 at 2020-04-29 20:20:58 +0900
+Started GET "/assets/star-on-fd26bf0ea0990cfd808f7540f958eed324b86fc609bf56ec2b3a5612cdfde5f5.png" for 127.0.0.1 at 2020-04-29 20:20:58 +0900
+Started GET "/articles/new" for 127.0.0.1 at 2020-04-29 20:20:59 +0900
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (Duration: 121.0ms | Allocations: 5681)
+  Rendered articles/new.html.erb within layouts/application (Duration: 142.3ms | Allocations: 6009)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 226ms (Views: 216.6ms | ActiveRecord: 0.0ms | Allocations: 10638)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (14.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------
+ArticlesTest: test_creating_an_article
+--------------------------------------
+Started GET "/articles" for 127.0.0.1 at 2020-04-29 20:24:51 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mArticle Load (1.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (Duration: 16659.1ms | Allocations: 90032)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16870ms (Views: 16791.1ms | ActiveRecord: 7.2ms | Allocations: 95642)
+Started GET "/assets/application-5938c676e174c17751cb7248d66d4a4b21a6c4a58c737a08e8a8f0f542907b64.css" for 127.0.0.1 at 2020-04-29 20:25:08 +0900
+Started GET "/assets/star-on-fd26bf0ea0990cfd808f7540f958eed324b86fc609bf56ec2b3a5612cdfde5f5.png" for 127.0.0.1 at 2020-04-29 20:25:09 +0900
+Started GET "/assets/star-off-6aaeebdaab93d594c005d366ce0d94fba02e7a07fd03557dbee8482f04a91c22.png" for 127.0.0.1 at 2020-04-29 20:25:09 +0900
+Started GET "/articles/new" for 127.0.0.1 at 2020-04-29 20:25:11 +0900
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (Duration: 185.4ms | Allocations: 5620)
+  Rendered articles/new.html.erb within layouts/application (Duration: 202.9ms | Allocations: 5947)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 313ms (Views: 297.4ms | ActiveRecord: 0.0ms | Allocations: 9605)
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (14.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------
+ArticlesTest: test_creating_an_article
+--------------------------------------
+Started GET "/articles" for 127.0.0.1 at 2020-04-29 20:26:37 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mArticle Load (1.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (Duration: 17442.0ms | Allocations: 90087)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 17710ms (Views: 17600.7ms | ActiveRecord: 9.4ms | Allocations: 95697)
+Started GET "/assets/application-5938c676e174c17751cb7248d66d4a4b21a6c4a58c737a08e8a8f0f542907b64.css" for 127.0.0.1 at 2020-04-29 20:26:55 +0900
+Started GET "/assets/star-off-6aaeebdaab93d594c005d366ce0d94fba02e7a07fd03557dbee8482f04a91c22.png" for 127.0.0.1 at 2020-04-29 20:26:55 +0900
+Started GET "/assets/star-on-fd26bf0ea0990cfd808f7540f958eed324b86fc609bf56ec2b3a5612cdfde5f5.png" for 127.0.0.1 at 2020-04-29 20:26:55 +0900
+Started GET "/articles/new" for 127.0.0.1 at 2020-04-29 20:26:57 +0900
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (Duration: 139.5ms | Allocations: 5681)
+  Rendered articles/new.html.erb within layouts/application (Duration: 160.1ms | Allocations: 6009)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 276ms (Views: 264.0ms | ActiveRecord: 0.0ms | Allocations: 10638)
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (17.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------
+ArticleTest: test_should_not_save_article_without_title
+-------------------------------------------------------
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------
+ArticleTest: test_should_report_error
+-------------------------------------
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[36mbegin transaction[0m
+---------------------------
+ArticleTest: test_the_truth
+---------------------------
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------
+WelcomeControllerTest: test_should_get_index
+--------------------------------------------
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+Started GET "/welcome/index" for 127.0.0.1 at 2020-04-29 20:28:45 +0900
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 13180.0ms | Allocations: 76425)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13367ms (Views: 13312.9ms | ActiveRecord: 0.0ms | Allocations: 81265)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (18.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------
+ArticleTest: test_should_report_error
+-------------------------------------
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+---------------------------
+ArticleTest: test_the_truth
+---------------------------
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (1.9ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------
+ArticleTest: test_should_not_save_article_without_title
+-------------------------------------------------------
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------
+WelcomeControllerTest: test_should_get_index
+--------------------------------------------
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+Started GET "/welcome/index" for 127.0.0.1 at 2020-04-29 20:30:04 +0900
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 12585.9ms | Allocations: 76467)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12759ms (Views: 12717.3ms | ActiveRecord: 0.0ms | Allocations: 81304)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (14.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------
+MemovieFlowTest: test_can_see_the_welcome_page
+----------------------------------------------
+Started GET "/" for 127.0.0.1 at 2020-04-29 20:45:14 +0900
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 11251.8ms | Allocations: 76530)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11400ms (Views: 11359.6ms | ActiveRecord: 0.0ms | Allocations: 81435)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (20.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------
+MemovieFlowTest: test_can_see_the_welcome_page
+----------------------------------------------
+Started GET "/" for 127.0.0.1 at 2020-04-29 20:47:07 +0900
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 11181.3ms | Allocations: 76603)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11331ms (Views: 11284.4ms | ActiveRecord: 0.0ms | Allocations: 81509)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (14.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------
+MemovieFlowTest: test_can_see_the_welcome_page
+----------------------------------------------
+Started GET "/" for 127.0.0.1 at 2020-04-29 20:48:30 +0900
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 10207.9ms | Allocations: 76644)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10374ms (Views: 10330.4ms | ActiveRecord: 0.0ms | Allocations: 81549)
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (25.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------
+MemovieFlowTest: test_can_see_the_welcome_page
+----------------------------------------------
+Started GET "/" for 127.0.0.1 at 2020-04-29 20:51:49 +0900
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 15362.2ms | Allocations: 76699)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15638ms (Views: 15563.4ms | ActiveRecord: 0.0ms | Allocations: 81605)
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (16.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------
+MemovieFlowTest: test_can_see_the_welcome_page
+----------------------------------------------
+Started GET "/" for 127.0.0.1 at 2020-04-29 20:53:30 +0900
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 13252.5ms | Allocations: 76726)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13416ms (Views: 13368.9ms | ActiveRecord: 0.0ms | Allocations: 81631)
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (16.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------
+MemovieFlowTest: test_can_see_the_welcome_page
+----------------------------------------------
+Started GET "/" for 127.0.0.1 at 2020-04-29 21:06:36 +0900
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 14063.8ms | Allocations: 76775)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14221ms (Views: 14173.1ms | ActiveRecord: 0.0ms | Allocations: 81680)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (17.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------
+MemovieFlowTest: test_can_see_the_welcome_page
+----------------------------------------------
+Started GET "/" for 127.0.0.1 at 2020-04-29 21:07:54 +0900
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 10890.1ms | Allocations: 76834)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11069ms (Views: 11013.4ms | ActiveRecord: 0.0ms | Allocations: 81739)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (14.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------
+MemovieFlowTest: test_can_see_the_welcome_page
+----------------------------------------------
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------
+MemovieFlowTest: test_can_create_an_article
+-------------------------------------------
+  [1m[35m (22.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------
+MemovieFlowTest: test_can_create_an_article
+-------------------------------------------
+Started GET "/articles/new" for 127.0.0.1 at 2020-04-29 21:31:04 +0900
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (Duration: 12093.4ms | Allocations: 82039)
+  Rendered articles/new.html.erb within layouts/application (Duration: 12118.7ms | Allocations: 82604)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12437ms (Views: 12251.2ms | ActiveRecord: 3.5ms | Allocations: 93738)
+Started POST "/articles" for 127.0.0.1 at 2020-04-29 21:31:17 +0900
+Processing by ArticlesController#create as HTML
+  Parameters: {"article"=>{"title"=>"can create", "body"=>"article successfully."}}
+[31mUnpermitted parameter: :body[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mArticle Create (4.3ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "can create"], ["created_at", "2020-04-29 12:31:17.341719"], ["updated_at", "2020-04-29 12:31:17.341719"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/articles/980190970
+Completed 302 Found in 13ms (ActiveRecord: 4.8ms | Allocations: 1005)
+Started GET "/articles/980190970" for 127.0.0.1 at 2020-04-29 21:31:17 +0900
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"980190970"}
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190970], ["LIMIT", 1]]
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (Duration: 13.6ms | Allocations: 1034)
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 0.4ms | Allocations: 1775)
+  [1m[35m (1.7ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (14.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------
+MemovieFlowTest: test_can_create_an_article
+-------------------------------------------
+Started GET "/articles/new" for 127.0.0.1 at 2020-04-29 21:32:41 +0900
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (Duration: 13932.5ms | Allocations: 82087)
+  Rendered articles/new.html.erb within layouts/application (Duration: 13946.5ms | Allocations: 82652)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14160ms (Views: 14075.6ms | ActiveRecord: 3.1ms | Allocations: 93786)
+Started POST "/articles" for 127.0.0.1 at 2020-04-29 21:32:55 +0900
+Processing by ArticlesController#create as HTML
+  Parameters: {"article"=>{"title"=>"can create", "body"=>"article successfully."}}
+[31mUnpermitted parameter: :body[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mArticle Create (5.5ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "can create"], ["created_at", "2020-04-29 12:32:55.407119"], ["updated_at", "2020-04-29 12:32:55.407119"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/articles/980190970
+Completed 302 Found in 17ms (ActiveRecord: 6.1ms | Allocations: 1005)
+Started GET "/articles/980190970" for 127.0.0.1 at 2020-04-29 21:32:55 +0900
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"980190970"}
+  [1m[36mArticle Load (0.5ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190970], ["LIMIT", 1]]
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (Duration: 18.6ms | Allocations: 1034)
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 0.5ms | Allocations: 1775)
+  [1m[35m (2.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (16.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------
+MemovieFlowTest: test_can_create_an_article
+-------------------------------------------
+Started GET "/articles/new" for 127.0.0.1 at 2020-04-29 21:35:30 +0900
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (Duration: 15468.8ms | Allocations: 82150)
+  Rendered articles/new.html.erb within layouts/application (Duration: 15484.4ms | Allocations: 82715)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15756ms (Views: 15673.0ms | ActiveRecord: 2.3ms | Allocations: 93849)
+Started POST "/articles" for 127.0.0.1 at 2020-04-29 21:35:46 +0900
+Processing by ArticlesController#create as HTML
+  Parameters: {"article"=>{"title"=>"can create", "body"=>"article successfully.", "watched_date"=>"2018/07/16 12:00:00 +09:00"}}
+[31mUnpermitted parameter: :body[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mArticle Create (3.1ms)[0m  [1m[32mINSERT INTO "articles" ("title", "watched_date", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "can create"], ["watched_date", "2018-07-16 03:00:00"], ["created_at", "2020-04-29 12:35:46.648410"], ["updated_at", "2020-04-29 12:35:46.648410"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/articles/980190970
+Completed 302 Found in 23ms (ActiveRecord: 3.8ms | Allocations: 1100)
+Started GET "/articles/980190970" for 127.0.0.1 at 2020-04-29 21:35:46 +0900
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"980190970"}
+  [1m[36mArticle Load (0.6ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190970], ["LIMIT", 1]]
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (Duration: 11.8ms | Allocations: 1167)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 99ms (Views: 84.4ms | ActiveRecord: 0.6ms | Allocations: 4198)
+  [1m[35m (1.8ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (14.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------
+MemovieFlowTest: test_can_create_an_article
+-------------------------------------------
+Started GET "/articles/new" for 127.0.0.1 at 2020-04-29 21:37:32 +0900
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (Duration: 11049.6ms | Allocations: 82198)
+  Rendered articles/new.html.erb within layouts/application (Duration: 11063.5ms | Allocations: 82763)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11278ms (Views: 11198.5ms | ActiveRecord: 2.2ms | Allocations: 93897)
+Started POST "/articles" for 127.0.0.1 at 2020-04-29 21:37:43 +0900
+Processing by ArticlesController#create as HTML
+  Parameters: {"article"=>{"title"=>"can create", "body"=>"article successfully.", "watched_date"=>"2018/07/16 12:00:00 +09:00"}}
+[31mUnpermitted parameter: :body[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mArticle Create (5.5ms)[0m  [1m[32mINSERT INTO "articles" ("title", "watched_date", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "can create"], ["watched_date", "2018-07-16 03:00:00"], ["created_at", "2020-04-29 12:37:43.778735"], ["updated_at", "2020-04-29 12:37:43.778735"]]
+  [1m[35m (0.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/articles/980190970
+Completed 302 Found in 19ms (ActiveRecord: 6.2ms | Allocations: 1100)
+Started GET "/articles/980190970" for 127.0.0.1 at 2020-04-29 21:37:43 +0900
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"980190970"}
+  [1m[36mArticle Load (0.7ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190970], ["LIMIT", 1]]
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (Duration: 10.0ms | Allocations: 1169)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 84ms (Views: 73.3ms | ActiveRecord: 0.7ms | Allocations: 4200)
+  [1m[35m (1.8ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (20.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (3.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------
+MemovieFlowTest: test_can_create_an_article
+-------------------------------------------
+Started GET "/articles/new" for 127.0.0.1 at 2020-04-29 21:39:06 +0900
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (Duration: 11587.9ms | Allocations: 82236)
+  Rendered articles/new.html.erb within layouts/application (Duration: 11601.8ms | Allocations: 82801)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11787ms (Views: 11698.1ms | ActiveRecord: 2.3ms | Allocations: 93937)
+Started POST "/articles" for 127.0.0.1 at 2020-04-29 21:39:18 +0900
+Processing by ArticlesController#create as HTML
+  Parameters: {"article"=>{"title"=>"can create", "body"=>"article successfully.", "watched_date"=>"2018/07/16 12:00:00 +09:00"}}
+[31mUnpermitted parameter: :body[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mArticle Create (3.6ms)[0m  [1m[32mINSERT INTO "articles" ("title", "watched_date", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "can create"], ["watched_date", "2018-07-16 03:00:00"], ["created_at", "2020-04-29 12:39:18.748745"], ["updated_at", "2020-04-29 12:39:18.748745"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/articles/980190970
+Completed 302 Found in 15ms (ActiveRecord: 4.1ms | Allocations: 1049)
+Started GET "/articles/980190970" for 127.0.0.1 at 2020-04-29 21:39:18 +0900
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"980190970"}
+  [1m[36mArticle Load (0.6ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190970], ["LIMIT", 1]]
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (Duration: 8.2ms | Allocations: 1169)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 86ms (Views: 75.4ms | ActiveRecord: 0.6ms | Allocations: 4200)
+  [1m[35m (2.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (14.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------
+MemovieFlowTest: test_can_create_an_article
+-------------------------------------------
+Started GET "/articles/new" for 127.0.0.1 at 2020-04-29 21:40:18 +0900
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (Duration: 10660.0ms | Allocations: 82283)
+  Rendered articles/new.html.erb within layouts/application (Duration: 10674.4ms | Allocations: 82848)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10874ms (Views: 10791.6ms | ActiveRecord: 2.2ms | Allocations: 93982)
+Started POST "/articles" for 127.0.0.1 at 2020-04-29 21:40:30 +0900
+Processing by ArticlesController#create as HTML
+  Parameters: {"article"=>{"title"=>"can create", "body"=>"article successfully.", "watched_date"=>"2018/07/16 12:00:00 +09:00"}}
+[31mUnpermitted parameter: :body[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mArticle Create (3.8ms)[0m  [1m[32mINSERT INTO "articles" ("title", "watched_date", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "can create"], ["watched_date", "2018-07-16 03:00:00"], ["created_at", "2020-04-29 12:40:30.060398"], ["updated_at", "2020-04-29 12:40:30.060398"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/articles/980190970
+Completed 302 Found in 19ms (ActiveRecord: 4.5ms | Allocations: 1100)
+Started GET "/articles/980190970" for 127.0.0.1 at 2020-04-29 21:40:30 +0900
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"980190970"}
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190970], ["LIMIT", 1]]
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (Duration: 9.6ms | Allocations: 1169)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 85ms (Views: 75.6ms | ActiveRecord: 0.4ms | Allocations: 4200)
+  [1m[35m (2.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (14.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------
+MemovieFlowTest: test_can_create_an_article
+-------------------------------------------
+Started GET "/articles/new" for 127.0.0.1 at 2020-04-29 21:41:43 +0900
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (Duration: 12038.5ms | Allocations: 82334)
+  Rendered articles/new.html.erb within layouts/application (Duration: 12052.3ms | Allocations: 82899)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12238ms (Views: 12155.7ms | ActiveRecord: 2.5ms | Allocations: 94033)
+Started POST "/articles" for 127.0.0.1 at 2020-04-29 21:41:55 +0900
+Processing by ArticlesController#create as HTML
+  Parameters: {"article"=>{"title"=>"can create", "body"=>"article successfully.", "watched_date"=>"2018/07/16 12:00:00 +09:00"}}
+[31mUnpermitted parameter: :body[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mArticle Create (6.8ms)[0m  [1m[32mINSERT INTO "articles" ("title", "watched_date", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "can create"], ["watched_date", "2018-07-16 03:00:00"], ["created_at", "2020-04-29 12:41:55.552861"], ["updated_at", "2020-04-29 12:41:55.552861"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/articles/980190970
+Completed 302 Found in 17ms (ActiveRecord: 7.3ms | Allocations: 1097)
+Started GET "/articles/980190970" for 127.0.0.1 at 2020-04-29 21:41:55 +0900
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"980190970"}
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190970], ["LIMIT", 1]]
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (Duration: 9.9ms | Allocations: 1167)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 77ms (Views: 67.9ms | ActiveRecord: 0.4ms | Allocations: 4198)
+  [1m[35m (1.7ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (14.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (3.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------
+MemovieFlowTest: test_can_create_an_article
+-------------------------------------------
+Started GET "/articles/new" for 127.0.0.1 at 2020-04-29 21:42:44 +0900
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (Duration: 11691.2ms | Allocations: 82381)
+  Rendered articles/new.html.erb within layouts/application (Duration: 11705.0ms | Allocations: 82946)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11900ms (Views: 11820.1ms | ActiveRecord: 2.4ms | Allocations: 94082)
+Started POST "/articles" for 127.0.0.1 at 2020-04-29 21:42:56 +0900
+Processing by ArticlesController#create as HTML
+  Parameters: {"article"=>{"title"=>"can create", "body"=>"article successfully.", "watched_date"=>"2018/07/16 12:00:00 +09:00"}}
+[31mUnpermitted parameter: :body[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mArticle Create (5.2ms)[0m  [1m[32mINSERT INTO "articles" ("title", "watched_date", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "can create"], ["watched_date", "2018-07-16 03:00:00"], ["created_at", "2020-04-29 12:42:56.086074"], ["updated_at", "2020-04-29 12:42:56.086074"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/articles/980190970
+Completed 302 Found in 18ms (ActiveRecord: 5.7ms | Allocations: 1100)
+Started GET "/articles/980190970" for 127.0.0.1 at 2020-04-29 21:42:56 +0900
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"980190970"}
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190970], ["LIMIT", 1]]
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (Duration: 7.0ms | Allocations: 1167)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 67ms (Views: 58.6ms | ActiveRecord: 0.4ms | Allocations: 4198)
+  [1m[35m (1.8ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (14.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------
+MemovieFlowTest: test_can_create_an_article
+-------------------------------------------
+Started GET "/articles/new" for 127.0.0.1 at 2020-04-29 21:45:19 +0900
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (Duration: 11177.3ms | Allocations: 82418)
+  Rendered articles/new.html.erb within layouts/application (Duration: 11191.8ms | Allocations: 82983)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11386ms (Views: 11308.6ms | ActiveRecord: 2.6ms | Allocations: 94117)
+Started POST "/articles" for 127.0.0.1 at 2020-04-29 21:45:30 +0900
+Processing by ArticlesController#create as HTML
+  Parameters: {"article"=>{"title"=>"can create", "body"=>"article successfully.", "watched_date"=>"2018/07/16 12:00:00 +09:00"}}
+[31mUnpermitted parameter: :body[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mArticle Create (4.1ms)[0m  [1m[32mINSERT INTO "articles" ("title", "watched_date", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "can create"], ["watched_date", "2018-07-16 03:00:00"], ["created_at", "2020-04-29 12:45:30.607420"], ["updated_at", "2020-04-29 12:45:30.607420"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/articles/980190970
+Completed 302 Found in 17ms (ActiveRecord: 4.8ms | Allocations: 1100)
+Started GET "/articles/980190970" for 127.0.0.1 at 2020-04-29 21:45:30 +0900
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"980190970"}
+  [1m[36mArticle Load (0.6ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190970], ["LIMIT", 1]]
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (Duration: 8.9ms | Allocations: 1167)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 93ms (Views: 81.8ms | ActiveRecord: 0.6ms | Allocations: 4198)
+  [1m[35m (1.9ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (14.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------
+MemovieFlowTest: test_can_create_an_article
+-------------------------------------------
+Started GET "/articles/new" for 127.0.0.1 at 2020-04-29 21:46:38 +0900
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (Duration: 11369.3ms | Allocations: 82469)
+  Rendered articles/new.html.erb within layouts/application (Duration: 11383.4ms | Allocations: 83034)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11601ms (Views: 11506.0ms | ActiveRecord: 3.3ms | Allocations: 94168)
+Started POST "/articles" for 127.0.0.1 at 2020-04-29 21:46:50 +0900
+Processing by ArticlesController#create as HTML
+  Parameters: {"article"=>{"title"=>"can create", "body"=>"article successfully.", "watched_date"=>"2018/07/16 12:00:00 +09:00"}}
+[31mUnpermitted parameter: :body[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mArticle Create (3.8ms)[0m  [1m[32mINSERT INTO "articles" ("title", "watched_date", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "can create"], ["watched_date", "2018-07-16 03:00:00"], ["created_at", "2020-04-29 12:46:50.371337"], ["updated_at", "2020-04-29 12:46:50.371337"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/articles/980190970
+Completed 302 Found in 18ms (ActiveRecord: 4.5ms | Allocations: 1100)
+Started GET "/articles/980190970" for 127.0.0.1 at 2020-04-29 21:46:50 +0900
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"980190970"}
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190970], ["LIMIT", 1]]
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (Duration: 6.8ms | Allocations: 1167)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 70ms (Views: 62.0ms | ActiveRecord: 0.4ms | Allocations: 4198)
+  [1m[35m (1.9ms)[0m  [1m[31mrollback transaction[0m
