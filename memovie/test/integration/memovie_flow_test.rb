@@ -1,14 +1,9 @@
 require 'test_helper'
 
 class MemovieFlowTest < ActionDispatch::IntegrationTest
-  # test "the truth" do
-  #   assert true
-  # end
-
-  # test "can see the welcome page" do
-  #   get "/"
-  #   assert_select "h1", "Hello"
-  # end
+  test "the truth" do
+    assert true
+  end
 
   test "can create an article" do
     get "/articles/new"
