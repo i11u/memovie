@@ -9,6 +9,6 @@ class MemovieFlowTest < ActionDispatch::IntegrationTest
     assert_response :redirect
     follow_redirect!
     assert_response :success
-    assert_select "p", "Title:\n    can create"
+    assert_select "p", "Title:\n            can create"
   end
 end

@@ -4854,3 +4854,571 @@ Processing by ArticlesController#show as HTML
 [Webpacker] Everything's up-to-date. Nothing to do
 Completed 200 OK in 106ms (Views: 100.6ms | ActiveRecord: 0.3ms | Allocations: 3586)
   [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (17.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (4.9ms)[0m  [1m[31mDELETE FROM "articles";
+INSERT INTO "articles" ("id", "title", "text", "theater", "watched_date", "rate", "created_at", "updated_at") VALUES (980190962, '天気の子', '感動した', 'ユナイテッドシネマ福岡', '2020-08-26 12:00:00', 5, '2020-05-01 12:32:38.476181', '2020-05-01 12:32:38.476181');
+INSERT INTO "articles" ("id", "title", "text", "theater", "watched_date", "rate", "created_at", "updated_at") VALUES (298486374, '帰ってきたヒトラー', '心を揺さぶられた', '家', '2020-04-19 19:00:00', 1, '2020-05-01 12:32:38.476181', '2020-05-01 12:32:38.476181')[0m
+  [1m[35m (9.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------
+ArticlesControllerTest: test_should_create_article
+--------------------------------------------------
+  [1m[36mArticle Load (0.9ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "articles"[0m
+Started POST "/articles" for 127.0.0.1 at 2020-05-01 21:32:40 +0900
+Processing by ArticlesController#create as HTML
+  Parameters: {"article"=>{"body"=>"Rails is awesome!", "title"=>"Hello Rails"}}
+[31mUnpermitted parameter: :body[0m
+  [1m[35m (1.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mArticle Create (4.7ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "Hello Rails"], ["created_at", "2020-05-01 12:32:40.396213"], ["updated_at", "2020-05-01 12:32:40.396213"]]
+  [1m[35m (1.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/articles/980190970
+Completed 302 Found in 48ms (ActiveRecord: 7.2ms | Allocations: 1106)
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "articles"[0m
+  [1m[36mArticle Load (0.8ms)[0m  [1m[34mSELECT "articles".* FROM "articles" ORDER BY "articles"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (4.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------
+ArticlesControllerTest: test_should_update_article
+--------------------------------------------------
+  [1m[36mArticle Load (1.5ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Started PATCH "/articles/980190962" for 127.0.0.1 at 2020-05-01 21:32:40 +0900
+Processing by ArticlesController#update as HTML
+  Parameters: {"article"=>{"title"=>"updated"}, "id"=>"980190962"}
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mArticle Update (8.2ms)[0m  [1m[33mUPDATE "articles" SET "title" = ?, "updated_at" = ? WHERE "articles"."id" = ?[0m  [["title", "updated"], ["updated_at", "2020-05-01 12:32:40.504811"], ["id", 980190962]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/articles/980190962
+Completed 302 Found in 21ms (ActiveRecord: 9.1ms | Allocations: 1011)
+  [1m[36mArticle Load (1.0ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (2.5ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------
+ArticlesControllerTest: test_shuold_destroy_article
+---------------------------------------------------
+  [1m[36mArticle Load (1.0ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "articles"[0m
+Started DELETE "/articles/980190962" for 127.0.0.1 at 2020-05-01 21:32:40 +0900
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mArticle Destroy (4.2ms)[0m  [1m[31mDELETE FROM "articles" WHERE "articles"."id" = ?[0m  [["id", 980190962]]
+  [1m[35m (0.6ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/articles
+Completed 302 Found in 18ms (ActiveRecord: 5.5ms | Allocations: 544)
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "articles"[0m
+  [1m[35m (2.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------
+ArticlesControllerTest: test_should_show_article
+------------------------------------------------
+  [1m[36mArticle Load (0.8ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Started GET "/articles/980190962" for 127.0.0.1 at 2020-05-01 21:32:40 +0900
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (Duration: 12099.3ms | Allocations: 81185)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in C:/assignment/memovie/public/packs-test
+[Webpacker] Hash: bf60939b7ec320c521c8
+Version: webpack 4.42.1
+Time: 7278ms
+Built at: 2020-05-01 21:33:11
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-5a509837af38755d1ecd.js    789 KiB  application  [emitted] [immutable]  application
+js/application-5a509837af38755d1ecd.js.map    839 KiB  application  [emitted] [dev]        application
+           js/raty-8c52ba8b820af246a2dd.js    432 KiB         raty  [emitted] [immutable]  raty
+       js/raty-8c52ba8b820af246a2dd.js.map    420 KiB         raty  [emitted] [dev]        raty
+                             manifest.json  694 bytes               [emitted]              
+Entrypoint application = js/application-5a509837af38755d1ecd.js js/application-5a509837af38755d1ecd.js.map
+Entrypoint raty = js/raty-8c52ba8b820af246a2dd.js js/raty-8c52ba8b820af246a2dd.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 771 bytes {application} [built]
+[./app/javascript/packs/raty.js] 19.1 KiB {raty} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 110 hidden modules
+
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 30596ms (Views: 30546.9ms | ActiveRecord: 0.4ms | Allocations: 87724)
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------
+ArticleTest: test_should_not_save_article_without_title
+-------------------------------------------------------
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------
+ArticleTest: test_should_report_error
+-------------------------------------
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------
+MemovieFlowTest: test_can_create_an_article
+-------------------------------------------
+Started GET "/articles/new" for 127.0.0.1 at 2020-05-01 21:33:11 +0900
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (Duration: 98.5ms | Allocations: 3611)
+  Rendered articles/new.html.erb within layouts/application (Duration: 105.0ms | Allocations: 3937)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 170ms (Views: 163.7ms | ActiveRecord: 0.0ms | Allocations: 6694)
+Started POST "/articles" for 127.0.0.1 at 2020-05-01 21:33:11 +0900
+Processing by ArticlesController#create as HTML
+  Parameters: {"article"=>{"title"=>"can create", "body"=>"article successfully.", "watched_date"=>"2018/07/16 12:00:00 +09:00", "rate"=>"4"}}
+[31mUnpermitted parameter: :body[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mArticle Create (4.8ms)[0m  [1m[32mINSERT INTO "articles" ("title", "watched_date", "rate", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "can create"], ["watched_date", "2018-07-16 03:00:00"], ["rate", 4], ["created_at", "2020-05-01 12:33:11.500468"], ["updated_at", "2020-05-01 12:33:11.500468"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/articles/980190970
+Completed 302 Found in 19ms (ActiveRecord: 5.4ms | Allocations: 857)
+Started GET "/articles/980190970" for 127.0.0.1 at 2020-05-01 21:33:11 +0900
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"980190970"}
+  [1m[36mArticle Load (1.5ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190970], ["LIMIT", 1]]
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (Duration: 8.9ms | Allocations: 843)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 77ms (Views: 72.6ms | ActiveRecord: 1.5ms | Allocations: 3655)
+  [1m[35m (2.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------
+WelcomeControllerTest: test_should_get_index
+--------------------------------------------
+Started GET "/welcome/index" for 127.0.0.1 at 2020-05-01 21:33:11 +0900
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 10.8ms | Allocations: 986)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 91ms (Views: 83.8ms | ActiveRecord: 0.0ms | Allocations: 4165)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (14.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (4.4ms)[0m  [1m[31mDELETE FROM "articles";
+INSERT INTO "articles" ("id", "title", "text", "theater", "watched_date", "rate", "created_at", "updated_at") VALUES (980190962, '天気の子', '感動した', 'ユナイテッドシネマ福岡', '2020-08-26 12:00:00', 5, '2020-05-01 14:40:37.263153', '2020-05-01 14:40:37.263153');
+INSERT INTO "articles" ("id", "title", "text", "theater", "watched_date", "rate", "created_at", "updated_at") VALUES (298486374, '帰ってきたヒトラー', '心を揺さぶられた', '家', '2020-04-19 19:00:00', 1, '2020-05-01 14:40:37.263153', '2020-05-01 14:40:37.263153')[0m
+  [1m[35m (8.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------
+ArticleTest: test_should_report_error
+-------------------------------------
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (1.2ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------
+ArticleTest: test_should_not_save_article_without_title
+-------------------------------------------------------
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.9ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------
+MemovieFlowTest: test_can_create_an_article
+-------------------------------------------
+Started GET "/articles/new" for 127.0.0.1 at 2020-05-01 23:40:38 +0900
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_header.html.erb (Duration: 14484.1ms | Allocations: 99957)
+  Rendered articles/_form.html.erb (Duration: 80.1ms | Allocations: 3512)
+  Rendered articles/new.html.erb within layouts/application (Duration: 14597.0ms | Allocations: 104253)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14882ms (Views: 14817.8ms | ActiveRecord: 0.0ms | Allocations: 109068)
+Started POST "/articles" for 127.0.0.1 at 2020-05-01 23:40:53 +0900
+Processing by ArticlesController#create as HTML
+  Parameters: {"article"=>{"title"=>"can create", "body"=>"article successfully.", "watched_date"=>"2018/07/16 12:00:00 +09:00", "rate"=>"4"}}
+[31mUnpermitted parameter: :body[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mArticle Create (5.0ms)[0m  [1m[32mINSERT INTO "articles" ("title", "watched_date", "rate", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "can create"], ["watched_date", "2018-07-16 03:00:00"], ["rate", 4], ["created_at", "2020-05-01 14:40:53.686109"], ["updated_at", "2020-05-01 14:40:53.686109"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/articles/980190970
+Completed 302 Found in 17ms (ActiveRecord: 5.6ms | Allocations: 1010)
+Started GET "/articles/980190970" for 127.0.0.1 at 2020-05-01 23:40:53 +0900
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"980190970"}
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190970], ["LIMIT", 1]]
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/_header.html.erb (Duration: 2.5ms | Allocations: 431)
+  Rendered articles/show.html.erb within layouts/application (Duration: 9.9ms | Allocations: 1699)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 68ms (Views: 59.4ms | ActiveRecord: 0.4ms | Allocations: 4812)
+  [1m[35m (2.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------
+WelcomeControllerTest: test_should_get_index
+--------------------------------------------
+Started GET "/welcome/index" for 127.0.0.1 at 2020-05-01 23:40:54 +0900
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/_header.html.erb (Duration: 6.1ms | Allocations: 580)
+  Rendered welcome/index.html.erb within layouts/application (Duration: 14.3ms | Allocations: 940)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 95ms (Views: 89.9ms | ActiveRecord: 0.0ms | Allocations: 4119)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------
+ArticlesControllerTest: test_should_show_article
+------------------------------------------------
+  [1m[36mArticle Load (0.8ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Started GET "/articles/980190962" for 127.0.0.1 at 2020-05-01 23:40:54 +0900
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/_header.html.erb (Duration: 3.0ms | Allocations: 431)
+  Rendered articles/show.html.erb within layouts/application (Duration: 17.1ms | Allocations: 1318)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 80ms (Views: 76.9ms | ActiveRecord: 0.3ms | Allocations: 4033)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------
+ArticlesControllerTest: test_should_update_article
+--------------------------------------------------
+  [1m[36mArticle Load (0.7ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Started PATCH "/articles/980190962" for 127.0.0.1 at 2020-05-01 23:40:54 +0900
+Processing by ArticlesController#update as HTML
+  Parameters: {"article"=>{"title"=>"updated"}, "id"=>"980190962"}
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mArticle Update (5.6ms)[0m  [1m[33mUPDATE "articles" SET "title" = ?, "updated_at" = ? WHERE "articles"."id" = ?[0m  [["title", "updated"], ["updated_at", "2020-05-01 14:40:54.359817"], ["id", 980190962]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/articles/980190962
+Completed 302 Found in 22ms (ActiveRecord: 6.5ms | Allocations: 898)
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (1.9ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------
+ArticlesControllerTest: test_shuold_destroy_article
+---------------------------------------------------
+  [1m[36mArticle Load (0.7ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "articles"[0m
+Started DELETE "/articles/980190962" for 127.0.0.1 at 2020-05-01 23:40:54 +0900
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mArticle Load (2.0ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mArticle Destroy (3.0ms)[0m  [1m[31mDELETE FROM "articles" WHERE "articles"."id" = ?[0m  [["id", 980190962]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/articles
+Completed 302 Found in 11ms (ActiveRecord: 5.6ms | Allocations: 544)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "articles"[0m
+  [1m[35m (5.5ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------
+ArticlesControllerTest: test_should_create_article
+--------------------------------------------------
+  [1m[36mArticle Load (0.7ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "articles"[0m
+Started POST "/articles" for 127.0.0.1 at 2020-05-01 23:40:54 +0900
+Processing by ArticlesController#create as HTML
+  Parameters: {"article"=>{"body"=>"Rails is awesome!", "title"=>"Hello Rails"}}
+[31mUnpermitted parameter: :body[0m
+  [1m[35m (0.5ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mArticle Create (4.8ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "Hello Rails"], ["created_at", "2020-05-01 14:40:54.451978"], ["updated_at", "2020-05-01 14:40:54.451978"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/articles/980190970
+Completed 302 Found in 20ms (ActiveRecord: 5.7ms | Allocations: 740)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "articles"[0m
+  [1m[36mArticle Load (0.5ms)[0m  [1m[34mSELECT "articles".* FROM "articles" ORDER BY "articles"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (2.6ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (14.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.4ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (1.4ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (7.1ms)[0m  [1m[31mDELETE FROM "articles";
+INSERT INTO "articles" ("id", "title", "text", "theater", "watched_date", "rate", "created_at", "updated_at") VALUES (980190962, '天気の子', '感動した', 'ユナイテッドシネマ福岡', '2020-08-26 12:00:00', 5, '2020-05-01 14:42:31.685188', '2020-05-01 14:42:31.685188');
+INSERT INTO "articles" ("id", "title", "text", "theater", "watched_date", "rate", "created_at", "updated_at") VALUES (298486374, '帰ってきたヒトラー', '心を揺さぶられた', '家', '2020-04-19 19:00:00', 1, '2020-05-01 14:42:31.685188', '2020-05-01 14:42:31.685188')[0m
+  [1m[35m (10.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------
+WelcomeControllerTest: test_should_get_index
+--------------------------------------------
+Started GET "/welcome/index" for 127.0.0.1 at 2020-05-01 23:42:32 +0900
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/_header.html.erb (Duration: 13913.0ms | Allocations: 78841)
+  Rendered welcome/index.html.erb within layouts/application (Duration: 13934.0ms | Allocations: 79430)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14130ms (Views: 14053.7ms | ActiveRecord: 0.0ms | Allocations: 84243)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------
+ArticlesControllerTest: test_shuold_destroy_article
+---------------------------------------------------
+  [1m[36mArticle Load (1.0ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "articles"[0m
+Started DELETE "/articles/980190962" for 127.0.0.1 at 2020-05-01 23:42:47 +0900
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mArticle Destroy (5.1ms)[0m  [1m[31mDELETE FROM "articles" WHERE "articles"."id" = ?[0m  [["id", 980190962]]
+  [1m[35m (0.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/articles
+Completed 302 Found in 15ms (ActiveRecord: 5.9ms | Allocations: 690)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "articles"[0m
+  [1m[35m (1.8ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------
+ArticlesControllerTest: test_should_create_article
+--------------------------------------------------
+  [1m[36mArticle Load (1.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "articles"[0m
+Started POST "/articles" for 127.0.0.1 at 2020-05-01 23:42:47 +0900
+Processing by ArticlesController#create as HTML
+  Parameters: {"article"=>{"body"=>"Rails is awesome!", "title"=>"Hello Rails"}}
+[31mUnpermitted parameter: :body[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mArticle Create (2.9ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "Hello Rails"], ["created_at", "2020-05-01 14:42:47.216249"], ["updated_at", "2020-05-01 14:42:47.216249"]]
+  [1m[35m (0.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/articles/980190970
+Completed 302 Found in 18ms (ActiveRecord: 3.5ms | Allocations: 1000)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "articles"[0m
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles" ORDER BY "articles"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (1.7ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------
+ArticlesControllerTest: test_should_update_article
+--------------------------------------------------
+  [1m[36mArticle Load (0.9ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Started PATCH "/articles/980190962" for 127.0.0.1 at 2020-05-01 23:42:47 +0900
+Processing by ArticlesController#update as HTML
+  Parameters: {"article"=>{"title"=>"updated"}, "id"=>"980190962"}
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mArticle Update (3.9ms)[0m  [1m[33mUPDATE "articles" SET "title" = ?, "updated_at" = ? WHERE "articles"."id" = ?[0m  [["title", "updated"], ["updated_at", "2020-05-01 14:42:47.266330"], ["id", 980190962]]
+  [1m[35m (0.7ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/articles/980190962
+Completed 302 Found in 21ms (ActiveRecord: 5.3ms | Allocations: 899)
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (1.9ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------
+ArticlesControllerTest: test_should_show_article
+------------------------------------------------
+  [1m[36mArticle Load (1.0ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Started GET "/articles/980190962" for 127.0.0.1 at 2020-05-01 23:42:47 +0900
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/_header.html.erb (Duration: 5.6ms | Allocations: 589)
+  Rendered articles/show.html.erb within layouts/application (Duration: 74.2ms | Allocations: 4691)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 156ms (Views: 145.3ms | ActiveRecord: 0.4ms | Allocations: 7980)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------
+ArticleTest: test_should_report_error
+-------------------------------------
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------
+ArticleTest: test_should_not_save_article_without_title
+-------------------------------------------------------
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------
+MemovieFlowTest: test_can_create_an_article
+-------------------------------------------
+Started GET "/articles/new" for 127.0.0.1 at 2020-05-01 23:42:47 +0900
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_header.html.erb (Duration: 5.3ms | Allocations: 426)
+  Rendered articles/_form.html.erb (Duration: 85.1ms | Allocations: 3489)
+  Rendered articles/new.html.erb within layouts/application (Duration: 100.5ms | Allocations: 4337)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 160ms (Views: 153.6ms | ActiveRecord: 0.0ms | Allocations: 7094)
+Started POST "/articles" for 127.0.0.1 at 2020-05-01 23:42:47 +0900
+Processing by ArticlesController#create as HTML
+  Parameters: {"article"=>{"title"=>"can create", "body"=>"article successfully.", "watched_date"=>"2018/07/16 12:00:00 +09:00", "rate"=>"4"}}
+[31mUnpermitted parameter: :body[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mArticle Create (4.8ms)[0m  [1m[32mINSERT INTO "articles" ("title", "watched_date", "rate", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "can create"], ["watched_date", "2018-07-16 03:00:00"], ["rate", 4], ["created_at", "2020-05-01 14:42:47.680963"], ["updated_at", "2020-05-01 14:42:47.680963"]]
+  [1m[35m (0.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/articles/980190970
+Completed 302 Found in 17ms (ActiveRecord: 5.4ms | Allocations: 810)
+Started GET "/articles/980190970" for 127.0.0.1 at 2020-05-01 23:42:47 +0900
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"980190970"}
+  [1m[36mArticle Load (1.6ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190970], ["LIMIT", 1]]
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/_header.html.erb (Duration: 4.4ms | Allocations: 426)
+  Rendered articles/show.html.erb within layouts/application (Duration: 11.6ms | Allocations: 1308)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 76ms (Views: 71.5ms | ActiveRecord: 1.6ms | Allocations: 4140)
+  [1m[35m (2.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (14.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (9.9ms)[0m  [1m[31mDELETE FROM "articles";
+INSERT INTO "articles" ("id", "title", "text", "theater", "watched_date", "rate", "created_at", "updated_at") VALUES (980190962, '天気の子', '感動した', 'ユナイテッドシネマ福岡', '2020-08-26 12:00:00', 5, '2020-05-01 14:43:51.204490', '2020-05-01 14:43:51.204490');
+INSERT INTO "articles" ("id", "title", "text", "theater", "watched_date", "rate", "created_at", "updated_at") VALUES (298486374, '帰ってきたヒトラー', '心を揺さぶられた', '家', '2020-04-19 19:00:00', 1, '2020-05-01 14:43:51.204490', '2020-05-01 14:43:51.204490')[0m
+  [1m[35m (7.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------
+ArticleTest: test_should_report_error
+-------------------------------------
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------
+ArticleTest: test_should_not_save_article_without_title
+-------------------------------------------------------
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------
+MemovieFlowTest: test_can_create_an_article
+-------------------------------------------
+Started GET "/articles/new" for 127.0.0.1 at 2020-05-01 23:43:52 +0900
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_header.html.erb (Duration: 12767.3ms | Allocations: 84435)
+  Rendered articles/_form.html.erb (Duration: 95.5ms | Allocations: 3512)
+  Rendered articles/new.html.erb within layouts/application (Duration: 12885.7ms | Allocations: 88731)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13055ms (Views: 12991.2ms | ActiveRecord: 0.0ms | Allocations: 93560)
+Started POST "/articles" for 127.0.0.1 at 2020-05-01 23:44:06 +0900
+Processing by ArticlesController#create as HTML
+  Parameters: {"article"=>{"title"=>"can create", "body"=>"article successfully.", "watched_date"=>"2018/07/16 12:00:00 +09:00", "rate"=>"4"}}
+[31mUnpermitted parameter: :body[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mArticle Create (4.7ms)[0m  [1m[32mINSERT INTO "articles" ("title", "watched_date", "rate", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "can create"], ["watched_date", "2018-07-16 03:00:00"], ["rate", 4], ["created_at", "2020-05-01 14:44:06.238581"], ["updated_at", "2020-05-01 14:44:06.238581"]]
+  [1m[35m (0.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/articles/980190970
+Completed 302 Found in 16ms (ActiveRecord: 5.3ms | Allocations: 1010)
+Started GET "/articles/980190970" for 127.0.0.1 at 2020-05-01 23:44:06 +0900
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"980190970"}
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190970], ["LIMIT", 1]]
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/_header.html.erb (Duration: 2.6ms | Allocations: 431)
+  Rendered articles/show.html.erb within layouts/application (Duration: 11.5ms | Allocations: 1699)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 69ms (Views: 60.4ms | ActiveRecord: 0.4ms | Allocations: 4818)
+  [1m[35m (2.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------
+WelcomeControllerTest: test_should_get_index
+--------------------------------------------
+Started GET "/welcome/index" for 127.0.0.1 at 2020-05-01 23:44:06 +0900
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/_header.html.erb (Duration: 4.1ms | Allocations: 580)
+  Rendered welcome/index.html.erb within layouts/application (Duration: 10.3ms | Allocations: 940)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 80ms (Views: 74.3ms | ActiveRecord: 0.0ms | Allocations: 4119)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------
+ArticlesControllerTest: test_should_show_article
+------------------------------------------------
+  [1m[36mArticle Load (1.0ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Started GET "/articles/980190962" for 127.0.0.1 at 2020-05-01 23:44:06 +0900
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/_header.html.erb (Duration: 2.8ms | Allocations: 431)
+  Rendered articles/show.html.erb within layouts/application (Duration: 10.4ms | Allocations: 1318)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 69ms (Views: 63.9ms | ActiveRecord: 0.3ms | Allocations: 4033)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------
+ArticlesControllerTest: test_should_update_article
+--------------------------------------------------
+  [1m[36mArticle Load (0.9ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Started PATCH "/articles/980190962" for 127.0.0.1 at 2020-05-01 23:44:06 +0900
+Processing by ArticlesController#update as HTML
+  Parameters: {"article"=>{"title"=>"updated"}, "id"=>"980190962"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mArticle Update (4.2ms)[0m  [1m[33mUPDATE "articles" SET "title" = ?, "updated_at" = ? WHERE "articles"."id" = ?[0m  [["title", "updated"], ["updated_at", "2020-05-01 14:44:06.565148"], ["id", 980190962]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/articles/980190962
+Completed 302 Found in 20ms (ActiveRecord: 5.0ms | Allocations: 898)
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (1.9ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------
+ArticlesControllerTest: test_shuold_destroy_article
+---------------------------------------------------
+  [1m[36mArticle Load (0.7ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "articles"[0m
+Started DELETE "/articles/980190962" for 127.0.0.1 at 2020-05-01 23:44:06 +0900
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mArticle Destroy (2.6ms)[0m  [1m[31mDELETE FROM "articles" WHERE "articles"."id" = ?[0m  [["id", 980190962]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/articles
+Completed 302 Found in 12ms (ActiveRecord: 3.4ms | Allocations: 544)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "articles"[0m
+  [1m[35m (5.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------
+ArticlesControllerTest: test_should_create_article
+--------------------------------------------------
+  [1m[36mArticle Load (0.7ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "articles"[0m
+Started POST "/articles" for 127.0.0.1 at 2020-05-01 23:44:06 +0900
+Processing by ArticlesController#create as HTML
+  Parameters: {"article"=>{"body"=>"Rails is awesome!", "title"=>"Hello Rails"}}
+[31mUnpermitted parameter: :body[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mArticle Create (5.0ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "Hello Rails"], ["created_at", "2020-05-01 14:44:06.657901"], ["updated_at", "2020-05-01 14:44:06.657901"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/articles/980190970
+Completed 302 Found in 17ms (ActiveRecord: 5.5ms | Allocations: 696)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "articles"[0m
+  [1m[36mArticle Load (0.6ms)[0m  [1m[34mSELECT "articles".* FROM "articles" ORDER BY "articles"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (2.7ms)[0m  [1m[31mrollback transaction[0m

@@ -1,43 +1,70 @@
-<h1>My Movies</h1>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <title>articles</title>
+</head>
 
-<%= link_to 'New Article', new_article_path%>
+<body>
+    <%= render 'header' %>
 
-<%= form_tag(search_path, :method => 'get') do %>
-    <%= text_field_tag :search %>
-    <%= submit_tag 'Search', :name => nil %>
-<% end %>
+    <div id="wrap">
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container bg-light">
+                <h2>My Movies</h2>
 
-<table class = "table table-hover">
-    <tr>
-        <th>Title</th>
-        <th>Theater</th>
-        <th>Watched_date</th>
-        <th>Rate</th>
-        <th>Text</th>
-        <th></th>
-    </tr>
+                <div class="input-group pb-3">
+                    <%= form_tag(search_path, :method => 'get') do %>
+                        <%= text_field_tag :search %>
+                        <span class="input-group-btn">
+                            <%= submit_tag 'Search', :name => nil, :class => 'btn btn-primary' %>
+                        </span>
+                    <% end %>
+                </div>
 
-    <% @articles.each do |article| %>
-        <tr>
-            <td><%= article.title %></td>
-            <td><%= article.theater %></td>
-            <td><%= l article.watched_date %></td>
-            <td><div id="star-rate-<%= article.rate %>"></div></td>
-            <script>
-                $('#star-rate-<%= article.rate %>').raty({
-                    size: 36,
-                    starOff:  '<%= asset_path('star-off.png') %>',
-                    starOn : '<%= asset_path('star-on.png') %>',
-                    starHalf: '<%= asset_path('star-half.png') %>',
-                    readOnly: true,
-                    score: <%= article.rate %>,
-                });
-            </script> 
-            <td><%= article.text %></td>
-            <td><%= link_to 'Show', article_path(article) %></td>
-            <td><%= link_to 'Edit', edit_article_path(article) %></td>
-            <td><%= link_to 'Destroy', article_path(article),
-            method: :delete, data: { confirm: 'You are removing the selcted data. Are you sure?'} %></td>
-        </tr>
-    <% end %>
-</table>
+                <table class = "table table-hover">
+                    <tr>
+                        <th>Title</th>
+                        <th>Theater</th>
+                        <th>Watched_date</th>
+                        <th>Rate</th>
+                        <th>Text</th>
+                        <th></th>
+                    </tr>
+
+                    <% @articles.each do |article| %>
+                        <tr>
+                            <td><%= article.title %></td>
+                            <td><%= article.theater %></td>
+                            <td><%= l article.watched_date %></td>
+                            <td><div id="star-rate-<%= article.rate %>"></div></td>
+                            <script>
+                                $('#star-rate-<%= article.rate %>').raty({
+                                    size: 36,
+                                    starOff:  '<%= asset_path('star-off.png') %>',
+                                    starOn : '<%= asset_path('star-on.png') %>',
+                                    starHalf: '<%= asset_path('star-half.png') %>',
+                                    readOnly: true,
+                                    score: <%= article.rate %>,
+                                });
+                            </script> 
+                            <td><%= article.text %></td>
+                            <td><%= link_to 'Show', article_path(article) %></td>
+                            <td><%= link_to 'Edit', edit_article_path(article) %></td>
+                            <td><%= link_to 'Destroy', article_path(article),
+                            method: :delete, data: { confirm: 'You are removing the selcted data. Are you sure?'} %></td>
+                        </tr>
+                    <% end %>
+                </table>
+
+                <p class="pb-3">
+                    <%= link_to 'New Article', new_article_path %>
+                    | <%= link_to 'Back', root_path %>
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
