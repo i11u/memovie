@@ -3530,3 +3530,36 @@ Processing by WelcomeController#index as HTML
 Completed 200 OK in 2165ms (Views: 2042.7ms | ActiveRecord: 0.0ms | Allocations: 51958)
 
 
+Started GET "/" for ::1 at 2020-05-01 13:06:31 +0900
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 50.5ms | Allocations: 1603)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 471ms (Views: 447.6ms | ActiveRecord: 0.0ms | Allocations: 24437)
+
+
+Started GET "/welcome/index?class=nav-link" for ::1 at 2020-05-01 13:44:12 +0900
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by WelcomeController#index as HTML
+  Parameters: {"class"=>"nav-link"}
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 117.7ms | Allocations: 1034)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 2164ms (Views: 2109.9ms | ActiveRecord: 0.0ms | Allocations: 22917)
+
+
+Started GET "/articles?class=nav-link" for ::1 at 2020-05-01 13:44:20 +0900
+Processing by ArticlesController#index as HTML
+  Parameters: {"class"=>"nav-link"}
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (1.7ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:20
+  Rendered articles/index.html.erb within layouts/application (Duration: 442.9ms | Allocations: 12636)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 1374ms (Views: 1219.6ms | ActiveRecord: 27.0ms | Allocations: 35756)
+
+

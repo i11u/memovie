@@ -1,10 +1,6 @@
 require 'test_helper'
 
 class MemovieFlowTest < ActionDispatch::IntegrationTest
-  test "the truth" do
-    assert true
-  end
-
   test "can create an article" do
     get "/articles/new"
     assert_response :success

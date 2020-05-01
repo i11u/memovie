@@ -6,6 +6,18 @@ class ArticlesTest < ApplicationSystemTestCase
     assert_selector "h1", text: "My Movies"
   end
 
+  test "jumping from home to home" do
+    visit root_path
+    click_on "Home"
+    assert_selector "p", text: "New Movie"
+  end
+
+  test "jumping to the index via home" do
+    visit root_path
+    click_on "My Movies"
+    assert_selector "h1", text: "My Movies"
+  end
+
   test "creating an article" do
     visit articles_path
 
