@@ -1,1 +1,18 @@
 @import "bootstrap";
+
+.jumbotron {
+    background-image: image_url('theater.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 800px;
+}
+
+.btn {
+    margin-top: 10px;
+}
+
+#wrap h1 {
+    font-size: 80px;
+}

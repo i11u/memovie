@@ -9,7 +9,7 @@
 </head>
 <body>
   <header>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-success">
       <div class="navbar-header">
         <%= link_to (image_tag("logo.png", class:"logo")), controller: 'welcome', class: "navbar-brand" %></a>
         <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#Navber" aria-controls="Navber" aria-expanded="false" aria-label="ナビゲーションの切替">
@@ -17,21 +17,26 @@
         </button>
       </div>
       <div class="collapse navbar-collapse" id="Navber">
-        <ul class="nav navbar-nav">
+        <ul class="navbar-nav">
           <li class="nav-item">
-            <%= link_to "Home", controller: 'welcome', class: "nav-link" %>
+            <%= link_to "Home", root_path, class: "nav-link" %>
           </li>
           <li class="nav-item">
-            <%= link_to "My Movies", controller: 'articles', class: "nav-link" %>
+            <%= link_to "My Movies", articles_path, class: "nav-link" %>
           </li>
         </ul>
       </div>
     </nav>
   </header>
 
-  <p>
-    <%= link_to "New Movie", new_article_path %>
-  </p>
+  <div id="wrap">
+    <div class="jumbotron jumbotron-fluid">
+      <div class="container">
+        <h1 class="text-light">Record your Movies<br><h2 class="text-muted">Memovie archives movies you watched</h2></h1>
+        <%= link_to "New Movie", new_article_path, class: "btn btn-outline-success btn-lg" %>
+      </div>
+    </div>
+  </div>
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
