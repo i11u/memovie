@@ -7234,3 +7234,2103 @@ Processing by ArticlesController#index as HTML
 Completed 200 OK in 362ms (Views: 359.4ms | ActiveRecord: 0.7ms | Allocations: 25947)
 
 
+Started GET "/articles" for ::1 at 2020-05-01 21:24:52 +0900
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (1.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:18
+  Rendered articles/index.html.erb within layouts/application (Duration: 132.6ms | Allocations: 4202)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 544ms (Views: 531.3ms | ActiveRecord: 1.3ms | Allocations: 27389)
+
+
+Started GET "/articles" for ::1 at 2020-05-01 21:25:16 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (1.8ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:18
+  Rendered articles/index.html.erb within layouts/application (Duration: 130.7ms | Allocations: 4164)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 631ms (Views: 614.8ms | ActiveRecord: 1.8ms | Allocations: 27345)
+
+
+Started GET "/" for ::1 at 2020-05-01 21:25:26 +0900
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 31.5ms | Allocations: 1135)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 367ms (Views: 356.7ms | ActiveRecord: 0.0ms | Allocations: 23946)
+
+
+Started GET "/articles/new" for ::1 at 2020-05-01 21:36:09 +0900
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (Duration: 94.4ms | Allocations: 3550)
+  Rendered articles/new.html.erb within layouts/application (Duration: 116.2ms | Allocations: 3886)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 1011ms (Views: 999.1ms | ActiveRecord: 0.0ms | Allocations: 26274)
+
+
+Started GET "/articles/new" for ::1 at 2020-05-01 21:37:58 +0900
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (Duration: 92.6ms | Allocations: 3551)
+  Rendered articles/new.html.erb within layouts/application (Duration: 108.1ms | Allocations: 3892)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 545ms (Views: 531.2ms | ActiveRecord: 0.0ms | Allocations: 27092)
+
+
+Started GET "/articles/new" for ::1 at 2020-05-01 21:39:52 +0900
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (Duration: 14.3ms | Allocations: 2918)
+  Rendered articles/new.html.erb within layouts/application (Duration: 37.0ms | Allocations: 3238)
+Completed 500 Internal Server Error in 92ms (ActiveRecord: 0.0ms | Allocations: 4528)
+
+
+
+ActionView::SyntaxErrorInTemplate - Encountered a syntax error while rendering template: check <%= form_with model: @article, local: true do |form| %>
+    <% if @article.errors.any? %>
+    <div id = "error_explanation">
+        <h2><%= pluralize(@article.errors.count, "error") %>
+        prohibited this article from being saved:</h2>
+        <ul>
+        <% @article.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+        <% end %>
+        </ul>
+    </div>
+    <% end %>
+    <p>
+        <%= form.label :title %><br>
+        <%= form.text_field :title %>
+    </p>
+
+    <p>
+        <%= form.label :theater %><br>
+        <%= form.text_field :theater %>
+    </p>
+
+    <p>
+        <%= form.label :watched_date %><br>
+        <%= form.datetime_field :watched_date %>
+    </p>
+
+    <div class="field" id="star">
+        <%= form.label :rate,  "Rate" ,id: "e"%>
+        <%= form.hidden_field :rate, id: :review_star %>
+    </div>
+
+    <script>
+        $('#star').raty({
+            size     : 36,
+            starOff:  '<%= asset_path('star-off.png') %>',
+            starOn : '<%= asset_path('star-on.png') %>',
+            starHalf: '<%= asset_path('star-half.png') %>',
+            scoreName: 'article[rate]',
+        });
+    </script>
+
+    <p>
+        <%= form.label :text %><br>
+        <%= form.text_area :text %>
+    </p>
+
+    <p>
+        <%= form.submit, class: "btn btn-outline-primary" %>
+    </p>
+
+<% end %>
+:
+  app/views/articles/new.html.erb:4
+
+Started POST "/__better_errors/57535ec55c4520d6/variables" for ::1 at 2020-05-01 21:39:54 +0900
+Started GET "/articles/new" for ::1 at 2020-05-01 21:40:36 +0900
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (Duration: 13.3ms | Allocations: 2904)
+  Rendered articles/new.html.erb within layouts/application (Duration: 30.7ms | Allocations: 3229)
+Completed 500 Internal Server Error in 79ms (ActiveRecord: 0.0ms | Allocations: 4519)
+
+
+
+ActionView::SyntaxErrorInTemplate - Encountered a syntax error while rendering template: check <%= form_with model: @article, local: true do |form| %>
+    <% if @article.errors.any? %>
+    <div id = "error_explanation">
+        <h2><%= pluralize(@article.errors.count, "error") %>
+        prohibited this article from being saved:</h2>
+        <ul>
+        <% @article.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+        <% end %>
+        </ul>
+    </div>
+    <% end %>
+    <p>
+        <%= form.label :title %><br>
+        <%= form.text_field :title %>
+    </p>
+
+    <p>
+        <%= form.label :theater %><br>
+        <%= form.text_field :theater %>
+    </p>
+
+    <p>
+        <%= form.label :watched_date %><br>
+        <%= form.datetime_field :watched_date %>
+    </p>
+
+    <div class="field" id="star">
+        <%= form.label :rate,  "Rate" ,id: "e"%>
+        <%= form.hidden_field :rate, id: :review_star %>
+    </div>
+
+    <script>
+        $('#star').raty({
+            size     : 36,
+            starOff:  '<%= asset_path('star-off.png') %>',
+            starOn : '<%= asset_path('star-on.png') %>',
+            starHalf: '<%= asset_path('star-half.png') %>',
+            scoreName: 'article[rate]',
+        });
+    </script>
+
+    <p>
+        <%= form.label :text %><br>
+        <%= form.text_area :text %>
+    </p>
+
+    <p>
+        <%= form.submit, class: "btn btn-outline-success" %>
+    </p>
+
+<% end %>
+:
+  app/views/articles/new.html.erb:4
+
+Started POST "/__better_errors/34a2ba9753e224a5/variables" for ::1 at 2020-05-01 21:40:37 +0900
+Started POST "/__better_errors/34a2ba9753e224a5/variables" for ::1 at 2020-05-01 21:41:38 +0900
+Started GET "/articles/new" for ::1 at 2020-05-01 21:41:43 +0900
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (Duration: 64.6ms | Allocations: 3551)
+  Rendered articles/new.html.erb within layouts/application (Duration: 78.1ms | Allocations: 3896)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 603ms (Views: 591.8ms | ActiveRecord: 0.0ms | Allocations: 27197)
+
+
+Started GET "/articles/new" for ::1 at 2020-05-01 21:42:55 +0900
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (Duration: 10.4ms | Allocations: 2913)
+  Rendered articles/new.html.erb within layouts/application (Duration: 32.0ms | Allocations: 3232)
+Completed 500 Internal Server Error in 138ms (ActiveRecord: 0.0ms | Allocations: 4501)
+
+
+
+ActionView::SyntaxErrorInTemplate - Encountered a syntax error while rendering template: check <%= form_with model: @article, local: true do |form| %>
+    <% if @article.errors.any? %>
+    <div id = "error_explanation">
+        <h2><%= pluralize(@article.errors.count, "error") %>
+        prohibited this article from being saved:</h2>
+        <ul>
+        <% @article.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+        <% end %>
+        </ul>
+    </div>
+    <% end %>
+    <p>
+        <%= form.label :title %><br>
+        <%= form.text_field :title %>
+    </p>
+
+    <p>
+        <%= form.label :theater %><br>
+        <%= form.text_field :theater %>
+    </p>
+
+    <p>
+        <%= form.label :watched_date %><br>
+        <%= form.datetime_field :watched_date %>
+    </p>
+
+    <div class="field" id="star">
+        <%= form.label :rate,  "Rate" ,id: "e"%>
+        <%= form.hidden_field :rate, id: :review_star %>
+    </div>
+
+    <script>
+        $('#star').raty({
+            size     : 36,
+            starOff:  '<%= asset_path('star-off.png') %>',
+            starOn : '<%= asset_path('star-on.png') %>',
+            starHalf: '<%= asset_path('star-half.png') %>',
+            scoreName: 'article[rate]',
+        });
+    </script>
+
+    <p>
+        <%= form.label :text %><br>
+        <%= form.text_area :text %>
+    </p>
+
+    <p>
+        <%= form.submit('Create Article, class: 'btn btn-primary btn-lg my-1 mb-5 px-5) %>
+    </p>
+
+<% end %>
+:
+  app/views/articles/new.html.erb:4
+
+Started POST "/__better_errors/b7ebc9d2346496aa/variables" for ::1 at 2020-05-01 21:42:57 +0900
+Started GET "/articles" for ::1 at 2020-05-01 21:43:53 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (1.8ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:18
+  Rendered articles/index.html.erb within layouts/application (Duration: 81.0ms | Allocations: 4194)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 461ms (Views: 447.9ms | ActiveRecord: 1.8ms | Allocations: 26858)
+
+
+Started GET "/articles/new" for ::1 at 2020-05-01 21:44:00 +0900
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (Duration: 17.9ms | Allocations: 2889)
+  Rendered articles/new.html.erb within layouts/application (Duration: 22.5ms | Allocations: 2961)
+Completed 500 Internal Server Error in 41ms (ActiveRecord: 0.0ms | Allocations: 3495)
+
+
+
+ActionView::SyntaxErrorInTemplate - Encountered a syntax error while rendering template: check <%= form_with model: @article, local: true do |form| %>
+    <% if @article.errors.any? %>
+    <div id = "error_explanation">
+        <h2><%= pluralize(@article.errors.count, "error") %>
+        prohibited this article from being saved:</h2>
+        <ul>
+        <% @article.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+        <% end %>
+        </ul>
+    </div>
+    <% end %>
+    <p>
+        <%= form.label :title %><br>
+        <%= form.text_field :title %>
+    </p>
+
+    <p>
+        <%= form.label :theater %><br>
+        <%= form.text_field :theater %>
+    </p>
+
+    <p>
+        <%= form.label :watched_date %><br>
+        <%= form.datetime_field :watched_date %>
+    </p>
+
+    <div class="field" id="star">
+        <%= form.label :rate,  "Rate" ,id: "e"%>
+        <%= form.hidden_field :rate, id: :review_star %>
+    </div>
+
+    <script>
+        $('#star').raty({
+            size     : 36,
+            starOff:  '<%= asset_path('star-off.png') %>',
+            starOn : '<%= asset_path('star-on.png') %>',
+            starHalf: '<%= asset_path('star-half.png') %>',
+            scoreName: 'article[rate]',
+        });
+    </script>
+
+    <p>
+        <%= form.label :text %><br>
+        <%= form.text_area :text %>
+    </p>
+
+    <p>
+        <%= form.submit('Create Article, class: 'btn btn-primary btn-lg my-1 mb-5 px-5) %>
+    </p>
+
+<% end %>
+:
+  app/views/articles/new.html.erb:4
+
+Started POST "/__better_errors/c532d68ef92142c2/variables" for ::1 at 2020-05-01 21:44:02 +0900
+Started GET "/articles/new" for ::1 at 2020-05-01 21:44:42 +0900
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (Duration: 55.8ms | Allocations: 3552)
+  Rendered articles/new.html.erb within layouts/application (Duration: 69.9ms | Allocations: 3897)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 447ms (Views: 433.9ms | ActiveRecord: 0.0ms | Allocations: 27183)
+
+
+Started GET "/articles/new" for ::1 at 2020-05-01 21:44:53 +0900
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (Duration: 19.4ms | Allocations: 2904)
+  Rendered articles/new.html.erb within layouts/application (Duration: 81.9ms | Allocations: 3229)
+Completed 500 Internal Server Error in 132ms (ActiveRecord: 0.0ms | Allocations: 4526)
+
+
+
+ActionView::SyntaxErrorInTemplate - Encountered a syntax error while rendering template: check <%= form_with model: @article, local: true do |form| %>
+    <% if @article.errors.any? %>
+    <div id = "error_explanation">
+        <h2><%= pluralize(@article.errors.count, "error") %>
+        prohibited this article from being saved:</h2>
+        <ul>
+        <% @article.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+        <% end %>
+        </ul>
+    </div>
+    <% end %>
+    <p>
+        <%= form.label :title %><br>
+        <%= form.text_field :title %>
+    </p>
+
+    <p>
+        <%= form.label :theater %><br>
+        <%= form.text_field :theater %>
+    </p>
+
+    <p>
+        <%= form.label :watched_date %><br>
+        <%= form.datetime_field :watched_date %>
+    </p>
+
+    <div class="field" id="star">
+        <%= form.label :rate,  "Rate" ,id: "e"%>
+        <%= form.hidden_field :rate, id: :review_star %>
+    </div>
+
+    <script>
+        $('#star').raty({
+            size     : 36,
+            starOff:  '<%= asset_path('star-off.png') %>',
+            starOn : '<%= asset_path('star-on.png') %>',
+            starHalf: '<%= asset_path('star-half.png') %>',
+            scoreName: 'article[rate]',
+        });
+    </script>
+
+    <p>
+        <%= form.label :text %><br>
+        <%= form.text_area :text %>
+    </p>
+
+    <p>
+        <%= form.submit('Create Article, class: 'btn btn-primary btn-lg my-1 mb-5 px-5) %>
+    </p>
+
+<% end %>
+:
+  app/views/articles/new.html.erb:4
+
+Started POST "/__better_errors/bd92af8c4726193d/variables" for ::1 at 2020-05-01 21:44:54 +0900
+Started GET "/articles/new" for ::1 at 2020-05-01 21:45:21 +0900
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (Duration: 81.5ms | Allocations: 3459)
+  Rendered articles/new.html.erb within layouts/application (Duration: 109.9ms | Allocations: 3804)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 613ms (Views: 593.8ms | ActiveRecord: 0.0ms | Allocations: 27108)
+
+
+Started GET "/articles/new" for ::1 at 2020-05-01 21:47:03 +0900
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (Duration: 104.7ms | Allocations: 3456)
+  Rendered articles/new.html.erb within layouts/application (Duration: 144.2ms | Allocations: 3795)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 616ms (Views: 601.3ms | ActiveRecord: 0.0ms | Allocations: 26985)
+
+
+Started GET "/articles/new" for ::1 at 2020-05-01 21:47:47 +0900
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (Duration: 55.0ms | Allocations: 3456)
+  Rendered articles/new.html.erb within layouts/application (Duration: 65.2ms | Allocations: 3804)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 419ms (Views: 408.6ms | ActiveRecord: 0.0ms | Allocations: 27088)
+
+
+Started GET "/articles/new" for ::1 at 2020-05-01 21:58:00 +0900
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (Duration: 75.4ms | Allocations: 3456)
+  Rendered articles/new.html.erb within layouts/application (Duration: 107.7ms | Allocations: 3808)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 726ms (Views: 710.2ms | ActiveRecord: 0.0ms | Allocations: 27012)
+
+
+Started GET "/articles" for ::1 at 2020-05-01 21:58:06 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (1.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:18
+  Rendered articles/index.html.erb within layouts/application (Duration: 76.0ms | Allocations: 4187)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 391ms (Views: 381.3ms | ActiveRecord: 1.3ms | Allocations: 26581)
+
+
+Started GET "/" for ::1 at 2020-05-01 21:58:10 +0900
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 4.9ms | Allocations: 196)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 335ms (Views: 326.1ms | ActiveRecord: 0.0ms | Allocations: 23122)
+
+
+Started GET "/" for ::1 at 2020-05-01 21:58:20 +0900
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 6.7ms | Allocations: 191)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 510ms (Views: 495.7ms | ActiveRecord: 0.0ms | Allocations: 23454)
+
+
+Started GET "/" for ::1 at 2020-05-01 21:59:12 +0900
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/_header.html.erb (Duration: 32.9ms | Allocations: 1062)
+  Rendered welcome/index.html.erb within layouts/application (Duration: 57.9ms | Allocations: 1439)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 602ms (Views: 578.2ms | ActiveRecord: 0.0ms | Allocations: 24700)
+
+
+Started GET "/articles" for ::1 at 2020-05-01 22:01:56 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/_header.html.erb (Duration: 47.1ms | Allocations: 1063)
+  [1m[36mArticle Load (4.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:20
+  Rendered articles/index.html.erb within layouts/application (Duration: 183.3ms | Allocations: 5308)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 534ms (Views: 521.2ms | ActiveRecord: 4.4ms | Allocations: 28478)
+
+
+Started GET "/articles" for ::1 at 2020-05-01 22:05:39 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/_header.html.erb (Duration: 27.1ms | Allocations: 1061)
+  [1m[36mArticle Load (1.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:32
+  Rendered articles/index.html.erb within layouts/application (Duration: 110.2ms | Allocations: 5353)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 626ms (Views: 609.1ms | ActiveRecord: 1.3ms | Allocations: 28529)
+
+
+Started GET "/articles" for ::1 at 2020-05-01 22:09:51 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/_header.html.erb (Duration: 37.4ms | Allocations: 1061)
+  [1m[36mArticle Load (1.9ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:33
+  Rendered articles/index.html.erb within layouts/application (Duration: 145.5ms | Allocations: 5359)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 577ms (Views: 566.9ms | ActiveRecord: 1.9ms | Allocations: 28556)
+
+
+Started GET "/articles" for ::1 at 2020-05-01 22:10:12 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/_header.html.erb (Duration: 27.2ms | Allocations: 1061)
+  [1m[36mArticle Load (1.8ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:33
+  Rendered articles/index.html.erb within layouts/application (Duration: 138.1ms | Allocations: 5339)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 766ms (Views: 751.1ms | ActiveRecord: 1.8ms | Allocations: 28528)
+
+
+Started GET "/articles" for ::1 at 2020-05-01 22:10:24 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/_header.html.erb (Duration: 36.8ms | Allocations: 1062)
+  [1m[36mArticle Load (1.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:33
+  Rendered articles/index.html.erb within layouts/application (Duration: 181.9ms | Allocations: 5346)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 577ms (Views: 552.3ms | ActiveRecord: 1.1ms | Allocations: 28531)
+
+
+Started GET "/articles" for ::1 at 2020-05-01 22:11:39 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/_header.html.erb (Duration: 24.2ms | Allocations: 905)
+  [1m[36mArticle Load (2.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:33
+  Rendered articles/index.html.erb within layouts/application (Duration: 100.2ms | Allocations: 4542)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8127ms (Views: 8122.1ms | ActiveRecord: 2.4ms | Allocations: 96448)
+
+
+Started GET "/articles" for ::1 at 2020-05-01 22:12:31 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/_header.html.erb (Duration: 37.0ms | Allocations: 1061)
+  [1m[36mArticle Load (1.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:33
+  Rendered articles/index.html.erb within layouts/application (Duration: 168.7ms | Allocations: 5348)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 688ms (Views: 672.0ms | ActiveRecord: 1.2ms | Allocations: 28540)
+
+
+Started GET "/articles" for ::1 at 2020-05-01 22:12:49 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/_header.html.erb (Duration: 17.2ms | Allocations: 905)
+  [1m[36mArticle Load (1.0ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:33
+  Rendered articles/index.html.erb within layouts/application (Duration: 108.5ms | Allocations: 4542)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9061ms (Views: 9055.7ms | ActiveRecord: 1.0ms | Allocations: 98672)
+
+
+Started GET "/articles" for ::1 at 2020-05-01 22:14:44 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/index.html.erb within layouts/application (Duration: 20.4ms | Allocations: 2596)
+Completed 500 Internal Server Error in 90ms (ActiveRecord: 0.0ms | Allocations: 3859)
+
+
+
+ActionView::SyntaxErrorInTemplate - Encountered a syntax error while rendering template: check <!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <title>articles</title>
+</head>
+
+<body>
+    <%= render 'header' %>
+
+    <div id="wrap">
+        <div class="container">
+            <h2>My Movies</h2>
+
+            <%= form_tag(search_path, :method => 'get') do %>
+                <%= text_field_tag :search %>
+                <%= submit_tag 'Search', :name => nil, class: 'btn btn-primary btn-lg my-1 mb-5 px-5') %>
+            <% end %>
+
+            <table class = "table table-hover">
+                <tr>
+                    <th>Title</th>
+                    <th>Theater</th>
+                    <th>Watched_date</th>
+                    <th>Rate</th>
+                    <th>Text</th>
+                    <th></th>
+                </tr>
+
+                <% @articles.each do |article| %>
+                    <tr>
+                        <td><%= article.title %></td>
+                        <td><%= article.theater %></td>
+                        <td><%= l article.watched_date %></td>
+                        <td><div id="star-rate-<%= article.rate %>"></div></td>
+                        <script>
+                            $('#star-rate-<%= article.rate %>').raty({
+                                size: 36,
+                                starOff:  '<%= asset_path('star-off.png') %>',
+                                starOn : '<%= asset_path('star-on.png') %>',
+                                starHalf: '<%= asset_path('star-half.png') %>',
+                                readOnly: true,
+                                score: <%= article.rate %>,
+                            });
+                        </script> 
+                        <td><%= article.text %></td>
+                        <td><%= link_to 'Show', article_path(article) %></td>
+                        <td><%= link_to 'Edit', edit_article_path(article) %></td>
+                        <td><%= link_to 'Destroy', article_path(article),
+                        method: :delete, data: { confirm: 'You are removing the selcted data. Are you sure?'} %></td>
+                    </tr>
+                <% end %>
+            </table>
+
+            <%= link_to 'New Article', new_article_path%>
+            | <%= link_to 'Back', root_path %>
+        </div>
+    </div>
+</body>
+:
+
+Started POST "/__better_errors/0a834cbc5450ab69/variables" for ::1 at 2020-05-01 22:14:46 +0900
+  [1m[36mArticle Load (1.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles" LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/articles" for ::1 at 2020-05-01 22:16:07 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/index.html.erb within layouts/application (Duration: 5.8ms | Allocations: 2596)
+Completed 500 Internal Server Error in 39ms (ActiveRecord: 0.0ms | Allocations: 3859)
+
+
+
+ActionView::SyntaxErrorInTemplate - Encountered a syntax error while rendering template: check <!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <title>articles</title>
+</head>
+
+<body>
+    <%= render 'header' %>
+
+    <div id="wrap">
+        <div class="container">
+            <h2>My Movies</h2>
+
+            <%= form_tag(search_path, :method => 'get') do %>
+                <%= text_field_tag :search %>
+                <%= submit_tag 'Search', :name => nil, :class => 'btn btn-primary btn-lg my-1 mb-5 px-5') %>
+            <% end %>
+
+            <table class = "table table-hover">
+                <tr>
+                    <th>Title</th>
+                    <th>Theater</th>
+                    <th>Watched_date</th>
+                    <th>Rate</th>
+                    <th>Text</th>
+                    <th></th>
+                </tr>
+
+                <% @articles.each do |article| %>
+                    <tr>
+                        <td><%= article.title %></td>
+                        <td><%= article.theater %></td>
+                        <td><%= l article.watched_date %></td>
+                        <td><div id="star-rate-<%= article.rate %>"></div></td>
+                        <script>
+                            $('#star-rate-<%= article.rate %>').raty({
+                                size: 36,
+                                starOff:  '<%= asset_path('star-off.png') %>',
+                                starOn : '<%= asset_path('star-on.png') %>',
+                                starHalf: '<%= asset_path('star-half.png') %>',
+                                readOnly: true,
+                                score: <%= article.rate %>,
+                            });
+                        </script> 
+                        <td><%= article.text %></td>
+                        <td><%= link_to 'Show', article_path(article) %></td>
+                        <td><%= link_to 'Edit', edit_article_path(article) %></td>
+                        <td><%= link_to 'Destroy', article_path(article),
+                        method: :delete, data: { confirm: 'You are removing the selcted data. Are you sure?'} %></td>
+                    </tr>
+                <% end %>
+            </table>
+
+            <%= link_to 'New Article', new_article_path%>
+            | <%= link_to 'Back', root_path %>
+        </div>
+    </div>
+</body>
+:
+
+Started POST "/__better_errors/154bd485ae1b3a49/variables" for ::1 at 2020-05-01 22:16:08 +0900
+  [1m[36mArticle Load (1.7ms)[0m  [1m[34mSELECT "articles".* FROM "articles" LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/articles" for ::1 at 2020-05-01 22:16:26 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/_header.html.erb (Duration: 21.7ms | Allocations: 1062)
+  [1m[36mArticle Load (1.7ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:33
+  Rendered articles/index.html.erb within layouts/application (Duration: 121.0ms | Allocations: 5354)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 818ms (Views: 808.1ms | ActiveRecord: 1.7ms | Allocations: 28636)
+
+
+Started GET "/articles" for ::1 at 2020-05-01 22:17:21 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/_header.html.erb (Duration: 23.3ms | Allocations: 1062)
+  [1m[36mArticle Load (2.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:33
+  Rendered articles/index.html.erb within layouts/application (Duration: 88.6ms | Allocations: 5356)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 381ms (Views: 369.9ms | ActiveRecord: 2.4ms | Allocations: 28630)
+
+
+Started GET "/articles" for ::1 at 2020-05-01 22:17:31 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/_header.html.erb (Duration: 23.5ms | Allocations: 1061)
+  [1m[36mArticle Load (0.9ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:33
+  Rendered articles/index.html.erb within layouts/application (Duration: 96.4ms | Allocations: 5349)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 443ms (Views: 428.9ms | ActiveRecord: 0.9ms | Allocations: 28523)
+
+
+Started GET "/articles" for ::1 at 2020-05-01 22:17:45 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/_header.html.erb (Duration: 14.6ms | Allocations: 1062)
+  [1m[36mArticle Load (1.0ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:33
+  Rendered articles/index.html.erb within layouts/application (Duration: 88.9ms | Allocations: 5356)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 442ms (Views: 430.6ms | ActiveRecord: 1.0ms | Allocations: 28534)
+
+
+Started GET "/articles" for ::1 at 2020-05-01 22:17:56 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/_header.html.erb (Duration: 30.1ms | Allocations: 1061)
+  [1m[36mArticle Load (2.0ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:33
+  Rendered articles/index.html.erb within layouts/application (Duration: 121.0ms | Allocations: 5349)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 600ms (Views: 589.1ms | ActiveRecord: 2.0ms | Allocations: 28523)
+
+
+Started GET "/articles" for ::1 at 2020-05-01 22:18:10 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/_header.html.erb (Duration: 26.4ms | Allocations: 1062)
+  [1m[36mArticle Load (0.9ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:33
+  Rendered articles/index.html.erb within layouts/application (Duration: 110.0ms | Allocations: 5356)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 613ms (Views: 597.5ms | ActiveRecord: 0.9ms | Allocations: 28533)
+
+
+Started GET "/articles" for ::1 at 2020-05-01 22:19:44 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/_header.html.erb (Duration: 22.8ms | Allocations: 1061)
+  [1m[36mArticle Load (3.7ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:33
+  Rendered articles/index.html.erb within layouts/application (Duration: 124.1ms | Allocations: 5349)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 612ms (Views: 590.7ms | ActiveRecord: 3.7ms | Allocations: 28538)
+
+
+Started GET "/articles" for ::1 at 2020-05-01 22:25:08 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/_header.html.erb (Duration: 29.0ms | Allocations: 1061)
+  [1m[36mArticle Load (2.0ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:33
+  Rendered articles/index.html.erb within layouts/application (Duration: 148.1ms | Allocations: 5369)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 735ms (Views: 713.5ms | ActiveRecord: 2.0ms | Allocations: 28558)
+
+
+Started GET "/articles" for ::1 at 2020-05-01 22:27:01 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/_header.html.erb (Duration: 17.0ms | Allocations: 1061)
+  [1m[36mArticle Load (1.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:33
+  Rendered articles/index.html.erb within layouts/application (Duration: 96.2ms | Allocations: 5348)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 470ms (Views: 457.5ms | ActiveRecord: 1.2ms | Allocations: 28525)
+
+
+Started GET "/articles" for ::1 at 2020-05-01 22:30:04 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/_header.html.erb (Duration: 28.3ms | Allocations: 1061)
+  [1m[36mArticle Load (1.5ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:35
+  Rendered articles/index.html.erb within layouts/application (Duration: 135.3ms | Allocations: 5359)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 496ms (Views: 482.6ms | ActiveRecord: 1.5ms | Allocations: 28537)
+
+
+Started GET "/articles" for ::1 at 2020-05-01 22:33:52 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/_header.html.erb (Duration: 33.0ms | Allocations: 1061)
+  [1m[36mArticle Load (1.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:37
+  Rendered articles/index.html.erb within layouts/application (Duration: 151.0ms | Allocations: 5373)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 727ms (Views: 713.2ms | ActiveRecord: 1.4ms | Allocations: 28551)
+
+
+Started GET "/articles" for ::1 at 2020-05-01 22:34:07 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/_header.html.erb (Duration: 19.1ms | Allocations: 1061)
+  [1m[36mArticle Load (1.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:37
+  Rendered articles/index.html.erb within layouts/application (Duration: 104.9ms | Allocations: 5362)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 580ms (Views: 569.0ms | ActiveRecord: 1.3ms | Allocations: 28558)
+
+
+Started GET "/articles" for ::1 at 2020-05-01 22:37:31 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/_header.html.erb (Duration: 21.3ms | Allocations: 906)
+  [1m[36mArticle Load (1.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:37
+  Rendered articles/index.html.erb within layouts/application (Duration: 125.1ms | Allocations: 4551)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 450ms (Views: 443.1ms | ActiveRecord: 1.3ms | Allocations: 26802)
+
+
+Started GET "/articles" for ::1 at 2020-05-01 22:40:16 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/_header.html.erb (Duration: 21.6ms | Allocations: 895)
+  [1m[36mArticle Load (1.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:37
+  Rendered articles/index.html.erb within layouts/application (Duration: 100.7ms | Allocations: 4536)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8765ms (Views: 8759.4ms | ActiveRecord: 1.2ms | Allocations: 93827)
+
+
+Started GET "/articles" for ::1 at 2020-05-01 22:40:50 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/_header.html.erb (Duration: 30.9ms | Allocations: 895)
+  [1m[36mArticle Load (1.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:37
+  Rendered articles/index.html.erb within layouts/application (Duration: 146.8ms | Allocations: 4537)
+Completed 500 Internal Server Error in 10000ms (ActiveRecord: 1.2ms | Allocations: 68673)
+
+
+
+ActionView::Template::Error - Error: style declaration must contain a value
+        on line 29:19 of app/assets/stylesheets/application.scss
+>>     vertical-align: ;
+
+   ------------------^
+:
+
+Started POST "/__better_errors/ee07ef0019bfa670/variables" for ::1 at 2020-05-01 22:41:02 +0900
+Started GET "/articles" for ::1 at 2020-05-01 22:41:14 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/_header.html.erb (Duration: 25.2ms | Allocations: 896)
+  [1m[36mArticle Load (1.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:37
+  Rendered articles/index.html.erb within layouts/application (Duration: 140.0ms | Allocations: 4537)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9487ms (Views: 9479.1ms | ActiveRecord: 1.4ms | Allocations: 96426)
+
+
+Started GET "/articles" for ::1 at 2020-05-01 22:41:39 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/_header.html.erb (Duration: 16.2ms | Allocations: 895)
+  [1m[36mArticle Load (1.0ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:37
+  Rendered articles/index.html.erb within layouts/application (Duration: 77.3ms | Allocations: 4536)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 7109ms (Views: 7105.9ms | ActiveRecord: 1.0ms | Allocations: 93645)
+
+
+Started GET "/articles" for ::1 at 2020-05-01 22:44:23 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/_header.html.erb (Duration: 26.8ms | Allocations: 896)
+  [1m[36mArticle Load (1.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:37
+  Rendered articles/index.html.erb within layouts/application (Duration: 119.5ms | Allocations: 4537)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9169ms (Views: 9160.7ms | ActiveRecord: 1.3ms | Allocations: 100036)
+
+
+Started GET "/articles" for ::1 at 2020-05-01 22:44:57 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/_header.html.erb (Duration: 19.0ms | Allocations: 895)
+  [1m[36mArticle Load (0.8ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:37
+  Rendered articles/index.html.erb within layouts/application (Duration: 81.0ms | Allocations: 4537)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 6808ms (Views: 6803.3ms | ActiveRecord: 0.8ms | Allocations: 93663)
+
+
+Started GET "/articles" for ::1 at 2020-05-01 22:45:33 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/_header.html.erb (Duration: 21.6ms | Allocations: 895)
+  [1m[36mArticle Load (1.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:37
+  Rendered articles/index.html.erb within layouts/application (Duration: 98.0ms | Allocations: 4536)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8817ms (Views: 8810.9ms | ActiveRecord: 1.3ms | Allocations: 94914)
+
+
+Started GET "/articles" for ::1 at 2020-05-01 22:47:07 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/_header.html.erb (Duration: 20.9ms | Allocations: 895)
+  [1m[36mArticle Load (1.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:37
+  Rendered articles/index.html.erb within layouts/application (Duration: 100.8ms | Allocations: 4537)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8665ms (Views: 8660.6ms | ActiveRecord: 1.2ms | Allocations: 97401)
+
+
+Started GET "/articles" for ::1 at 2020-05-01 22:50:13 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/_header.html.erb (Duration: 32.9ms | Allocations: 1062)
+  [1m[36mArticle Load (1.9ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:37
+  Rendered articles/index.html.erb within layouts/application (Duration: 138.2ms | Allocations: 5366)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 551ms (Views: 537.3ms | ActiveRecord: 1.9ms | Allocations: 28558)
+
+
+Started GET "/articles" for ::1 at 2020-05-01 22:50:23 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/_header.html.erb (Duration: 28.0ms | Allocations: 1061)
+  [1m[36mArticle Load (3.9ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:37
+  Rendered articles/index.html.erb within layouts/application (Duration: 143.3ms | Allocations: 5357)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 622ms (Views: 602.1ms | ActiveRecord: 3.9ms | Allocations: 28538)
+
+
+Started GET "/articles" for ::1 at 2020-05-01 22:55:25 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/_header.html.erb (Duration: 21.7ms | Allocations: 1061)
+  [1m[36mArticle Load (1.5ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:38
+  Rendered articles/index.html.erb within layouts/application (Duration: 99.5ms | Allocations: 5383)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 526ms (Views: 513.8ms | ActiveRecord: 1.5ms | Allocations: 28564)
+
+
+Started GET "/articles" for ::1 at 2020-05-01 23:00:17 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/_header.html.erb (Duration: 28.7ms | Allocations: 1061)
+  [1m[36mArticle Load (1.5ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:38
+  Rendered articles/index.html.erb within layouts/application (Duration: 195.9ms | Allocations: 5361)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 799ms (Views: 778.5ms | ActiveRecord: 1.5ms | Allocations: 28546)
+
+
+Started GET "/articles" for ::1 at 2020-05-01 23:00:41 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/_header.html.erb (Duration: 23.4ms | Allocations: 1062)
+  [1m[36mArticle Load (1.8ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:38
+  Rendered articles/index.html.erb within layouts/application (Duration: 108.0ms | Allocations: 5367)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 482ms (Views: 469.5ms | ActiveRecord: 1.8ms | Allocations: 28549)
+
+
+Started GET "/articles" for ::1 at 2020-05-01 23:01:00 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/_header.html.erb (Duration: 29.9ms | Allocations: 1061)
+  [1m[36mArticle Load (0.9ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:38
+  Rendered articles/index.html.erb within layouts/application (Duration: 109.4ms | Allocations: 5360)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 543ms (Views: 512.3ms | ActiveRecord: 0.9ms | Allocations: 28551)
+
+
+Started GET "/articles" for ::1 at 2020-05-01 23:02:09 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/_header.html.erb (Duration: 29.1ms | Allocations: 1062)
+  [1m[36mArticle Load (1.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:38
+  Rendered articles/index.html.erb within layouts/application (Duration: 112.6ms | Allocations: 5369)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 548ms (Views: 535.4ms | ActiveRecord: 1.2ms | Allocations: 28630)
+
+
+Started GET "/articles" for ::1 at 2020-05-01 23:03:48 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/_header.html.erb (Duration: 20.6ms | Allocations: 1061)
+  [1m[36mArticle Load (1.6ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:38
+  Rendered articles/index.html.erb within layouts/application (Duration: 92.0ms | Allocations: 5364)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 526ms (Views: 514.2ms | ActiveRecord: 1.6ms | Allocations: 28560)
+
+
+Started GET "/articles" for ::1 at 2020-05-01 23:04:09 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/_header.html.erb (Duration: 25.5ms | Allocations: 1064)
+  [1m[36mArticle Load (1.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:38
+  Rendered articles/index.html.erb within layouts/application (Duration: 165.7ms | Allocations: 5366)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 608ms (Views: 594.1ms | ActiveRecord: 1.4ms | Allocations: 28640)
+
+
+Started GET "/articles/new" for ::1 at 2020-05-01 23:05:59 +0900
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_header.html.erb (Duration: 24.9ms | Allocations: 1061)
+  Rendered articles/_form.html.erb (Duration: 56.8ms | Allocations: 3337)
+  Rendered articles/new.html.erb within layouts/application (Duration: 116.1ms | Allocations: 4998)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 432ms (Views: 422.8ms | ActiveRecord: 0.0ms | Allocations: 28183)
+
+
+Started GET "/articles/new" for ::1 at 2020-05-01 23:06:25 +0900
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_header.html.erb (Duration: 29.9ms | Allocations: 1061)
+  Rendered articles/_form.html.erb (Duration: 55.8ms | Allocations: 3319)
+  Rendered articles/new.html.erb within layouts/application (Duration: 116.9ms | Allocations: 4969)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 496ms (Views: 482.7ms | ActiveRecord: 0.0ms | Allocations: 28170)
+
+
+Started GET "/articles/new" for ::1 at 2020-05-01 23:08:01 +0900
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_header.html.erb (Duration: 22.4ms | Allocations: 1061)
+  Rendered articles/_form.html.erb (Duration: 74.5ms | Allocations: 3319)
+  Rendered articles/new.html.erb within layouts/application (Duration: 139.6ms | Allocations: 4981)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 603ms (Views: 587.1ms | ActiveRecord: 0.0ms | Allocations: 28194)
+
+
+Started GET "/articles/new" for ::1 at 2020-05-01 23:08:34 +0900
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_header.html.erb (Duration: 59.1ms | Allocations: 1061)
+  Rendered articles/_form.html.erb (Duration: 76.4ms | Allocations: 3319)
+  Rendered articles/new.html.erb within layouts/application (Duration: 187.8ms | Allocations: 4971)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 766ms (Views: 748.0ms | ActiveRecord: 0.0ms | Allocations: 28165)
+
+
+Started GET "/articles/new" for ::1 at 2020-05-01 23:09:20 +0900
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_header.html.erb (Duration: 36.5ms | Allocations: 1062)
+  Rendered articles/_form.html.erb (Duration: 50.0ms | Allocations: 3314)
+  Rendered articles/new.html.erb within layouts/application (Duration: 114.2ms | Allocations: 4972)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 618ms (Views: 601.1ms | ActiveRecord: 0.0ms | Allocations: 28162)
+
+
+Started GET "/articles/new" for ::1 at 2020-05-01 23:09:32 +0900
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_header.html.erb (Duration: 18.4ms | Allocations: 1061)
+  Rendered articles/_form.html.erb (Duration: 43.1ms | Allocations: 3319)
+  Rendered articles/new.html.erb within layouts/application (Duration: 100.2ms | Allocations: 4969)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 514ms (Views: 502.1ms | ActiveRecord: 0.0ms | Allocations: 28158)
+
+
+Started GET "/articles/new" for ::1 at 2020-05-01 23:12:22 +0900
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_header.html.erb (Duration: 18.0ms | Allocations: 1062)
+  Rendered articles/_form.html.erb (Duration: 43.8ms | Allocations: 3318)
+  Rendered articles/new.html.erb within layouts/application (Duration: 83.8ms | Allocations: 4977)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 518ms (Views: 478.3ms | ActiveRecord: 0.0ms | Allocations: 28263)
+
+
+Started GET "/articles/new" for ::1 at 2020-05-01 23:13:40 +0900
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_header.html.erb (Duration: 28.8ms | Allocations: 1061)
+  Rendered articles/_form.html.erb (Duration: 53.6ms | Allocations: 3318)
+  Rendered articles/new.html.erb within layouts/application (Duration: 114.2ms | Allocations: 4969)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 553ms (Views: 532.6ms | ActiveRecord: 0.0ms | Allocations: 28154)
+
+
+Started GET "/articles/new" for ::1 at 2020-05-01 23:13:52 +0900
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_header.html.erb (Duration: 15.7ms | Allocations: 1061)
+  Rendered articles/_form.html.erb (Duration: 47.4ms | Allocations: 3318)
+  Rendered articles/new.html.erb within layouts/application (Duration: 84.8ms | Allocations: 4968)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 516ms (Views: 504.7ms | ActiveRecord: 0.0ms | Allocations: 28252)
+
+
+Started GET "/articles" for ::1 at 2020-05-01 23:14:12 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/_header.html.erb (Duration: 13.9ms | Allocations: 905)
+  [1m[36mArticle Load (1.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:38
+  Rendered articles/index.html.erb within layouts/application (Duration: 78.6ms | Allocations: 5072)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 384ms (Views: 374.3ms | ActiveRecord: 1.1ms | Allocations: 27465)
+
+
+Started GET "/articles/1" for ::1 at 2020-05-01 23:14:20 +0900
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (1.8ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:12:in `show'
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (Duration: 66.8ms | Allocations: 2346)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 452ms (Views: 423.8ms | ActiveRecord: 1.8ms | Allocations: 25279)
+
+
+Started GET "/articles/1" for ::1 at 2020-05-01 23:15:19 +0900
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (0.9ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:12:in `show'
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (Duration: 55.0ms | Allocations: 2339)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 490ms (Views: 467.7ms | ActiveRecord: 0.9ms | Allocations: 26037)
+
+
+Started GET "/articles/1/edit" for ::1 at 2020-05-01 23:15:22 +0900
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (1.0ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:4:in `edit'
+  Rendering articles/edit.html.erb within layouts/application
+  Rendered articles/_header.html.erb (Duration: 15.2ms | Allocations: 1066)
+  Rendered articles/_form.html.erb (Duration: 48.1ms | Allocations: 3406)
+  Rendered articles/edit.html.erb within layouts/application (Duration: 91.9ms | Allocations: 5067)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 429ms (Views: 410.8ms | ActiveRecord: 1.0ms | Allocations: 27975)
+
+
+Started GET "/articles" for ::1 at 2020-05-01 23:15:33 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/_header.html.erb (Duration: 16.2ms | Allocations: 906)
+  [1m[36mArticle Load (1.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:38
+  Rendered articles/index.html.erb within layouts/application (Duration: 87.7ms | Allocations: 5073)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 385ms (Views: 374.9ms | ActiveRecord: 1.2ms | Allocations: 27474)
+
+
+Started GET "/search?search=%E5%90%9B" for ::1 at 2020-05-01 23:16:29 +0900
+Processing by ArticlesController#search as HTML
+  Parameters: {"search"=>"君"}
+  Rendering articles/search.html.erb within layouts/application
+  Rendered articles/_header.html.erb (Duration: 35.6ms | Allocations: 1061)
+  Rendered articles/search.html.erb within layouts/application (Duration: 53.3ms | Allocations: 1390)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 444ms (Views: 427.9ms | ActiveRecord: 0.0ms | Allocations: 24625)
+
+
+Started GET "/search?search=%E5%90%9B" for ::1 at 2020-05-01 23:16:43 +0900
+Processing by ArticlesController#search as HTML
+  Parameters: {"search"=>"君"}
+  Rendering articles/search.html.erb within layouts/application
+  Rendered articles/_header.html.erb (Duration: 16.7ms | Allocations: 905)
+  Rendered articles/search.html.erb within layouts/application (Duration: 20.1ms | Allocations: 974)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 349ms (Views: 346.0ms | ActiveRecord: 0.0ms | Allocations: 23372)
+
+
+Started GET "/search?search=%E5%90%9B%E3%81%AE%E8%86%B5%E8%87%93%E3%82%92%E9%A3%9F%E3%81%B9%E3%81%9F%E3%81%84" for ::1 at 2020-05-01 23:17:01 +0900
+Processing by ArticlesController#search as HTML
+  Parameters: {"search"=>"君の膵臓を食べたい"}
+  Rendering articles/search.html.erb within layouts/application
+  Rendered articles/_header.html.erb (Duration: 21.5ms | Allocations: 895)
+  Rendered articles/search.html.erb within layouts/application (Duration: 28.5ms | Allocations: 964)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 388ms (Views: 383.3ms | ActiveRecord: 0.0ms | Allocations: 23264)
+
+
+Started GET "/articles/1/edit" for ::1 at 2020-05-01 23:18:46 +0900
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (2.6ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:4:in `edit'
+  Rendering articles/edit.html.erb within layouts/application
+  Rendered articles/_header.html.erb (Duration: 33.0ms | Allocations: 1066)
+  Rendered articles/_form.html.erb (Duration: 60.4ms | Allocations: 3406)
+  Rendered articles/edit.html.erb within layouts/application (Duration: 129.3ms | Allocations: 5069)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 683ms (Views: 654.0ms | ActiveRecord: 2.6ms | Allocations: 28778)
+
+
+Started GET "/search?search=%E5%90%9B%E3%81%AE%E8%86%B5%E8%87%93%E3%82%92%E9%A3%9F%E3%81%B9%E3%81%9F%E3%81%84" for ::1 at 2020-05-01 23:20:49 +0900
+Processing by ArticlesController#search as HTML
+  Parameters: {"search"=>"君の膵臓を食べたい"}
+  Rendering articles/search.html.erb within layouts/application
+  Rendered articles/_header.html.erb (Duration: 34.7ms | Allocations: 1061)
+  [1m[36mArticle Load (1.7ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE (title LIKE '%君の膵臓を食べたい%' OR theater LIKE '%君の膵臓を食べたい%' OR watched_date LIKE '%君の膵臓を食べたい%')[0m
+  ↳ app/views/articles/search.html.erb:27
+  Rendered articles/search.html.erb within layouts/application (Duration: 162.3ms | Allocations: 4246)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 732ms (Views: 712.7ms | ActiveRecord: 1.7ms | Allocations: 27475)
+
+
+Started GET "/search?search=%E5%90%9B" for ::1 at 2020-05-01 23:20:59 +0900
+Processing by ArticlesController#search as HTML
+  Parameters: {"search"=>"君"}
+  Rendering articles/search.html.erb within layouts/application
+  Rendered articles/_header.html.erb (Duration: 19.1ms | Allocations: 905)
+  [1m[36mArticle Load (1.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE (title LIKE '%君%' OR theater LIKE '%君%' OR watched_date LIKE '%君%')[0m
+  ↳ app/views/articles/search.html.erb:27
+  Rendered articles/search.html.erb within layouts/application (Duration: 78.0ms | Allocations: 4429)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 425ms (Views: 419.4ms | ActiveRecord: 1.4ms | Allocations: 26722)
+
+
+Started GET "/search?search=MOVIX" for ::1 at 2020-05-01 23:21:17 +0900
+Processing by ArticlesController#search as HTML
+  Parameters: {"search"=>"MOVIX"}
+  Rendering articles/search.html.erb within layouts/application
+  Rendered articles/_header.html.erb (Duration: 17.5ms | Allocations: 896)
+  [1m[36mArticle Load (1.9ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE (title LIKE '%MOVIX%' OR theater LIKE '%MOVIX%' OR watched_date LIKE '%MOVIX%')[0m
+  ↳ app/views/articles/search.html.erb:27
+  Rendered articles/search.html.erb within layouts/application (Duration: 67.7ms | Allocations: 3518)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 369ms (Views: 364.2ms | ActiveRecord: 1.9ms | Allocations: 25823)
+
+
+Started GET "/articles" for ::1 at 2020-05-01 23:22:22 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/_header.html.erb (Duration: 31.9ms | Allocations: 1061)
+  [1m[36mArticle Load (1.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:35
+  Rendered articles/index.html.erb within layouts/application (Duration: 132.0ms | Allocations: 5351)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 578ms (Views: 561.8ms | ActiveRecord: 1.2ms | Allocations: 28542)
+
+
+Started GET "/articles" for ::1 at 2020-05-01 23:22:47 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/_header.html.erb (Duration: 24.5ms | Allocations: 1062)
+  [1m[36mArticle Load (2.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:44
+  Rendered articles/index.html.erb within layouts/application (Duration: 111.7ms | Allocations: 5544)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 512ms (Views: 493.9ms | ActiveRecord: 2.2ms | Allocations: 28822)
+
+
+Started GET "/articles" for ::1 at 2020-05-01 23:23:57 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/index.html.erb within layouts/application (Duration: 11.1ms | Allocations: 2693)
+Completed 500 Internal Server Error in 128ms (ActiveRecord: 0.0ms | Allocations: 3953)
+
+
+
+ActionView::SyntaxErrorInTemplate - Encountered a syntax error while rendering template: check <!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <title>articles</title>
+</head>
+
+<body>
+    <%= render 'header' %>
+
+    <div id="wrap">
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container bg-light">
+                <h2>My Movies</h2>
+
+                <%= form_tag(search_path, :method => 'get') do %>
+                    <%= text_field_tag :search %>
+                    <%= submit_tag 'Search', :class => 'btn btn-primary', :name => nil %>
+                <% end %>
+                
+                    <%= form_tag(search_path, :method => 'get') do %>
+                        <%= text_field_tag :search %>
+                        <span class="input-group-btn">
+                            <%= submit_tag 'Search', :name => nil, :class =>  %>
+                        </span>
+                    <% end %>
+                </div>
+
+                <table class = "table table-hover">
+                    <tr>
+                        <th>Title</th>
+                        <th>Theater</th>
+                        <th>Watched_date</th>
+                        <th>Rate</th>
+                        <th>Text</th>
+                        <th></th>
+                    </tr>
+
+                    <% @articles.each do |article| %>
+                        <tr>
+                            <td><%= article.title %></td>
+                            <td><%= article.theater %></td>
+                            <td><%= l article.watched_date %></td>
+                            <td><div id="star-rate-<%= article.rate %>"></div></td>
+                            <script>
+                                $('#star-rate-<%= article.rate %>').raty({
+                                    size: 36,
+                                    starOff:  '<%= asset_path('star-off.png') %>',
+                                    starOn : '<%= asset_path('star-on.png') %>',
+                                    starHalf: '<%= asset_path('star-half.png') %>',
+                                    readOnly: true,
+                                    score: <%= article.rate %>,
+                                });
+                            </script> 
+                            <td><%= article.text %></td>
+                            <td><%= link_to 'Show', article_path(article) %></td>
+                            <td><%= link_to 'Edit', edit_article_path(article) %></td>
+                            <td><%= link_to 'Destroy', article_path(article),
+                            method: :delete, data: { confirm: 'You are removing the selcted data. Are you sure?'} %></td>
+                        </tr>
+                    <% end %>
+                </table>
+
+                <p class="pb-3">
+                    <%= link_to 'New Article', new_article_path %>
+                    | <%= link_to 'Back', root_path %>
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+:
+
+Started POST "/__better_errors/6de9e0fc675b69e3/variables" for ::1 at 2020-05-01 23:24:00 +0900
+  [1m[36mArticle Load (1.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/articles" for ::1 at 2020-05-01 23:24:10 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/_header.html.erb (Duration: 29.5ms | Allocations: 1062)
+  [1m[36mArticle Load (1.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:34
+  Rendered articles/index.html.erb within layouts/application (Duration: 147.3ms | Allocations: 5359)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 869ms (Views: 857.4ms | ActiveRecord: 1.3ms | Allocations: 28633)
+
+
+Started GET "/search?search=%E5%90%9B" for ::1 at 2020-05-01 23:24:19 +0900
+Processing by ArticlesController#search as HTML
+  Parameters: {"search"=>"君"}
+  Rendering articles/search.html.erb within layouts/application
+  Rendered articles/_header.html.erb (Duration: 17.3ms | Allocations: 905)
+  [1m[36mArticle Load (1.6ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE (title LIKE '%君%' OR theater LIKE '%君%' OR watched_date LIKE '%君%')[0m
+  ↳ app/views/articles/search.html.erb:27
+  Rendered articles/search.html.erb within layouts/application (Duration: 96.7ms | Allocations: 4828)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 420ms (Views: 409.5ms | ActiveRecord: 1.6ms | Allocations: 27341)
+
+
+Started GET "/articles" for ::1 at 2020-05-01 23:25:13 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/_header.html.erb (Duration: 21.5ms | Allocations: 1061)
+  [1m[36mArticle Load (1.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:36
+  Rendered articles/index.html.erb within layouts/application (Duration: 153.4ms | Allocations: 5364)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 590ms (Views: 580.5ms | ActiveRecord: 1.3ms | Allocations: 28558)
+
+
+Started GET "/articles" for ::1 at 2020-05-01 23:25:25 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/_header.html.erb (Duration: 25.7ms | Allocations: 1067)
+  [1m[36mArticle Load (1.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:36
+  Rendered articles/index.html.erb within layouts/application (Duration: 200.9ms | Allocations: 5370)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 710ms (Views: 655.2ms | ActiveRecord: 1.4ms | Allocations: 28629)
+
+
+Started GET "/articles" for ::1 at 2020-05-01 23:26:30 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/_header.html.erb (Duration: 32.8ms | Allocations: 1061)
+  [1m[36mArticle Load (1.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:36
+  Rendered articles/index.html.erb within layouts/application (Duration: 134.1ms | Allocations: 5357)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 554ms (Views: 542.4ms | ActiveRecord: 1.4ms | Allocations: 28539)
+
+
+Started GET "/search?search=%E5%90%9B" for ::1 at 2020-05-01 23:26:45 +0900
+Processing by ArticlesController#search as HTML
+  Parameters: {"search"=>"君"}
+  Rendering articles/search.html.erb within layouts/application
+  Rendered articles/_header.html.erb (Duration: 23.4ms | Allocations: 906)
+  [1m[36mArticle Load (2.0ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE (title LIKE '%君%' OR theater LIKE '%君%' OR watched_date LIKE '%君%')[0m
+  ↳ app/views/articles/search.html.erb:27
+  Rendered articles/search.html.erb within layouts/application (Duration: 96.9ms | Allocations: 4833)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 402ms (Views: 388.5ms | ActiveRecord: 2.0ms | Allocations: 27362)
+
+
+Started GET "/articles" for ::1 at 2020-05-01 23:27:02 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/_header.html.erb (Duration: 51.3ms | Allocations: 1061)
+  [1m[36mArticle Load (1.0ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:36
+  Rendered articles/index.html.erb within layouts/application (Duration: 250.0ms | Allocations: 5358)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 917ms (Views: 906.0ms | ActiveRecord: 1.0ms | Allocations: 28535)
+
+
+Started GET "/articles" for ::1 at 2020-05-01 23:27:36 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/_header.html.erb (Duration: 29.2ms | Allocations: 1062)
+  [1m[36mArticle Load (3.8ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:36
+  Rendered articles/index.html.erb within layouts/application (Duration: 165.0ms | Allocations: 5364)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 702ms (Views: 685.6ms | ActiveRecord: 3.8ms | Allocations: 28532)
+
+
+Started GET "/search?search=%E5%90%9B" for ::1 at 2020-05-01 23:27:43 +0900
+Processing by ArticlesController#search as HTML
+  Parameters: {"search"=>"君"}
+  Rendering articles/search.html.erb within layouts/application
+  Rendered articles/_header.html.erb (Duration: 17.9ms | Allocations: 905)
+  [1m[36mArticle Load (1.7ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE (title LIKE '%君%' OR theater LIKE '%君%' OR watched_date LIKE '%君%')[0m
+  ↳ app/views/articles/search.html.erb:27
+  Rendered articles/search.html.erb within layouts/application (Duration: 82.8ms | Allocations: 4828)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 405ms (Views: 394.1ms | ActiveRecord: 1.7ms | Allocations: 27271)
+
+
+Started GET "/articles" for ::1 at 2020-05-01 23:28:46 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/_header.html.erb (Duration: 32.6ms | Allocations: 1062)
+  [1m[36mArticle Load (2.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:38
+  Rendered articles/index.html.erb within layouts/application (Duration: 133.5ms | Allocations: 5371)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 573ms (Views: 561.3ms | ActiveRecord: 2.1ms | Allocations: 28551)
+
+
+Started GET "/search?search=%E5%90%9B" for ::1 at 2020-05-01 23:28:53 +0900
+Processing by ArticlesController#search as HTML
+  Parameters: {"search"=>"君"}
+  Rendering articles/search.html.erb within layouts/application
+  Rendered articles/_header.html.erb (Duration: 16.6ms | Allocations: 905)
+  [1m[36mArticle Load (1.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE (title LIKE '%君%' OR theater LIKE '%君%' OR watched_date LIKE '%君%')[0m
+  ↳ app/views/articles/search.html.erb:27
+  Rendered articles/search.html.erb within layouts/application (Duration: 123.5ms | Allocations: 4827)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 442ms (Views: 423.4ms | ActiveRecord: 1.2ms | Allocations: 27267)
+
+
+Started GET "/search?search=%E5%90%9B%E3%81%AE%E8%86%B5%E8%87%93" for ::1 at 2020-05-01 23:29:04 +0900
+Processing by ArticlesController#search as HTML
+  Parameters: {"search"=>"君の膵臓"}
+  Rendering articles/search.html.erb within layouts/application
+  Rendered articles/_header.html.erb (Duration: 26.0ms | Allocations: 895)
+  [1m[36mArticle Load (1.7ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE (title LIKE '%君の膵臓%' OR theater LIKE '%君の膵臓%' OR watched_date LIKE '%君の膵臓%')[0m
+  ↳ app/views/articles/search.html.erb:27
+  Rendered articles/search.html.erb within layouts/application (Duration: 82.6ms | Allocations: 3517)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 378ms (Views: 373.5ms | ActiveRecord: 1.7ms | Allocations: 25813)
+
+
+Started GET "/search?search=%E5%90%9B%E3%81%AE%E8%86%B5%E8%87%93" for ::1 at 2020-05-01 23:29:28 +0900
+Processing by ArticlesController#search as HTML
+  Parameters: {"search"=>"君の膵臓"}
+  Rendering articles/search.html.erb within layouts/application
+  Rendered articles/_header.html.erb (Duration: 26.2ms | Allocations: 895)
+  [1m[36mArticle Load (1.5ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE (title LIKE '%君の膵臓%' OR theater LIKE '%君の膵臓%' OR watched_date LIKE '%君の膵臓%')[0m
+  ↳ app/views/articles/search.html.erb:27
+  Rendered articles/search.html.erb within layouts/application (Duration: 147.7ms | Allocations: 3517)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 719ms (Views: 713.9ms | ActiveRecord: 1.5ms | Allocations: 25824)
+
+
+Started GET "/search?search=%E5%90%9B%E3%81%AE%E8%86%B5%E8%87%93" for ::1 at 2020-05-01 23:30:11 +0900
+Processing by ArticlesController#search as HTML
+  Parameters: {"search"=>"君の膵臓"}
+  Rendering articles/search.html.erb within layouts/application
+  Rendered articles/_header.html.erb (Duration: 27.8ms | Allocations: 1061)
+  [1m[36mArticle Load (1.5ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE (title LIKE '%君の膵臓%' OR theater LIKE '%君の膵臓%' OR watched_date LIKE '%君の膵臓%')[0m
+  ↳ app/views/articles/search.html.erb:27
+  Rendered articles/search.html.erb within layouts/application (Duration: 103.0ms | Allocations: 4228)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 501ms (Views: 485.8ms | ActiveRecord: 1.5ms | Allocations: 27471)
+
+
+Started GET "/articles" for ::1 at 2020-05-01 23:30:19 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/_header.html.erb (Duration: 17.5ms | Allocations: 905)
+  [1m[36mArticle Load (2.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:38
+  Rendered articles/index.html.erb within layouts/application (Duration: 89.2ms | Allocations: 5067)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 434ms (Views: 422.0ms | ActiveRecord: 2.1ms | Allocations: 27458)
+
+
+Started GET "/search?search=MOVIX" for ::1 at 2020-05-01 23:30:26 +0900
+Processing by ArticlesController#search as HTML
+  Parameters: {"search"=>"MOVIX"}
+  Rendering articles/search.html.erb within layouts/application
+  Rendered articles/_header.html.erb (Duration: 20.2ms | Allocations: 895)
+  [1m[36mArticle Load (3.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE (title LIKE '%MOVIX%' OR theater LIKE '%MOVIX%' OR watched_date LIKE '%MOVIX%')[0m
+  ↳ app/views/articles/search.html.erb:27
+  Rendered articles/search.html.erb within layouts/application (Duration: 69.6ms | Allocations: 3517)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 427ms (Views: 417.6ms | ActiveRecord: 3.2ms | Allocations: 25805)
+
+
+Started GET "/articles/1/edit" for ::1 at 2020-05-01 23:30:32 +0900
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (1.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:4:in `edit'
+  Rendering articles/edit.html.erb within layouts/application
+  Rendered articles/_header.html.erb (Duration: 24.8ms | Allocations: 910)
+  Rendered articles/_form.html.erb (Duration: 38.4ms | Allocations: 3406)
+  Rendered articles/edit.html.erb within layouts/application (Duration: 84.1ms | Allocations: 4774)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 433ms (Views: 410.6ms | ActiveRecord: 1.1ms | Allocations: 27677)
+
+
+Started GET "/articles/1" for ::1 at 2020-05-01 23:33:31 +0900
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (0.8ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:12:in `show'
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/_header.html.erb (Duration: 21.9ms | Allocations: 1066)
+  Rendered articles/show.html.erb within layouts/application (Duration: 68.6ms | Allocations: 3528)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 412ms (Views: 386.2ms | ActiveRecord: 0.8ms | Allocations: 27237)
+
+
+Started GET "/articles/1" for ::1 at 2020-05-01 23:33:53 +0900
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (1.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:12:in `show'
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/_header.html.erb (Duration: 18.8ms | Allocations: 1067)
+  Rendered articles/show.html.erb within layouts/application (Duration: 102.5ms | Allocations: 3529)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 615ms (Views: 580.9ms | ActiveRecord: 1.2ms | Allocations: 27232)
+
+
+Started GET "/articles/1" for ::1 at 2020-05-01 23:34:18 +0900
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (1.5ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:12:in `show'
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/_header.html.erb (Duration: 30.4ms | Allocations: 1066)
+  Rendered articles/show.html.erb within layouts/application (Duration: 119.6ms | Allocations: 3512)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 902ms (Views: 878.1ms | ActiveRecord: 1.5ms | Allocations: 27220)
+
+
+Started GET "/articles/1" for ::1 at 2020-05-01 23:35:19 +0900
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (1.0ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:12:in `show'
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/_header.html.erb (Duration: 29.6ms | Allocations: 1067)
+  Rendered articles/show.html.erb within layouts/application (Duration: 106.5ms | Allocations: 3523)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 580ms (Views: 559.5ms | ActiveRecord: 1.0ms | Allocations: 27214)
+
+
+Started GET "/articles/1" for ::1 at 2020-05-01 23:35:33 +0900
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (4.0ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:12:in `show'
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/_header.html.erb (Duration: 34.5ms | Allocations: 1066)
+  Rendered articles/show.html.erb within layouts/application (Duration: 99.1ms | Allocations: 3515)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 672ms (Views: 636.9ms | ActiveRecord: 4.0ms | Allocations: 27213)
+
+
+Started GET "/articles/1" for ::1 at 2020-05-01 23:35:49 +0900
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (0.9ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:12:in `show'
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/_header.html.erb (Duration: 22.1ms | Allocations: 1066)
+  Rendered articles/show.html.erb within layouts/application (Duration: 71.7ms | Allocations: 3520)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 456ms (Views: 439.6ms | ActiveRecord: 0.9ms | Allocations: 27223)
+
+
+Started GET "/articles/1" for ::1 at 2020-05-01 23:36:03 +0900
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (5.6ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:12:in `show'
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/_header.html.erb (Duration: 29.9ms | Allocations: 1066)
+  Rendered articles/show.html.erb within layouts/application (Duration: 90.2ms | Allocations: 3514)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 529ms (Views: 499.2ms | ActiveRecord: 5.6ms | Allocations: 27212)
+
+
+Started GET "/articles/1" for ::1 at 2020-05-01 23:36:30 +0900
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (2.7ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:12:in `show'
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/_header.html.erb (Duration: 22.6ms | Allocations: 1067)
+  Rendered articles/show.html.erb within layouts/application (Duration: 74.3ms | Allocations: 3521)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 568ms (Views: 533.6ms | ActiveRecord: 2.7ms | Allocations: 27216)
+
+
+Started GET "/articles/1" for ::1 at 2020-05-01 23:36:42 +0900
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (1.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:12:in `show'
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/_header.html.erb (Duration: 17.7ms | Allocations: 910)
+  Rendered articles/show.html.erb within layouts/application (Duration: 68.4ms | Allocations: 2868)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 432ms (Views: 416.7ms | ActiveRecord: 1.1ms | Allocations: 25646)
+
+
+Started GET "/articles/1" for ::1 at 2020-05-01 23:37:22 +0900
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (1.0ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:12:in `show'
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/_header.html.erb (Duration: 39.3ms | Allocations: 1066)
+  Rendered articles/show.html.erb within layouts/application (Duration: 117.4ms | Allocations: 3514)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 815ms (Views: 771.0ms | ActiveRecord: 1.0ms | Allocations: 27217)
+
+
+Started GET "/articles/1" for ::1 at 2020-05-01 23:37:38 +0900
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (2.8ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:12:in `show'
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/_header.html.erb (Duration: 35.6ms | Allocations: 1066)
+  Rendered articles/show.html.erb within layouts/application (Duration: 98.9ms | Allocations: 3520)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 568ms (Views: 540.7ms | ActiveRecord: 2.8ms | Allocations: 27222)
+
+
+Started GET "/articles/1" for ::1 at 2020-05-01 23:38:07 +0900
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (1.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:12:in `show'
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/_header.html.erb (Duration: 31.4ms | Allocations: 1066)
+  Rendered articles/show.html.erb within layouts/application (Duration: 86.2ms | Allocations: 3516)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 493ms (Views: 469.2ms | ActiveRecord: 1.3ms | Allocations: 27207)
+
+
+Started GET "/articles/1" for ::1 at 2020-05-01 23:38:34 +0900
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (1.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:12:in `show'
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/_header.html.erb (Duration: 59.3ms | Allocations: 1066)
+  Rendered articles/show.html.erb within layouts/application (Duration: 107.1ms | Allocations: 3515)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 645ms (Views: 560.4ms | ActiveRecord: 1.1ms | Allocations: 27221)
+
+
+Started GET "/articles" for ::1 at 2020-05-01 23:38:43 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/_header.html.erb (Duration: 19.5ms | Allocations: 905)
+  [1m[36mArticle Load (1.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:38
+  Rendered articles/index.html.erb within layouts/application (Duration: 96.2ms | Allocations: 5093)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 446ms (Views: 432.3ms | ActiveRecord: 1.4ms | Allocations: 27482)
+
+
+Started GET "/articles/1" for ::1 at 2020-05-01 23:38:47 +0900
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (2.0ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:12:in `show'
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/_header.html.erb (Duration: 18.3ms | Allocations: 900)
+  Rendered articles/show.html.erb within layouts/application (Duration: 76.2ms | Allocations: 2857)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 463ms (Views: 444.3ms | ActiveRecord: 2.0ms | Allocations: 25629)
+
+
+Started GET "/articles/1/edit" for ::1 at 2020-05-01 23:38:53 +0900
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (1.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:4:in `edit'
+  Rendering articles/edit.html.erb within layouts/application
+  Rendered articles/_header.html.erb (Duration: 27.4ms | Allocations: 910)
+  Rendered articles/_form.html.erb (Duration: 58.5ms | Allocations: 3424)
+  Rendered articles/edit.html.erb within layouts/application (Duration: 108.3ms | Allocations: 4798)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 513ms (Views: 486.5ms | ActiveRecord: 1.2ms | Allocations: 27709)
+
+
+Started PATCH "/articles/1" for ::1 at 2020-05-01 23:38:59 +0900
+Processing by ArticlesController#update as HTML
+  Parameters: {"authenticity_token"=>"S0F/hP9IzITZsYv67gka9RUeYHYf0/BeZnkOw823aaqfjxYNbVxcBItt9k9izAFwegi4JIjPQ6BOjt0jdrQpHQ==", "article"=>{"title"=>"君の膵臓を食べたい", "theater"=>"MOVIX京都", "watched_date"=>"2020-04-01T21:30:00", "rate"=>"5", "text"=>"膵臓について深く知れる教養的な映画でした。"}, "commit"=>"Create Article", "id"=>"1"}
+  [1m[36mArticle Load (1.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:31:in `update'
+  [1m[35m (0.4ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/articles_controller.rb:33:in `update'
+  [1m[36mArticle Update (6.6ms)[0m  [1m[33mUPDATE "articles" SET "rate" = ?, "updated_at" = ? WHERE "articles"."id" = ?[0m  [["rate", 5], ["updated_at", "2020-05-01 14:38:59.552862"], ["id", 1]]
+  ↳ app/controllers/articles_controller.rb:33:in `update'
+  [1m[35m (11.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/articles_controller.rb:33:in `update'
+Redirected to http://localhost:3000/articles/1
+Completed 302 Found in 92ms (ActiveRecord: 19.1ms | Allocations: 3351)
+
+
+Started GET "/articles/1" for ::1 at 2020-05-01 23:38:59 +0900
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (0.7ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:12:in `show'
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/_header.html.erb (Duration: 18.6ms | Allocations: 905)
+  Rendered articles/show.html.erb within layouts/application (Duration: 63.4ms | Allocations: 2863)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 436ms (Views: 427.0ms | ActiveRecord: 0.7ms | Allocations: 25619)
+
+
+Started GET "/articles" for ::1 at 2020-05-01 23:39:03 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/_header.html.erb (Duration: 52.6ms | Allocations: 895)
+  [1m[36mArticle Load (1.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:38
+  Rendered articles/index.html.erb within layouts/application (Duration: 97.2ms | Allocations: 4541)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 513ms (Views: 508.3ms | ActiveRecord: 1.3ms | Allocations: 26798)
+
+
+Started GET "/search?search=%E5%90%9B" for ::1 at 2020-05-01 23:39:10 +0900
+Processing by ArticlesController#search as HTML
+  Parameters: {"search"=>"君"}
+  Rendering articles/search.html.erb within layouts/application
+  Rendered articles/_header.html.erb (Duration: 18.5ms | Allocations: 905)
+  [1m[36mArticle Load (1.8ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE (title LIKE '%君%' OR theater LIKE '%君%' OR watched_date LIKE '%君%')[0m
+  ↳ app/views/articles/search.html.erb:27
+  Rendered articles/search.html.erb within layouts/application (Duration: 91.9ms | Allocations: 4846)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 383ms (Views: 372.4ms | ActiveRecord: 1.8ms | Allocations: 27311)
+
+
+Started GET "/welcome/index?class=navbar-brand" for ::1 at 2020-05-01 23:39:21 +0900
+Processing by WelcomeController#index as HTML
+  Parameters: {"class"=>"navbar-brand"}
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/_header.html.erb (Duration: 33.1ms | Allocations: 1056)
+  Rendered welcome/index.html.erb within layouts/application (Duration: 49.0ms | Allocations: 1427)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 447ms (Views: 431.1ms | ActiveRecord: 0.0ms | Allocations: 24243)
+
+
+Started GET "/" for ::1 at 2020-05-01 23:39:25 +0900
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/_header.html.erb (Duration: 20.5ms | Allocations: 890)
+  Rendered welcome/index.html.erb within layouts/application (Duration: 25.8ms | Allocations: 989)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 390ms (Views: 382.3ms | ActiveRecord: 0.0ms | Allocations: 23226)
+
+
+Started GET "/" for ::1 at 2020-05-01 23:39:52 +0900
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/_header.html.erb (Duration: 19.0ms | Allocations: 1056)
+  Rendered welcome/index.html.erb within layouts/application (Duration: 35.6ms | Allocations: 1439)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 415ms (Views: 403.7ms | ActiveRecord: 0.0ms | Allocations: 24616)
+
+
+Started GET "/" for ::1 at 2020-05-01 23:46:11 +0900
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/_header.html.erb (Duration: 25.4ms | Allocations: 900)
+  Rendered welcome/index.html.erb within layouts/application (Duration: 30.4ms | Allocations: 1000)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 390ms (Views: 385.6ms | ActiveRecord: 0.0ms | Allocations: 23248)
+
+
+Started GET "/articles" for ::1 at 2020-05-01 23:46:16 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/_header.html.erb (Duration: 17.9ms | Allocations: 1061)
+  [1m[36mArticle Load (1.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:38
+  Rendered articles/index.html.erb within layouts/application (Duration: 93.1ms | Allocations: 5386)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 437ms (Views: 421.8ms | ActiveRecord: 1.3ms | Allocations: 28195)
+
+
+Started GET "/search?search=%E5%90%9B" for ::1 at 2020-05-01 23:46:22 +0900
+Processing by ArticlesController#search as HTML
+  Parameters: {"search"=>"君"}
+  Rendering articles/search.html.erb within layouts/application
+  Rendered articles/_header.html.erb (Duration: 29.0ms | Allocations: 905)
+  [1m[36mArticle Load (1.6ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE (title LIKE '%君%' OR theater LIKE '%君%' OR watched_date LIKE '%君%')[0m
+  ↳ app/views/articles/search.html.erb:27
+  Rendered articles/search.html.erb within layouts/application (Duration: 122.6ms | Allocations: 4828)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 474ms (Views: 462.1ms | ActiveRecord: 1.6ms | Allocations: 27270)
+
+
+Started GET "/articles/1" for ::1 at 2020-05-01 23:46:29 +0900
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (1.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:12:in `show'
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/_header.html.erb (Duration: 19.8ms | Allocations: 911)
+  Rendered articles/show.html.erb within layouts/application (Duration: 58.5ms | Allocations: 3228)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 380ms (Views: 345.0ms | ActiveRecord: 1.2ms | Allocations: 26144)
+
+
+Started GET "/articles/1/edit" for ::1 at 2020-05-01 23:46:32 +0900
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (0.8ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:4:in `edit'
+  Rendering articles/edit.html.erb within layouts/application
+  Rendered articles/_header.html.erb (Duration: 23.0ms | Allocations: 910)
+  Rendered articles/_form.html.erb (Duration: 59.2ms | Allocations: 3406)
+  Rendered articles/edit.html.erb within layouts/application (Duration: 110.5ms | Allocations: 4769)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 434ms (Views: 413.4ms | ActiveRecord: 0.8ms | Allocations: 27659)
+
+
+Started PATCH "/articles/1" for ::1 at 2020-05-01 23:46:41 +0900
+Processing by ArticlesController#update as HTML
+  Parameters: {"authenticity_token"=>"EV5jky+wrUmNxLjtk0t8S5jrIin7DEJ3t5ToRPk21Y3FkAoavaQ9yd8YxVgfjmfO9/36e2wQ8YmfYzukQjWVOg==", "article"=>{"title"=>"君の膵臓を食べたい", "theater"=>"MOVIX京都", "watched_date"=>"2020-04-01T21:30:00", "rate"=>"4", "text"=>"膵臓について深く知れる教養的な映画でした。"}, "commit"=>"Create Article", "id"=>"1"}
+  [1m[36mArticle Load (1.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:31:in `update'
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/articles_controller.rb:33:in `update'
+  [1m[36mArticle Update (6.7ms)[0m  [1m[33mUPDATE "articles" SET "rate" = ?, "updated_at" = ? WHERE "articles"."id" = ?[0m  [["rate", 4], ["updated_at", "2020-05-01 14:46:42.220254"], ["id", 1]]
+  ↳ app/controllers/articles_controller.rb:33:in `update'
+  [1m[35m (13.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/articles_controller.rb:33:in `update'
+Redirected to http://localhost:3000/articles/1
+Completed 302 Found in 169ms (ActiveRecord: 21.9ms | Allocations: 3348)
+
+
+Started GET "/articles/1" for ::1 at 2020-05-01 23:46:42 +0900
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (0.7ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:12:in `show'
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/_header.html.erb (Duration: 16.1ms | Allocations: 905)
+  Rendered articles/show.html.erb within layouts/application (Duration: 88.2ms | Allocations: 2864)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 368ms (Views: 357.6ms | ActiveRecord: 0.7ms | Allocations: 25622)
+
+
+Started GET "/articles" for ::1 at 2020-05-01 23:46:45 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/_header.html.erb (Duration: 17.4ms | Allocations: 895)
+  [1m[36mArticle Load (1.9ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:38
+  Rendered articles/index.html.erb within layouts/application (Duration: 93.9ms | Allocations: 4538)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 410ms (Views: 404.0ms | ActiveRecord: 1.9ms | Allocations: 26778)
+
+
+Started GET "/articles/new" for ::1 at 2020-05-01 23:46:49 +0900
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_header.html.erb (Duration: 20.4ms | Allocations: 905)
+  Rendered articles/_form.html.erb (Duration: 48.6ms | Allocations: 2837)
+  Rendered articles/new.html.erb within layouts/application (Duration: 81.3ms | Allocations: 4062)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 404ms (Views: 394.7ms | ActiveRecord: 0.0ms | Allocations: 26441)
+
+
+Started GET "/articles" for ::1 at 2020-05-01 23:46:53 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/_header.html.erb (Duration: 21.2ms | Allocations: 895)
+  [1m[36mArticle Load (1.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:38
+  Rendered articles/index.html.erb within layouts/application (Duration: 83.9ms | Allocations: 4540)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 426ms (Views: 421.5ms | ActiveRecord: 1.2ms | Allocations: 26787)
+
+
+Started GET "/" for ::1 at 2020-05-01 23:46:56 +0900
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/_header.html.erb (Duration: 23.7ms | Allocations: 900)
+  Rendered welcome/index.html.erb within layouts/application (Duration: 28.9ms | Allocations: 1000)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 321ms (Views: 316.6ms | ActiveRecord: 0.0ms | Allocations: 23264)
+
+
